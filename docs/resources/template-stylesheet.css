@@ -204,6 +204,12 @@ td, th {
   font-family: webflow-icons !important;
 }
 
+.myimages{
+  display: block; 
+  margin: auto; 
+  width: 50%;
+}
+
 .w-icon-slider-right:before {
   content: "";
 }
