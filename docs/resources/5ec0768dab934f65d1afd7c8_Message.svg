@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 21 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g transform="matrix(1,0,0,1,-1.25,-2.75)">
+        <g transform="matrix(1,0,0,1,2,3.5)">
+            <g id="Iconly-Light-Message" serif:id="Iconly/Light/Message">
+                <g id="Message">
+                    <path id="Path_445" d="M15.268,5.561L11.002,8.995C10.195,9.628 9.064,9.628 8.256,8.995L3.954,5.561" style="fill:none;stroke:rgb(156,89,255);stroke-width:1.5px;"/>
+                    <path id="Rectangle_511" d="M4.888,0L14.316,0C15.675,0.015 16.969,0.59 17.896,1.59C18.823,2.59 19.302,3.929 19.222,5.294L19.222,11.822C19.302,13.187 18.823,14.526 17.896,15.526C16.969,16.526 15.675,17.101 14.316,17.116L4.888,17.116C1.968,17.116 0,14.741 0,11.822L0,5.294C0,2.375 1.968,0 4.888,0Z" style="fill:none;stroke:rgb(156,89,255);stroke-width:1.5px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
