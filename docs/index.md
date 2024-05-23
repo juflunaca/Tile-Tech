@@ -4,24 +4,23 @@ layout: home
 
 hero:
   name: "Tile tech"
-  text: "construimos una propuesta de automatización para el mejoramiento de un proceso de producción ceramica"
+  text: "Propuesta de automatización para el mejoramiento de un proceso de producción ceramica"
   tagline: "We enhance tile production"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Quienes somos
+      link: /equipo-de-trabajo
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Nuestros productos
+      link: /productos/index
 
 features:
-  - title: Plane
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: 1_planeacion_y_gestion
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    
+  - title: Planeación y gestión
+    details: Como se desarrollo la gestión del proyecto
+    link: /proceso/1-planeacion-y-gestion
+  - title: Protocolo de comunicaciones
+    details: 
+    link: /proceso/comunicaciones
+
 ---
 
