@@ -19,7 +19,7 @@ features:
     details: Resumen ejecutivo de gestión durante el desarrollo del proyecto
     link: /proceso/1-planeacion-y-gestion
   - title: Analisis de diseño
-    details:  Resumen ejecutivo de los diseño realizado 
+    details:  Resumen ejecutivo del diseño realizado 
     link: /producto/analisis-disenio
 
 ---
