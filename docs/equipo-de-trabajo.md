@@ -1,5 +1,5 @@
 # Quienes somos
-El equipo de trabajo esta comformado por 
+El equipo de trabajo esta comformado por:
 
 
 

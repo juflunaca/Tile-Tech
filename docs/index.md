@@ -12,15 +12,15 @@ hero:
       link: /equipo-de-trabajo
     - theme: alt
       text: Nuestros productos
-      link: /productos/index
+      link: /producto/index
 
 features:
   - title: Planeación y gestión
-    details: Como se desarrollo la gestión del proyecto
+    details: Resumen ejecutivo de gestión durante el desarrollo del proyecto
     link: /proceso/1-planeacion-y-gestion
-  - title: Protocolo de comunicaciones
-    details: 
-    link: /proceso/comunicaciones
+  - title: Analisis de diseño
+    details:  Resumen ejecutivo de los diseño realizado 
+    link: /producto/analisis-disenio
 
 ---
 

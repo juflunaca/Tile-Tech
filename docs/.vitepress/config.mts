@@ -15,17 +15,19 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Producto',
+        text: 'Proceso',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Planeación y gestión', link: '/proceso/1-planeacion-y-gestion' },
+          { text: 'Comunicaciones', link: '/proceso/comunicaciones' },
+          { text: 'Cronograma', link: '/proceso/cronograma' }
         ]
       },
       {
-        text: 'Proceso',
+        text: 'Producto',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Análisis de diseño', link: '/producto/analisis-disenio'},
+          { text: 'Definición de producto', link: '/producto/definicion-de-producto'},
+          { text: 'Celda robotizada', link: '/producto/3-celdas-robotizadas' }
         ]
       }
     ],
