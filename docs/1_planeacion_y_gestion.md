@@ -31,7 +31,7 @@ Implementación de un sistema automatizado para la inspección visual y control 
 * Empaquetado:
 Mejora del sistema automatizado de empaquetado existente para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas.
 
-Deliverables:
+# Deliverables:
 
 Sistema de control cerrado para el contenido de humedad en el Atomizador de Secado.
 Sistema automático de control de humedad y densidad aparente en el Prensado.
@@ -52,6 +52,7 @@ No se abarca la capacitación del personal en el uso y mantenimiento de estos si
 El alcance del proyecto incluirá el diseño, desarrollo, implementación y puesta en marcha de los sistemas automatizados en cada subproceso identificado. Se buscará mejorar la eficiencia, la calidad y la consistencia en la producción de baldosas cerámicas mediante la automatización de procesos clave.
 
 NECESIDADES DE AUTOMATIZACIÓN
+
 Alcance
 Variable a medir
 Tecnología de medición propuesta
