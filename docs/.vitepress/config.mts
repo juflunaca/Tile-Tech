@@ -35,5 +35,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/juflunaca/Tile-Tech' }
     ]
-  }
+  },
+  outDir: '../dist'
 })
