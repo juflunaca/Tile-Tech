@@ -2,3 +2,6 @@ node_modules/
 dist/
 **/cache/
 .env
+
+## ignore temp files
+*.bak

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Statistics Report</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta charset="utf-8"/>
+<meta name="author" content="ThinkPad"/>
+<meta name="description" content="statistics report"/>
+<meta name="keywords" content="statistics report,report,statistics,material flow"/>
+<style>
+body {
+font: 10pt 'Segoe UI', Helvetica, sans-serif;
+}
+a {
+text-decoration: none;
+cursor:          pointer;
+color:           #395998;
+}
+a:hover {
+text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+border:    1pt solid #2882A0;
+padding:   1pt 4pt 2pt;
+font-size: 11pt;
+}
+h1 {
+border-width: 2pt;
+padding:      0pt 0pt 0pt 4pt;
+font-size:    16pt;
+}
+h2 {
+border-left-width: 6pt;
+padding:           0pt 4pt 0pt;
+font-size:         14pt;
+}
+h3 {
+border-left-width: 6pt;
+padding:           1pt 4pt 0pt;
+font-size:         13pt;
+}
+h4 {
+font-size: 12pt;
+}
+figure {
+display:        inline-block;
+margin:         1em;
+vertical-align: text-top;
+}
+figure table {
+box-shadow: 10px 10px 6px -6px #777;
+}
+figcaption {
+padding-top: 0.25em;
+font-size:   11pt;
+text-align:  left;
+}
+table {
+border:          1px solid #464646;
+margin:          0;
+padding:         0;
+caption-side:    top;
+border-collapse: collapse;
+border-spacing:  0;
+empty-cells:     show;
+font-size:       10pt;
+text-align:      left;
+box-shadow:      10px 10px 6px -6px #777;
+}
+table caption {
+font-size:   120%;
+font-weight: bold;
+}
+table thead {
+border: 1px solid #464646;
+}
+table tbody {
+border: 1px solid #464646;
+}
+table tr {
+border: 1px solid #464646;
+}
+table tr:nth-child(even) {
+background-color:#F0F0F0;
+}
+table th {
+background-color: #DCDCDC;
+color:            #1E1E1E;
+border:           1px solid #464646;
+}
+table th, table td {
+padding:        0.05em 0.2em;
+vertical-align: top;
+}
+table td {
+border:  1px solid #464646;
+}
+table tbody tr:hover th,
+table tbody tr:hover td {background-color: transparent;
+}
+table tbody tr:hover {
+background-color: #A3D0DC;
+}
+button, input[type="button"] {
+color:            #1E1E1E;
+background-color: #EBF0F5;
+border:           1px solid #AAAAAA;
+}
+button:focus, input[type="button"]:focus {
+outline:        1px solid #6E6E6E;
+outline-offset: -3px;
+}
+button:hover, input[type="button"]:hover {
+background-color: #DAECF0;
+}
+button:active, input[type="button"]:active {
+background-color: #AFD7E1;
+}
+table {
+display:         inline-block;
+}
+div {
+margin: 5px 5px;
+}
+table.Auswertungen {
+font-weight:    normal;
+text-align:     left;
+vertical-align: middle;
+}
+table.Auswertungen th, table.Auswertungen td {
+text-align:       right;
+vertical-align:   center;
+padding-left:     1px;
+padding-right:    1px;
+}
+table.Auswertungen th {
+background-color: #DCDCDC;
+}
+table.Auswertungen th.CIdx,
+table.Auswertungen th.RIdx,
+table.Auswertungen th.CFett {
+font-weight:      bold;
+}
+table.Auswertungen th.CIdx,
+table.Auswertungen th.CFett {
+text-align: center;
+}
+table.Auswertungen th.CFett {border-left-width: 1px;}
+table.Auswertungen th.RIdx  {text-align:        left;}
+table.Auswertungen td.NumP,
+table.Auswertungen td.NumPFett,
+table.Auswertungen td.NumN {
+text-align:  right;
+white-space: nowrap;
+}
+table.Auswertungen td.NumPFett {border-left-width: 1px;}
+table.Auswertungen td.NumN     {color:             #CD0000;}
+table.Auswertungen td.L        {text-align:        left;}
+table.Auswertungen td.C        {text-align:        center;}
+table.Auswertungen td.R        {text-align:        right;}
+
+@media only screen {}
+@media only print {@page {
+size:             landscape;
+}
+table  {
+orphans:          5;
+color:            #000000;
+font:             7pt Segoe, Calibri, Tahoma, Arial, sans-serif;
+background-color: #FFFFFF;
+margin:           0;
+padding:          0;
+page-break-after: avoid;
+}
+.donotprint {
+display: none;
+}
+}
+</style>
+<script>
+// global variables
+var printAll = false;
+var printOngoing = false;
+
+// functions
+
+function printPage(all) {
+if (!printOngoing) {
+printAll = all;
+printOngoing = true;
+document.execCommand("Print");
+printOngoing = false;
+} else
+alert('Print already ongoing');
+}
+function savePage()   { document.execCommand("SaveAs",true); }
+function refreshPage(){ document.location.href = "refresh"; }
+function showAll() {
+var list = document.getElementsByTagName("DIV");
+for (var i=0; i<list.length;++i) {
+list[i].style.display = "";
+}
+}
+function hideAll() {
+var list = document.getElementsByTagName("DIV");
+for (var i=0; i<list.length;++i) {
+list[i].style.display = "none";
+}
+}
+function saveHiddenStates() {
+var list = document.getElementsByTagName("DIV");
+for (var i=0; i<list.length;++i) {
+list[i].setAttribute("wasDisplayed", list[i].style.display);
+}
+}
+function restoreHiddenStates() {
+var list = document.getElementsByTagName("DIV");
+for (var i=0; i<list.length;++i) {
+list[i].style.display = list[i].wasDisplayed;
+}
+}
+function beforePrint() {
+printOngoing = true;
+if(printAll) {
+saveHiddenStates();
+showAll();
+}
+document.getElementById("Forms").style.display = "none";
+}
+function afterPrint() {
+if(printAll) {
+restoreHiddenStates();
+}
+document.getElementById("Forms").style.display = "";
+}function jumpTo(value) {
+hideAll();
+document.getElementById("Forms").style.display = "";
+divId = value.substring(1,100);
+myNode = document.getElementById(divId);
+myNode.style.display = "";
+var nodes = myNode.getElementsByTagName("DIV");
+for (var i = 0; i < nodes.length; i++) {
+nodes[i].style.display = "";
+}
+// display the header division too
+switch (divId) {
+case "View_Res_Stat":
+case "View_Res_Mov":
+case "View_Res_Drain":
+document.getElementById("View_Res").style.display = "";
+break;
+case "View_EnergyStat":
+document.getElementById("View_Energy").style.display = "";
+break;
+case "View_Prod_Cumul":
+case "View_Prod_Indiv":
+document.getElementById("View_Prod").style.display = "";
+break;
+case "View_Fahr_Einsatz":
+case "View_Fahr_Batterie":
+document.getElementById("View_Fahr").style.display = "";
+break;
+case "View_Dienst_Brok":
+case "View_Dienst_Exp":
+case "View_Dienst_Imp":
+document.getElementById("View_Dienst").style.display = "";
+break;
+}
+window.navigate(value);
+}</script>
+</head>
+<body onAfterPrint="javascript:afterPrint();" onBeforePrint="javascript:beforePrint();">
+<H1>Tecnomatix Plant Simulation 2302 Statistics</H1>
+<div class="donotprint" id="Forms">
+<form action="select.htm" name="Formular">
+<select name ="cont" size="1" onchange="jumpTo(this.options[this.selectedIndex].value)">
+<optgroup label="Resource Statistics">
+<option selected value="#View_Res_Stat" label="Resource Statistics">Resource Statistics</option>
+</optgroup>
+<optgroup label="Service Statistics">
+<option value="#View_Dienst_Imp" label="Importer Statistics">Importer Statistics</option>
+</optgroup>
+</select>
+<input type="button" value="Show All" name="ShowAll"  onClick="showAll()">
+<input type="button" value="Print This Page" name="Print"    onClick="printPage(false)">
+<input type="button" value="Print All" name="PrintAll" onClick="printPage(true)">
+<input type="button" value="Save" name="Save"     onClick="savePage()">
+<input type="button" value="Refresh" name="Refresh"  onClick="refreshPage()">
+</form>
+</div><!-- select -->
+<div><table>
+<tr>
+<th>Created on</th><td>sábado, 25 de mayo de 2024 8:52 a. m.</td>
+</tr>
+<tr>
+<th>Model name</th><td>C:\Users\ThinkPad\Documents\u\APMG1\plantv2.spp</td>
+</tr>
+<tr>
+<th>Simulation time</th><td>1:37.4994</td>
+</tr>
+</table><!--Timing Info-->
+</div>
+<div id="View_Res">
+<div id="View_Res_Stat">
+<h2>Resource Statistics - Resource Statistics</h2>
+<figure style="page-break-before:auto" id="R_V0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWorkingPortion">Working</th>
+<th class="CIdx" title="StatSetupPortion">Set-up</th>
+<th class="CIdx" title="StatWaitingPortion">Waiting</th>
+<th class="CIdx" title="StatBlockingPortion">Blocked</th>
+<th class="CIdx" title="StatPoweringUpDownPortion">Powering up/down</th>
+<th class="CIdx" title="StatFailPortion">Failed</th>
+<th class="CIdx" title="StatStoppedPortion">Stopped</th>
+<th class="CIdx" title="StatPausingPortion">Paused</th>
+<th class="CIdx" title="StatUnplannedPortion">Unplanned</th>
+<th class="CFett">Portion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">40.02%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">59.98%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="40" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="40" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="40" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="40" y="0" width="60" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Portions of the States</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_M0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatNumIn">Number of Entries</th>
+<th class="CIdx" title="StatNumOut">Number of Exits</th>
+<th class="CIdx" title="StatMinNumMU">Minimum Contents</th>
+<th class="CIdx" title="StatMaxNumMU">Maximum Contents</th>
+<th class="CFett" title="StatRelativeEmptyPortion">Relative Empty</th>
+<th class="CFett" title="StatRelativeFullPortion">Relative Full</th>
+<th class="CFett" title="StatRelativeOccupation">Relative Occupation without Interruptions</th>
+<th class="CIdx" title="StatRelativeOccupationIR">Relative Occupation with Interruptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">4</td><td class="NumP">3</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">20.15%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">79.85%</td><td class="NumP">79.85%</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Material Flow Properties</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="T_T0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="RIdx" rowspan="2">Object</th>
+<th class="CIdx" colspan="2">Rotation Empty</th>
+<th class="CFett" colspan="2">Rotation Loaded</th>
+</tr>
+<tr>
+<th class="CIdx" title="StatRotationEmptyPortion">Portion</th>
+<th class="CFett" title="StatRotationEmptyTime">Sum</th>
+<th class="CFett" title="StatRotationLoadedPortion">Portion</th>
+<th class="CIdx" title="StatRotationLoadedTime">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">20.15%</td><td class="NumP">19.6450</td><td class="NumPFett">19.87%</td><td class="NumP">19.3740</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Rotation Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_A0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWorkingPortion">Portion</th>
+<th class="CIdx" title="StatWorkingCount">Count</th>
+<th class="CIdx" title="StatWorkingTime">Sum</th>
+<th class="CIdx" title="StatWorkingMu">Mean Value</th>
+<th class="CIdx" title="StatWorkingDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">40.02%</td><td class="NumP">8</td><td class="NumP">39.0190</td><td class="NumP">4.8774</td><td class="NumP">0.0958</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Working Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_R0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CFett" title="StatSetupPortion">Portion</th>
+<th class="CIdx" title="StatSetupCount">Count</th>
+<th class="CIdx" title="StatSetupTime">Sum</th>
+<th class="CIdx" title="StatSetupMu">Mean Value</th>
+<th class="CIdx" title="StatSetupDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Set-up Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_W0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWaitingPortion">Portion</th>
+<th class="CIdx" title="StatWaitingCount">Count</th>
+<th class="CIdx" title="StatWaitingTime">Sum</th>
+<th class="CIdx" title="StatWaitingMu">Mean Value</th>
+<th class="CIdx" title="StatWaitingDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Waiting Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_B0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatBlockingPortion">Portion</th>
+<th class="CIdx" title="StatBlockingCount">Count</th>
+<th class="CIdx" title="StatBlockingTime">Sum</th>
+<th class="CIdx" title="StatBlockingMu">Mean Value</th>
+<th class="CIdx" title="StatBlockingDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">59.98%</td><td class="NumP">1</td><td class="NumP">58.4804</td><td class="NumP">58.4804</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Blocked Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_Pw0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatPoweringUpDownPortion">Portion</th>
+<th class="CIdx" title="StatPoweringUpDownCount">Count</th>
+<th class="CIdx" title="StatPoweringUpDownTime">Sum</th>
+<th class="CIdx" title="StatPoweringUpDownMu">Mean Value</th>
+<th class="CIdx" title="StatPoweringUpDownDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Powering up/down Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_Stp0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatStoppedPortion">Portion</th>
+<th class="CIdx" title="StatStoppedCount">Count</th>
+<th class="CIdx" title="StatStoppedTime">Sum</th>
+<th class="CIdx" title="StatStoppedMu">Mean Value</th>
+<th class="CIdx" title="StatStoppedDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Stopped Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_S0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatFailPortion">Portion</th>
+<th class="CIdx" title="StatFailCount">Count</th>
+<th class="CIdx" title="StatFailTime">Sum</th>
+<th class="CIdx" title="StatFailMu">Mean Value</th>
+<th class="CIdx" title="StatFailDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Failed Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_P0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatPausingPortion">Portion</th>
+<th class="CIdx" title="StatPausingCount">Count</th>
+<th class="CIdx" title="StatPausingTime">Sum</th>
+<th class="CIdx" title="StatPausingMu">Mean Value</th>
+<th class="CIdx" title="StatPausingDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Paused Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="R_L0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatEmptyPortion">Portion</th>
+<th class="CIdx" title="StatEmptyCount">Count</th>
+<th class="CIdx" title="StatEmptyTime">Sum</th>
+<th class="CIdx" title="StatEmptyMu">Mean Value</th>
+<th class="CIdx" title="StatEmptyDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">20.15%</td><td class="NumP">4</td><td class="NumP">19.6450</td><td class="NumP">4.9112</td><td class="NumP">0.1355</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Empty Time</figcaption>
+</figure> <!-- table -->
+</div>
+</div>
+<div id="View_Dienst">
+<div id="View_Dienst_Imp">
+<h2>Service Statistics - Importer Statistics</h2>
+<figure style="page-break-before:auto" id="I_I0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="RIdx"  rowspan="2">Object</th>
+<th class="CIdx"  rowspan="2" title="StatWaitingSetupExpPortion+StatWaitingResPortion">Total Delay</th>
+<th class="CFett" colspan="3">Reason for the Delay</th>
+</tr>
+<tr>
+<th class="CFett" title="StatWaitingResPortion">Waiting for Services and Parts</th>
+<th class="CIdx" title="StatWaitingPartsPortion">Waiting for Parts</th>
+<th class="CIdx" title="StatWaitingSetupExpPortion">Waiting for Set-up Exporters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Importers Waiting for Services and Parts</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="I_E0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWaitingResPortion">Waiting for Services and Parts</th>
+<th class="CIdx" title="StatWaitingResCount">Count</th>
+<th class="CIdx" title="StatWaitingResTime">Sum</th>
+<th class="CIdx" title="StatWaitingResMu">Mean Value</th>
+<th class="CIdx" title="StatWaitingResDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Waiting Times for Services and Parts</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="I_BE0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWaitingPartsPortion">Waiting for Parts</th>
+<th class="CIdx" title="StatWaitingPartsCount">Count</th>
+<th class="CIdx" title="StatWaitingPartsTime">Sum</th>
+<th class="CIdx" title="StatWaitingPartsMu">Mean Value</th>
+<th class="CIdx" title="StatWaitingPartsDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Waiting Times for Parts</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="I_R0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatWaitingSetupExpPortion">Waiting for Set-up Exporters</th>
+<th class="CIdx" title="StatWaitingSetupExpCount">Count</th>
+<th class="CIdx" title="StatWaitingSetupExpTime">Sum</th>
+<th class="CIdx" title="StatWaitingSetupExpMu">Mean Value</th>
+<th class="CIdx" title="StatWaitingSetupExpDelta">Standard Deviation</th>
+<th class="CFett" title="StatWaitingSetupExpWaitingPortion">Waiting Time while the Resource Waited</th>
+<th class="CIdx" title="StatWaitingSetupExpWorkingPortion">Waiting Time while the Resource Worked</th>
+<th class="CIdx" title="StatWaitingSetupExpBlockingPortion">Waiting Time while the Resource was Blocked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Waiting Times for Set-up Exporters</figcaption>
+</figure> <!-- table -->
+</div>
+</div>
+</body>
+</html>
