@@ -50,7 +50,7 @@ Implementación de un sistema automatizado para la inspección visual y control 
 * Empaquetado:
 Mejora del sistema automatizado de empaquetado existente para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas.
 
-## Deliverables:
+## Entregables:
 
 * Sistema de control cerrado para el contenido de humedad en el Atomizador de Secado.
 * Sistema automático de control de humedad y densidad aparente en el Prensado.
