@@ -30,7 +30,7 @@ export default defineConfig({
         text: 'Producto',
         items: [
           { text: 'Análisis de diseño', link: '/producto/analisis-disenio'},
-          { text: 'Definición de producto', link: '/producto/definicion-de-producto'},
+          { text: 'Definición de producto', link: '/producto/definicion-de-productos'},
           { text: 'Celda robotizada', link: '/producto/3-celdas-robotizadas' }
         ]
       }
