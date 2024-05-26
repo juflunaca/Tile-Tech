@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Tile tech"
-  text: "Propuesta de automatización para el mejoramiento de un proceso de producción ceramica"
+  text: "Propuesta de automatización para el mejoramiento de un proceso de producción cerámica"
   tagline: "We enhance tile production"
   actions:
     - theme: brand

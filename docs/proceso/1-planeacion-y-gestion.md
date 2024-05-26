@@ -4,7 +4,7 @@
 
 **Objetivo general:** Automatizar una planta de manufactura de baldosas cerámicas que permita la fabricación de tres productos diferentes, mejorando la eficiencia y flexibilidad del proceso.
 
-### Objetivos de Producción:
+### Objetivos de Proyecto:
 
 * Aumentar la producción mensual de baldosas cerámicas en un 15%.
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
