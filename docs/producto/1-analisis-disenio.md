@@ -10,10 +10,12 @@ El proceso de la producción de baldosas cerámicas consta de las siguientes eta
 
 En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-30%, arenas 10-20% , carbonatos 5-10% y caolines 1-5%) se dosifican en proporciones específicas y se introducen en el molino MTC 041 [[1](#referencias)].
 
-Dentro del molino, estos materiales se mezclan con agua y defloculantes, resultando en la formación del slurry, un compuesto líquido crucial para la fabricación de azulejos. La automatización de este proceso implica varios componentes y técnicas avanzadas.
-Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Dentro del molino, un sensor de humedad infrarrojo mide continuamente el contenido de humedad del slurry. Este sensor emite datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad del slurry dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua.
+Dentro del molino, estos materiales se mezclan con agua y defloculantes, resultando en la formación de la barbotina, un compuesto líquido crucial para la fabricación de azulejos. La automatización de este proceso implica varios componentes y técnicas avanzadas.
+Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Dentro del molino, un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor emite datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua. La densidad de las barbotinas varía de 1690 a 1740 g/l [2].
 
-![especificaciones de molino](1-molino-SACMI-MTC.png){width=60%}
+
+![especificaciones de molino](1molienda-SACMI-MTC.png){width=60%}
+> Tomado de [1] pag 68
 
 | dimension | units   | MTC-035 | MTC-041 |
 |-----------|---------|---------|---------|
@@ -24,16 +26,19 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 | E         | mm      | 2900    | 2900    |
 | F         | mm      | 9255    | 10550   |
 
-![especificaciones de molino](1molienda_caracteristicas.png){width=60%}
-> tomado de [2]
+![especificaciones de molino](1molienda-SACMI-MTC-2.png){width=60%}
+> Tomado de [1] pag 68
+
+![Flujo de molino](1molienda-caracteristicas.png){width=60%}
+> Tomado de [2] pag 68
 
 
-La densidad de las barbotinas varía de 1690 a 1740 g/l 
 
-### Atomizador de secado
-En la actualidad, muchas empresas utilizan dispositivos de medición por infrarrojos junto a un muestreador de polvo secado por aspersión para controlar el contenido de humedad del polvo; sin embargo, pocas empresas utilizan esta señal para completar el circuito de control, y no sólo medir sino también controlar la humedad. Se considera necesario cerrar el bucle de control. 
+### Atomizado
 
-Respecto al caudal de suspensión, se encontró que, aunque la medición de la variable se encuentra automatizada, la manipulación de ésta se realiza de manera manual. Se considera necesario automatizar la manipulación de ésta.
+En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación.
+Para mejorar la eficiencia y precisión de este proceso, se propone implementar un sistema de automatización que utilice un sensor infrarrojo y un muestreador de polvo. Estos dispositivos estarían diseñados para monitorear constantemente las condiciones de la barbotina y el sólido resultante. Con base en los datos recopilados por el sensor infrarrojo y el muestreador de polvo, se ajustaría automáticamente la válvula de aspersión de la barbotina.
+
 
 
 
@@ -85,5 +90,7 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 
 
 ## Referencias
-1. [Catalogo de molinos SACMI](/Tile-Tech/catalogos/1molienda_catalogo_Molino_MTC_SACMI.pdf)
-2. [](https://sacmi.com/)
+
+1. Catálogo  de molinos de tambor continuo SACMI. [Catalogo de molinos SACMI](/Tile-Tech/catalogos/1molienda_catalogo_Molino_MTC_SACMI.pdf)
+2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
+
