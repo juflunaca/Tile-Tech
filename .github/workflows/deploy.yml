@@ -6,7 +6,8 @@ on:
       - main  # Change this to match your main branch name
       - docs/*
   workflow_dispatch:
-
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
