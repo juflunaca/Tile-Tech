@@ -1,15 +1,49 @@
 # PLANEACIÓN Y GESTIÓN
 
+## Objetivos y metas
+
+**Objetivo general:** Automatizar una planta de manufactura de baldosas cerámicas que permita la fabricación de tres productos diferentes, mejorando la eficiencia y flexibilidad del proceso.
+
+### Objetivos de Proyecto:
+
+* Aumentar la producción mensual de baldosas cerámicas en un 15%.
+* Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
+* Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
+
+## Descripción del proceso previo a la automatización
+Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/1-analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
+
+
 ## Alcance del proyecto
 
 Podemos definir el alcance del proyecto a partir de los siguientes componentes:
 
-* Alcance Funcional: El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con tamaño de 20x20 centímetros y un grosor de 9 milímetros, con esmalte clase 1, 2 y 3. También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
-* Alcance Tecnológico: La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para cada uno de los subprocesos identificados.
-* Alcance Geográfico: Se trabajará exclusivamente en un entorno de gemelo digital, sin implementación física en fábrica.
-* Alcance de Recursos: Se utilizarán los recursos disponibles dentro del presupuesto asignado para el proyecto, incluyendo equipos, software, personal y el tiempo de implementación indicado en el cronograma.
-* Compatibilidad con Equipos Existentes: La automatización propuesta deberá ser compatible con los equipos y sistemas existentes en la planta de producción.
-* Seguridad y Regulaciones: La implementación de la automatización deberá cumplir con todas las normativas de seguridad laboral y regulaciones ambientales aplicables.
+### Alcance Funcional:
+
+El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 10 milímetros**, con esmalte clase 1, 2 y 3. También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
+
+
+### Alcance Tecnológico: 
+
+La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para los subprocesos identificados que asi lo requieran.
+
+### Alcance Geográfico: 
+
+Se trabajará exclusivamente en un entorno de gemelo digital, sin implementación física en fábrica.
+
+### Alcance de Recursos: 
+
+Se utilizarán los recursos disponibles dentro del presupuesto asignado para el proyecto, incluyendo equipos, software, personal y el tiempo de implementación indicado en el cronograma.
+
+### Compatibilidad con Equipos Existentes: 
+
+La automatización propuesta deberá ser compatible con los equipos y sistemas existentes en la planta de producción.
+
+### Seguridad y Regulaciones: 
+
+La implementación de la automatización deberá cumplir con todas las normativas de seguridad laboral y regulaciones ambientales aplicables.
+
+## Propuesta 
 
 A continuación, se presenta una lista de propuestas para la automatización de una línea de producción de baldosas cerámicas en una empresa mediana con producción anual de 650.000 metros cuadrados.
 
@@ -31,7 +65,7 @@ Implementación de un sistema automatizado para la inspección visual y control 
 * Empaquetado:
 Mejora del sistema automatizado de empaquetado existente para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas.
 
-## Deliverables:
+## Entregables:
 
 * Sistema de control cerrado para el contenido de humedad en el Atomizador de Secado.
 * Sistema automático de control de humedad y densidad aparente en el Prensado.
@@ -53,61 +87,8 @@ El alcance del proyecto incluirá el diseño, desarrollo, implementación y pues
 
 ![NECESIDADES DE AUTOMATIZACIÓN](tabla-de-necesidades-de-producto.png)
 
-## Alcance
-
-
-Podemos definir el alcance del proyecto a partir de los siguientes componentes:
-
-Alcance Funcional: El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con tamaño de 20x20 centímetros y un grosor de 9 milímetros, con esmalte clase 1, 2 y 3. También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
-Alcance Tecnológico: La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para cada uno de los subprocesos identificados.
-Alcance Geográfico: Se trabajará exclusivamente en un entorno de gemelo digital, sin implementación física en fábrica.
-Alcance de Recursos: Se utilizarán los recursos disponibles dentro del presupuesto asignado para el proyecto, incluyendo equipos, software, personal y el tiempo de implementación indicado en el cronograma.
-Compatibilidad con Equipos Existentes: La automatización propuesta deberá ser compatible con los equipos y sistemas existentes en la planta de producción.
-Seguridad y Regulaciones: La implementación de la automatización deberá cumplir con todas las normativas de seguridad laboral y regulaciones ambientales aplicables.
-
 -
-## Descripción del proceso
 
-### Atomizador de secado
-En la actualidad, muchas empresas utilizan dispositivos de medición por infrarrojos junto a un muestreador de polvo secado por aspersión para controlar el contenido de humedad del polvo; sin embargo, pocas empresas utilizan esta señal para completar el circuito de control, y no sólo medir sino también controlar la humedad. Se considera necesario cerrar el bucle de control. 
-
-Respecto al caudal de suspensión, se encontró que, aunque la medición de la variable se encuentra automatizada, la manipulación de ésta se realiza de manera manual. Se considera necesario automatizar la manipulación de ésta.
-
-### Prensado 
-
-Control automático de la medición y manipulación del contenido de humedad en las piezas. 
-Bucle de control tomando en cuenta la densidad aparente de las baldosas se considera necesario.
-
-### Secado: 
-
-Manejo automatizado de temperatura y contenido de humedad en las baldosas.
-
-### Esmaltado: 
-
-Controlador del caudal del esmalte.
-
-### Decoración: 
-
-Inspección visual automatizada.
-
-### Cocción: 
-
-Las dimensiones y curvatura de las piezas se miden de forma automática, pero la manipulación de los valores que determinan estas variables es manual. Se propone automatizar la manipulación de éstas. 
-Adicionalmente, la inspección visual y control de temperatura del aire del quemador se realizan manualmente. Se propone su automatización.
-
-### Empaquetado: 
-
-El empaquetado ya se encuentra automatizado. Se propone una mejora de éste.	
-
-## Objetivos y metas
-
-*Objetivo general:* Automatizar una línea de produccplanta de manufactura de baldosas cerámicas que permita la fabricación de tres productos diferentes, mejorando la eficiencia y flexibilidad del proceso. 
-
-### Objetivos de Producción:
-
-* Aumentar la producción mensual de baldosas cerámicas en un 15%.
-* Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
-* Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
 ### Metas de Eficiencia:
 

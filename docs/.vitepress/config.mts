@@ -1,13 +1,15 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
 import { config } from "dotenv";
 
 config();
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Tile tech",
   description: "Tile tech is a automation proposal to improve the production process of ceramic plant",
-  base: process.env.BASE_PATH ??'/Tile-Tech',
+  base: process.env.BASE_PATH ??'/Tile-Tech/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -30,7 +32,7 @@ export default defineConfig({
         text: 'Producto',
         items: [
           { text: 'Análisis de diseño', link: '/producto/analisis-disenio'},
-          { text: 'Definición de producto', link: '/producto/definicion-de-producto'},
+          { text: 'Definición de producto', link: '/producto/definicion-de-productos'},
           { text: 'Celda robotizada', link: '/producto/3-celdas-robotizadas' }
         ]
       }
@@ -40,5 +42,10 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/juflunaca/Tile-Tech' }
     ]
   },
-  outDir: '../dist'
+  outDir: '../dist',
+  markdown: {
+    config: (md) => {
+      md.use(footnote)
+    }
+  }
 })
