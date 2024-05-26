@@ -10,26 +10,40 @@
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
 * Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
+## Descripción del proceso previo a la automatización
+Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
+
 
 ## Alcance del proyecto
 
 Podemos definir el alcance del proyecto a partir de los siguientes componentes:
 
-### Alcance Funcional: 
-El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con tamaño de 20x20 centímetros y un grosor de 9 milímetros, con esmalte clase 1, 2 y 3. También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
+### Alcance Funcional:
+
+El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 10 milímetros**, con esmalte clase 1, 2 y 3. También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
+
 ### Alcance Tecnológico: 
-La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para cada uno de los subprocesos identificados.
+
+La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para los subprocesos identificados que asi lo requieran.
+
 ### Alcance Geográfico: 
+
 Se trabajará exclusivamente en un entorno de gemelo digital, sin implementación física en fábrica.
+
 ### Alcance de Recursos: 
+
 Se utilizarán los recursos disponibles dentro del presupuesto asignado para el proyecto, incluyendo equipos, software, personal y el tiempo de implementación indicado en el cronograma.
 
 ### Compatibilidad con Equipos Existentes: 
+
 La automatización propuesta deberá ser compatible con los equipos y sistemas existentes en la planta de producción.
+
 ### Seguridad y Regulaciones: 
+
 La implementación de la automatización deberá cumplir con todas las normativas de seguridad laboral y regulaciones ambientales aplicables.
 
 ## Propuesta 
+
 A continuación, se presenta una lista de propuestas para la automatización de una línea de producción de baldosas cerámicas en una empresa mediana con producción anual de 650.000 metros cuadrados.
 
 * Atomizador de Secado:
@@ -73,8 +87,6 @@ El alcance del proyecto incluirá el diseño, desarrollo, implementación y pues
 ![NECESIDADES DE AUTOMATIZACIÓN](tabla-de-necesidades-de-producto.png)
 
 -
-## Descripción del proceso 
-Para mayor detalle sobre el proceso remitirse a [descripción del proceso productivo sin-automatizar](../producto/analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
 
 
 ### Metas de Eficiencia:

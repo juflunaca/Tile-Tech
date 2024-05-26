@@ -16,11 +16,10 @@ hero:
 
 features:
   - title: Planeación y gestión
-    details: Resumen ejecutivo de gestión durante el desarrollo del proyecto
-    link: /proceso/1-planeacion-y-gestion
+    details: Resumen ejecutivo del proceso de gestión elaborado durante el desarrollo del proyecto
+    link: /proceso/
   - title: Analisis de diseño
-    details:  Resumen ejecutivo del diseño realizado 
-    link: /producto/analisis-disenio
-
+    details:  Resumen ejecutivo del proceso de diseño y consideraciones tomadas para la elaboración de la propuesta 
+    link: /producto/
 ---
 

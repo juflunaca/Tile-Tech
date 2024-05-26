@@ -50,10 +50,11 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 ## Indicadores claves de diseño 
 
 
-[KPI](/Tile-Tech/KPI.pdf)
 
 <embed src="/Tile-Tech/KPI.pdf" type="application/pdf" width="100%" height="600px" />
+[KPI](/KPI.pdf)
 
-## Anexos
-- cardboard taken from [Cardboard Insert](https://grabcad.com/library/cardboard-insert-1)
+
+## Modelos usado en el diseño
+- caja de empaque tomado de [Cardboard Insert](https://grabcad.com/library/cardboard-insert-1)
 
