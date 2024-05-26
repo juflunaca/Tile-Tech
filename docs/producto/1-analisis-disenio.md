@@ -14,10 +14,10 @@ Dentro del molino, estos materiales se mezclan con agua y defloculantes, resulta
 Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Dentro del molino, un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor emite datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua. La densidad de las barbotinas varía de 1690 a 1740 g/l [2]. En la molienda la barbotina sale con una humedad del 34% [[2](#referencias)].
 
 
-![especificaciones de molino](1molienda-SACMI-MTC.png){width=60%}
+![especificaciones de molino](1molienda-SACMI-MTC.png){width=80%}
 
 
-![especificaciones de molino](1molienda-SACMI-MTC-2.png){width=60%}
+![especificaciones de molino](1molienda-SACMI-MTC-2.png){width=80%}
 > Tomado de [1] pag 15
 
 | dimension | units   | MTC-035 | MTC-041 |
@@ -30,7 +30,7 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 | F         | mm      | 9255    | 10550   |
 
 
-![Flujo de molino](1molienda-caracteristicas.png){width=60%}
+![Flujo de molino](1molienda-caracteristicas.png){width=80%}
 > Tomado de [2] pag 68
 
 
@@ -40,7 +40,7 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM018 con una capacidad de producción de polvo atomizado de 4.240 kg/hora de polvo con humedad del 6% que representa 3985 kg/hora de polvo seco [[3](#referencias)].
 
 
-![Diagrama de atomización](1atomizacion-diagrama.png){width=60%}
+![Diagrama de atomización](1atomizacion-diagrama.png){width=80%}
 > Tomado de [2]
 
 
@@ -87,18 +87,45 @@ En el proceso de atomización, se inicia con la introducción de la barbotina ob
 
 ### Prensado 
 
-En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros.
+En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con molde tiene un area de trabajo de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto[[4](#referencias)]. 
 
+La cantidad de material que entra a la prensa se define a partir del molino quien limita la entrada a 3500 kg/h de material seco alrededor de 3700 kg/h barbotina con 6% de humedad. Basado en la ficha técnica de piso pared Egeo blanco de Corona cada baldosa pesa tiene un peso aproximado de 327 g [[5](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora que equivalen a un peso aproximado de 4120 kg/hora. Por lo que no trabaja a su máxima capacidad.
+
+
+
+![prensa](1prensado-diagrama.png){width=80%}
+> Tomado de [2] pag 166 a 173
 
 
 ### Secado: 
 
-Los secadores horizontales son de tipo horno monoestrato de rodillos. En este caso las piezas se mueven por encima de los rodillos en horizontal y el aire caliente con el que entran en contacto viene de quemadores que están en los laterales del horno. La temperatura máxima de este tipo de secadores está en los 350oC y los ciclos de secado son menores, entre 15 y 25 minutos. 
+En el proceso de secado se busca eliminar la humedad de las baldosas cerámicas. La cual se reduce de un 6% a un 0.5%. 
+Durante el secado se realiza una transferencia de calor desde el ambiente al cuerpo cerámico a secar.  Los secadores horizontales son de tipo horno monoestrato de rodillos. En este caso las piezas se mueven por encima de los rodillos en horizontal y el aire caliente con el que entran en contacto viene de quemadores que están en los laterales del horno. La temperatura máxima de este tipo de secadores está en los 350oC y los ciclos de secado son menores, entre 15 y 25 minutos. 
+
+
+![prensa](1secado-table.png){width=80%}
+
+Basado en la ecuación de secado se tiene que el tiempo de secado es de 12 minutos. 
+
+```  
+SECADO	
+Teo : tiempo de secado en minutos	
+Teo = (S)3/2 + (0.02 × Lm) × Ko	
+Ko : coeficiente del material	0.55 gres porcelánico
+S : espesor total mm	6,4mm
+Lm : lado mayor en mm	200
+	
+Teo : tiempo de secado en minutos	12
+```
+
+
 
 ### Esmaltado: 
 
 El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades tecnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc.
-El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones. Al principio, cuando se aplican las capas de esmalte en el soporte cerámico, son plásticas pero debido a la succión y evaporación  superficial del agua, se convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Controlador del caudal del esmalte.
+El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones. Al aplicar las capas de esmalte en el soporte cerámico convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Controlador del caudal del esmalte. Durante el proceso de esmaltado La velocidad de transporte es de aproximadamente 20-25 m/min.
+
+
 
 
 ### Decoración: 
@@ -149,3 +176,5 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 1. Catálogo  de molinos de tambor continuo SACMI. [Catalogo de molinos SACMI](/catalogos/1molienda_catalogo_Molino_MTC_SACMI.pdf)
 2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
 3. Preparacion de polvos ceramicos atomizacion.[SACMI](https://sacmi.com/es-ES/ceramics/Azulejos/Preparacion-de-polvos-ceramicos/atomizacion/ATM)
+4. [Catalogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
+5. []()

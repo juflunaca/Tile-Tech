@@ -50,3 +50,13 @@ export default defineConfig({
     }
   }
 })
+
+/*
+
+export default {
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('TeamMember', TeamMember)
+  }
+}
+*/
