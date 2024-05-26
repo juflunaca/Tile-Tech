@@ -69,6 +69,7 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 
 
 <embed src="/Tile-Tech/KPI.pdf" type="application/pdf" width="100%" height="600px" />
+
 [KPI](/KPI.pdf)
 
 
@@ -78,4 +79,4 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 
 
 ## Referencias
-1. [Catalogo de molinos SACMI](/Tile-Tech/catalogos/1molienda_catalogo_Molino_MTC_Sacmi)
+1. [Catalogo de molinos SACMI](/Tile-Tech/catalogos/1molienda_catalogo_Molino_MTC_SACMI.pdf)

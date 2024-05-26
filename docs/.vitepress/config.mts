@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
 import { config } from "dotenv";
 
 config();
@@ -41,5 +42,10 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/juflunaca/Tile-Tech' }
     ]
   },
-  outDir: '../dist'
+  outDir: '../dist',
+  markdown: {
+    config: (md) => {
+      md.use(footnote)
+    }
+  }
 })
