@@ -2,7 +2,7 @@
 
 Proceso de desarrollo de proyecto
 ## [Planeaciony gestion](./1-planeacion-y-gestion)
-## [COmunicacion](./2-comunicacion)
+## [COmunicacion](./2-comunicaciones)
 ## [Cronograma](./3-cronograma)
 ## [Proceso de aprendizaje](./4-proceso-de-aprendizaje)
 

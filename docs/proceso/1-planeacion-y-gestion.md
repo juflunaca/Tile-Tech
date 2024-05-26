@@ -11,7 +11,7 @@
 * Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
 ## Descripción del proceso previo a la automatización
-Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
+Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/1-analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
 
 
 ## Alcance del proyecto

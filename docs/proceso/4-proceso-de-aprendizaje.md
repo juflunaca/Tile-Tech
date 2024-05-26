@@ -4,12 +4,13 @@
 ## Modulo de automatización industrial
 
 ## Gerencia de producción
+<!--
 
 - [VSM](./VSM.md): 
 - [KPIS](./KPIS.md):
-
+-->
 ## Modulo de gestión de proyectos
-- [Planeación de proyectos](./pllaneacion-y-gestion.md):
+- [Planeación de proyectos](./1-planeacion-y-gestion):
 
 ### Analisis economico
 
