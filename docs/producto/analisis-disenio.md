@@ -3,10 +3,16 @@
 
 ## Descripción del proceso productivo sin automatizar
 
+El proceso previo a la automatización de la producción de baldosas cerámicas consta de las siguientes etapas:
+
+
+
 ### Atomizador de secado
 En la actualidad, muchas empresas utilizan dispositivos de medición por infrarrojos junto a un muestreador de polvo secado por aspersión para controlar el contenido de humedad del polvo; sin embargo, pocas empresas utilizan esta señal para completar el circuito de control, y no sólo medir sino también controlar la humedad. Se considera necesario cerrar el bucle de control. 
 
 Respecto al caudal de suspensión, se encontró que, aunque la medición de la variable se encuentra automatizada, la manipulación de ésta se realiza de manera manual. Se considera necesario automatizar la manipulación de ésta.
+
+
 
 ### Prensado 
 
@@ -43,12 +49,10 @@ Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%)
 
 ## Indicadores claves de diseño 
 
-<embed src="KPI.pdf" type="application/pdf" width="100%" height="600px" />
 
-[KPI](KPI.pdf)
+[KPI](/Tile-Tech/KPI.pdf)
 
-<embed src="/Tile-tech/KPI.pdf" type="application/pdf" width="100%" height="600px" />
-<embed src="${import.meta.env.BASE_URL}KPI.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="/Tile-Tech/KPI.pdf" type="application/pdf" width="100%" height="600px" />
 
 ## Anexos
 - cardboard taken from [Cardboard Insert](https://grabcad.com/library/cardboard-insert-1)
