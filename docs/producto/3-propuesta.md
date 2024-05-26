@@ -1,0 +1,2 @@
+## Propuestas de automatización
+
