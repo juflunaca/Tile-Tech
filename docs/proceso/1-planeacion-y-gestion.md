@@ -10,8 +10,8 @@
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
 * Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
-## Descripción del proceso previo a la automatización
-Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/1-analisis-disenio.md#descripción-del-proceso-productivo-sin-automatizar)
+## Descripción del proceso previo a intervención
+Para mayor detalle sobre el funcionamiento del proceso previo a la automatización remitirse a [descripción del proceso productivo sin-automatizar](../producto/1-analisis-disenio.md#descripción-del-proceso-productivo-previo-a-intervencion)
 
 
 ## Alcance del proyecto

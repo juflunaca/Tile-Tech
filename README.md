@@ -24,3 +24,13 @@ Para hacer un despligue local para prueba de resultados
 ```
 yarn run docs:dev
 ```
+
+## Development
+
+pre-commit hooks
+echo 'yarn docs:build' > .git/hooks/pre-commit
+
+
+```bash
+echo 'yarn docs:build' > .git/hooks/pre-commit
+```
