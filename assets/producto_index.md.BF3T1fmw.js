@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.BtoQSCtf.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"producto/index.md","filePath":"producto/index.md"}'),r={name:"producto/index.md"};function a(n,c,d,s,i,p){return o(),t("div")}const f=e(r,[["render",a]]);export{m as __pageData,f as default};

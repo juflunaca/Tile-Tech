@@ -1,0 +1,1 @@
+import{_ as a,c as e,o,a1 as r}from"./chunks/framework.BtoQSCtf.js";const u=JSON.parse('{"title":"Proceso","description":"","frontmatter":{},"headers":[],"relativePath":"proceso/index.md","filePath":"proceso/index.md"}'),n={name:"proceso/index.md"},c=r("",6),i=[c];function t(s,d,l,h,p,m){return o(),e("div",null,i)}const f=a(n,[["render",t]]);export{u as __pageData,f as default};
