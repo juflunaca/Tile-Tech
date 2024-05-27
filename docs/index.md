@@ -4,7 +4,7 @@ layout: home
 
 hero:
   image:
-      src: resources/tile-tech-logo.jpg
+      src: ./resources/tile-tech-logo.jpg
       alt: Hero Image
   name: "Tile tech"
   text: "Propuesta de automatización para el mejoramiento de un proceso de producción cerámica"
