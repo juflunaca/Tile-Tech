@@ -24,16 +24,17 @@ export default defineConfig({
         text: 'Proceso',
         items: [
           { text: 'Planeación y gestión', link: '/proceso/1-planeacion-y-gestion' },
-          { text: 'Comunicaciones', link: '/proceso/comunicaciones' },
-          { text: 'Cronograma', link: '/proceso/cronograma' }
+          { text: 'Comunicaciones', link: '/proceso/2-comunicaciones' },
+          { text: 'Cronograma', link: '/proceso/3-cronograma' },
+          { text: 'Proceso de aprendizaje', link: '/proceso/4-proceso-de-aprendizaje' }
         ]
       },
       {
         text: 'Producto',
         items: [
-          { text: 'Análisis de diseño', link: '/producto/analisis-disenio'},
-          { text: 'Definición de producto', link: '/producto/definicion-de-productos'},
-          { text: 'Celda robotizada', link: '/producto/3-celdas-robotizadas' }
+          { text: 'Análisis de diseño', link: '/producto/1-analisis-disenio'},
+          { text: 'Definición de producto', link: '/producto/2-definicion-de-productos'},
+          { text: 'Celda robotizada', link: '/producto/6-celdas-robotizadas' }
         ]
       }
     ],
@@ -44,8 +45,20 @@ export default defineConfig({
   },
   outDir: '../dist',
   markdown: {
+    math: true,
     config: (md) => {
       md.use(footnote)
+      
     }
   }
 })
+
+/*
+
+export default {
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('TeamMember', TeamMember)
+  }
+}
+*/

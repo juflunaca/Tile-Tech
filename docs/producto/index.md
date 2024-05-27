@@ -1,10 +1,16 @@
 
-
-# Productos
+# Desarrollo de propuesta de automatización 
  
-
-[tecnomatix](//Tile-Tech/tecnomatix_report)
+Para el desarrollo de la propuesta de automatización se tuvieron en cuenta las siguientes secciones:
 
 ## [Análisis y Diseño](./1-analisis-disenio)
+
 ## [Definición de productos](./2-definicion-de-productos)
+
 ## [Análisis económico](./3-analisis_economico)
+
+<!---
+[tecnomatix](/tecnomatix_report)
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+-->
