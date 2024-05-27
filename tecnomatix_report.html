@@ -276,9 +276,11 @@ window.navigate(value);
 <select name ="cont" size="1" onchange="jumpTo(this.options[this.selectedIndex].value)">
 <optgroup label="Resource Statistics">
 <option selected value="#View_Res_Stat" label="Resource Statistics">Resource Statistics</option>
+<option value="#View_Res_Drain" label="Drain Statistics">Drain Statistics</option>
 </optgroup>
 <optgroup label="Service Statistics">
 <option value="#View_Dienst_Imp" label="Importer Statistics">Importer Statistics</option>
+<option value="#View_Dienst_Brok" label="Broker Statistics">Broker Statistics</option>
 </optgroup>
 </select>
 <input type="button" value="Show All" name="ShowAll"  onClick="showAll()">
@@ -290,13 +292,13 @@ window.navigate(value);
 </div><!-- select -->
 <div><table>
 <tr>
-<th>Created on</th><td>sábado, 25 de mayo de 2024 8:52 a. m.</td>
+<th>Created on</th><td>domingo, 26 de mayo de 2024 10:32 p. m.</td>
 </tr>
 <tr>
-<th>Model name</th><td>C:\Users\ThinkPad\Documents\u\APMG1\plantv2.spp</td>
+<th>Model name</th><td>C:\Users\ThinkPad\Documents\u\APMG1\previous_plant.spp</td>
 </tr>
 <tr>
-<th>Simulation time</th><td>1:37.4994</td>
+<th>Simulation time</th><td>45:30.8712</td>
 </tr>
 </table><!--Timing Info-->
 </div>
@@ -322,17 +324,753 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">40.02%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">59.98%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
-<rect x="0" y="0" width="40" height="9" fill="#2A932A">
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">84.05%</td><td class="NumP">0.00%</td><td class="NumP">0.25%</td><td class="NumP">15.70%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="84" height="9" fill="#2A932A">
 <title>Working</title>
 </rect>
-<rect x="40" y="0" width="0" height="9" fill="#A8852D">
+<rect x="84" y="0" width="0" height="9" fill="#A8852D">
 <title>Set-up</title>
 </rect>
-<rect x="40" y="0" width="0" height="9" fill="#BEBEBE">
+<rect x="84" y="0" width="0" height="9" fill="#BEBEBE">
 <title>Waiting</title>
 </rect>
-<rect x="40" y="0" width="60" height="9" fill="#FFB900">
+<rect x="84" y="0" width="16" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">99.52%</td><td class="NumP">0.00%</td><td class="NumP">0.48%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">25.65%</td><td class="NumP">0.00%</td><td class="NumP">4.23%</td><td class="NumP">70.11%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="26" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="26" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="26" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="30" y="0" width="70" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">25.68%</td><td class="NumP">0.00%</td><td class="NumP">4.23%</td><td class="NumP">70.09%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="26" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="26" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="26" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="30" y="0" width="70" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">95.66%</td><td class="NumP">0.00%</td><td class="NumP">4.34%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="96" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="96" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="96" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">94.54%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">5.46%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="95" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="95" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="95" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="95" y="0" width="5" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">25.68%</td><td class="NumP">0.00%</td><td class="NumP">4.23%</td><td class="NumP">70.09%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="26" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="26" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="26" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="30" y="0" width="70" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">84.05%</td><td class="NumP">0.00%</td><td class="NumP">0.25%</td><td class="NumP">15.70%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="84" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="84" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="84" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="84" y="0" width="16" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">99.52%</td><td class="NumP">0.00%</td><td class="NumP">0.48%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">95.66%</td><td class="NumP">0.00%</td><td class="NumP">4.34%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="96" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="96" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="96" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="0" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="0" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="0" y="0" width="100" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">25.65%</td><td class="NumP">0.00%</td><td class="NumP">4.23%</td><td class="NumP">70.11%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="26" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="26" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="26" y="0" width="4" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="30" y="0" width="70" height="9" fill="#FFB900">
+<title>Blocking</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#AD687F">
+<title>Powering up/down</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BF1B1B">
+<title>Failed</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#F0AABE">
+<title>Stopped</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#0F789B">
+<title>Paused</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#50BED7">
+<title>Unplanned</title>
+</rect>
+</svg><!-- bargraphics -->
+</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">100.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td><td class="NumPFett"><svg class="resources" style="margin: 3px 1px 0 1px; nobr; width: 100px; height: 10px;">
+<rect x="0" y="0" width="100" height="9" fill="#2A932A">
+<title>Working</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#A8852D">
+<title>Set-up</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#BEBEBE">
+<title>Waiting</title>
+</rect>
+<rect x="100" y="0" width="0" height="9" fill="#FFB900">
 <title>Blocking</title>
 </rect>
 <rect x="100" y="0" width="0" height="9" fill="#AD687F">
@@ -374,34 +1112,121 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">4</td><td class="NumP">3</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">20.15%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">79.85%</td><td class="NumP">79.85%</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">537</td><td class="NumP">2680</td><td class="NumP">0</td><td class="NumP">5</td><td class="NumPFett">0.25%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">99.75%</td><td class="NumP">99.75%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumPFett">100.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">2676</td><td class="NumP">1893</td><td class="NumP">0</td><td class="NumP">784</td><td class="NumPFett">0.48%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">9.21%</td><td class="NumP">9.21%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">935</td><td class="NumP">934</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">4.23%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">95.77%</td><td class="NumP">95.77%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">935</td><td class="NumP">934</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">4.23%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">95.77%</td><td class="NumP">95.77%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">1867</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">1867</td><td class="NumPFett">4.34%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">37.21%</td><td class="NumP">37.21%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">1</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">0.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">947</td><td class="NumP">935</td><td class="NumP">0</td><td class="NumP">12</td><td class="NumPFett">4.15%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">543</td><td class="NumP">542</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">0.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">542</td><td class="NumP">537</td><td class="NumP">0</td><td class="NumP">5</td><td class="NumPFett">0.67%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">2680</td><td class="NumP">2676</td><td class="NumP">0</td><td class="NumP">5</td><td class="NumPFett">45.07%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">947</td><td class="NumP">935</td><td class="NumP">0</td><td class="NumP">12</td><td class="NumPFett">4.15%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">935</td><td class="NumP">934</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">4.23%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">95.77%</td><td class="NumP">95.77%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">1868</td><td class="NumP">1867</td><td class="NumP">0</td><td class="NumP">2</td><td class="NumPFett">4.25%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumPFett">100.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumPFett">100.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumPFett">100.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">537</td><td class="NumP">2680</td><td class="NumP">0</td><td class="NumP">5</td><td class="NumPFett">0.25%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">99.75%</td><td class="NumP">99.75%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">2676</td><td class="NumP">1893</td><td class="NumP">0</td><td class="NumP">784</td><td class="NumPFett">0.48%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">9.21%</td><td class="NumP">9.21%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">1867</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">1867</td><td class="NumPFett">4.34%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">37.21%</td><td class="NumP">37.21%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">1</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">0.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">2</td><td class="NumP">1</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">0.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">935</td><td class="NumP">934</td><td class="NumP">0</td><td class="NumP">1</td><td class="NumPFett">4.23%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">95.77%</td><td class="NumP">95.77%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">946</td><td class="NumP">935</td><td class="NumP">0</td><td class="NumP">12</td><td class="NumPFett">4.15%</td><td class="NumPFett">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <figcaption>Material Flow Properties</figcaption>
 </figure> <!-- table -->
-<figure style="page-break-before:auto" id="T_T0">
+<figure style="page-break-before:auto" id="C_V0">
 <table class="Auswertungen">
 <thead>
 <tr>
-<th class="RIdx" rowspan="2">Object</th>
-<th class="CIdx" colspan="2">Rotation Empty</th>
-<th class="CFett" colspan="2">Rotation Loaded</th>
+<th class="RIdx"  rowspan="2">Object</th>
+<th class="CIdx"  colspan="2">Moving Empty</th>
+<th class="CFett" colspan="2">Moving Loaded</th>
 </tr>
 <tr>
-<th class="CIdx" title="StatRotationEmptyPortion">Portion</th>
-<th class="CFett" title="StatRotationEmptyTime">Sum</th>
-<th class="CFett" title="StatRotationLoadedPortion">Portion</th>
-<th class="CIdx" title="StatRotationLoadedTime">Sum</th>
+<th class="CIdx" title="StatMovingEmptyPortion">Portion</th>
+<th class="CFett" title="StatMovingEmptyTime">Sum</th>
+<th class="CFett" title="StatMovingLoadedPortion">Portion</th>
+<th class="CIdx" title="StatMovingLoadedTime">Sum</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">20.15%</td><td class="NumP">19.6450</td><td class="NumPFett">19.87%</td><td class="NumP">19.3740</td>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
-<figcaption>Rotation Time</figcaption>
+<figcaption>Moving Time</figcaption>
 </figure> <!-- table -->
 <figure style="page-break-before:auto" id="R_A0">
 <table class="Auswertungen">
@@ -417,7 +1242,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">40.02%</td><td class="NumP">8</td><td class="NumP">39.0190</td><td class="NumP">4.8774</td><td class="NumP">0.0958</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">84.05%</td><td class="NumP">537</td><td class="NumP">38:15.3089</td><td class="NumP">4.2743</td><td class="NumP">0.1317</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">99.52%</td><td class="NumP">1</td><td class="NumP">45:17.8289</td><td class="NumP">45:17.8289</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">25.65%</td><td class="NumP">935</td><td class="NumP">11:40.5789</td><td class="NumP">0.7493</td><td class="NumP">0.0219</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">25.68%</td><td class="NumP">935</td><td class="NumP">11:41.2500</td><td class="NumP">0.7500</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">95.66%</td><td class="NumP">1</td><td class="NumP">43:32.4789</td><td class="NumP">43:32.4789</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">94.54%</td><td class="NumP">543</td><td class="NumP">43:01.8067</td><td class="NumP">4.7547</td><td class="NumP">0.1731</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">25.68%</td><td class="NumP">935</td><td class="NumP">11:41.2500</td><td class="NumP">0.7500</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">84.05%</td><td class="NumP">537</td><td class="NumP">38:15.3089</td><td class="NumP">4.2743</td><td class="NumP">0.1317</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">99.52%</td><td class="NumP">1</td><td class="NumP">45:17.8289</td><td class="NumP">45:17.8289</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">95.66%</td><td class="NumP">1</td><td class="NumP">43:32.4789</td><td class="NumP">43:32.4789</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">25.65%</td><td class="NumP">935</td><td class="NumP">11:40.5789</td><td class="NumP">0.7493</td><td class="NumP">0.0219</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -437,7 +1331,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -457,7 +1420,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.25%</td><td class="NumP">1</td><td class="NumP">6.7622</td><td class="NumP">6.7622</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.48%</td><td class="NumP">1</td><td class="NumP">13.0422</td><td class="NumP">13.0422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.6422</td><td class="NumP">1:55.6422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.4422</td><td class="NumP">1:55.4422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">4.34%</td><td class="NumP">1</td><td class="NumP">1:58.3922</td><td class="NumP">1:58.3922</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.4422</td><td class="NumP">1:55.4422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.25%</td><td class="NumP">1</td><td class="NumP">6.7622</td><td class="NumP">6.7622</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.48%</td><td class="NumP">1</td><td class="NumP">13.0422</td><td class="NumP">13.0422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">4.34%</td><td class="NumP">1</td><td class="NumP">1:58.3922</td><td class="NumP">1:58.3922</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.6422</td><td class="NumP">1:55.6422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -477,7 +1509,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">59.98%</td><td class="NumP">1</td><td class="NumP">58.4804</td><td class="NumP">58.4804</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">15.70%</td><td class="NumP">536</td><td class="NumP">7:08.8000</td><td class="NumP">0.8000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">70.11%</td><td class="NumP">934</td><td class="NumP">31:54.6500</td><td class="NumP">2.0499</td><td class="NumP">0.0016</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">70.09%</td><td class="NumP">934</td><td class="NumP">31:54.1789</td><td class="NumP">2.0494</td><td class="NumP">0.0170</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">5.46%</td><td class="NumP">469</td><td class="NumP">2:29.0645</td><td class="NumP">0.3178</td><td class="NumP">0.0006</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">70.09%</td><td class="NumP">934</td><td class="NumP">31:54.1789</td><td class="NumP">2.0494</td><td class="NumP">0.0170</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">15.70%</td><td class="NumP">536</td><td class="NumP">7:08.8000</td><td class="NumP">0.8000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">70.11%</td><td class="NumP">934</td><td class="NumP">31:54.6500</td><td class="NumP">2.0499</td><td class="NumP">0.0016</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +1598,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -517,7 +1687,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -537,7 +1776,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -557,7 +1865,76 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -577,11 +1954,124 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">20.15%</td><td class="NumP">4</td><td class="NumP">19.6450</td><td class="NumP">4.9112</td><td class="NumP">0.1355</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.25%</td><td class="NumP">1</td><td class="NumP">6.7622</td><td class="NumP">6.7622</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.48%</td><td class="NumP">1</td><td class="NumP">13.0422</td><td class="NumP">13.0422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.6422</td><td class="NumP">1:55.6422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.4422</td><td class="NumP">1:55.4422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">4.34%</td><td class="NumP">1</td><td class="NumP">1:58.3922</td><td class="NumP">1:58.3922</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">4.15%</td><td class="NumP">1</td><td class="NumP">1:53.2422</td><td class="NumP">1:53.2422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter2"> Converter2</th><td class="NumP">0.67%</td><td class="NumP">10</td><td class="NumP">18.1774</td><td class="NumP">1.8177</td><td class="NumP">1.3206</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter3"> Converter3</th><td class="NumP">45.07%</td><td class="NumP">536</td><td class="NumP">20:30.8422</td><td class="NumP">2.2963</td><td class="NumP">0.3785</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4"> Converter4</th><td class="NumP">4.15%</td><td class="NumP">1</td><td class="NumP">1:53.2422</td><td class="NumP">1:53.2422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.4422</td><td class="NumP">1:55.4422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter411"> Converter411</th><td class="NumP">4.25%</td><td class="NumP">1</td><td class="NumP">1:56.1922</td><td class="NumP">1:56.1922</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter4111"> Converter4111</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.25%</td><td class="NumP">1</td><td class="NumP">6.7622</td><td class="NumP">6.7622</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.48%</td><td class="NumP">1</td><td class="NumP">13.0422</td><td class="NumP">13.0422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">4.34%</td><td class="NumP">1</td><td class="NumP">1:58.3922</td><td class="NumP">1:58.3922</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">4.23%</td><td class="NumP">1</td><td class="NumP">1:55.6422</td><td class="NumP">1:55.6422</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Converter41"> Converter41</th><td class="NumP">4.15%</td><td class="NumP">1</td><td class="NumP">1:53.4422</td><td class="NumP">1:53.4422</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
 <figcaption>Empty Time</figcaption>
+</figure> <!-- table -->
+</div>
+<div id="View_Res_Drain">
+<h2>Resource Statistics - Drain Statistics</h2>
+<figure style="page-break-before:auto" id="D_C0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="typeStatisticsCumulated">Working</th>
+<th class="CIdx" title="typeStatisticsCumulated">Set-up</th>
+<th class="CIdx" title="typeStatisticsCumulated">Waiting</th>
+<th class="CIdx" title="typeStatisticsCumulated">Stopped</th>
+<th class="CIdx" title="typeStatisticsCumulated">Failed</th>
+<th class="CIdx" title="typeStatisticsCumulated">Paused</th>
+<th class="CFett" title="StatAvgLifeSpan">Mean Life Time</th>
+<th class="CIdx" title="StatAvgExitInterval">Mean Exit Time</th>
+<th class="CIdx" title="StatDeleted">Total Throughput</th>
+<th class="CIdx" title="StatThroughputPerHour">Throughput per Hour</th>
+<th class="CIdx" title="StatThroughputPerDay">Throughput per Day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx"> Drain</th><td class="NumP">5696.04%</td><td class="NumP">5696.04%</td><td class="NumP">5696.04%</td><td class="NumP">5696.04%</td><td class="NumP">28.63%</td><td class="NumP">28.63%</td><td class="NumPFett">&nbsp;</td><td class="NumP">&nbsp;</td><td class="NumP">&nbsp;</td><td class="NumP">&nbsp;</td><td class="NumP">&nbsp;</td></tr>
+</tbody>
+</table>
+<figcaption>Cumulated Statistics of the Parts which the Drain Deleted</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="D_A0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Object</th>
+<th class="CIdx" title="StatDeleted">All Types</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx"> Drain</th><td class="NumP">0</td></tr>
+</tbody>
+</table>
+<figcaption>Part Types which the Drain Deleted</figcaption>
 </figure> <!-- table -->
 </div>
 </div>
@@ -604,7 +2094,58 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Molino"> Molino</th><td class="NumP">0.00%</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">5.46%</td><td class="NumPFett">5.46%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumPFett">100.00%</td><td class="NumP">100.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
 </tr>
 </tbody>
 </table>
@@ -624,7 +2165,58 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Molino"> Molino</th><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">5.46%</td><td class="NumP">469</td><td class="NumP">2:29.0645</td><td class="NumP">0.3178</td><td class="NumP">0.0006</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -644,7 +2236,58 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Molino"> Molino</th><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">100.00%</td><td class="NumP">1</td><td class="NumP">45:30.8712</td><td class="NumP">45:30.8712</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
 </tr>
 </tbody>
 </table>
@@ -667,11 +2310,151 @@ window.navigate(value);
 </thead>
 <tbody>
 <tr>
-<th class="RIdx" title=".Proyecto.Vamooos.PickAndPlace"> PickAndPlace</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Molino"> Molino</th><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumPFett">-&nbsp;</td><td class="NumP">-&nbsp;</td><td class="NumP">-&nbsp;</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado1</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.preprensado"> preprensado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado"> Esmaltado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Paletizado"> Paletizado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Drain"> Drain</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Prensa"> Prensa</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Secado"> Secado</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Horno"> Horno</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Embalaje"> Embalaje</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.sourceCajas"> sourceCajas</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
+</tr>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Esmaltado2"> Esmaltado2</th><td class="NumP">0.00%</td><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.00%</td><td class="NumP">0.00%</td><td class="NumP">0.00%</td>
 </tr>
 </tbody>
 </table>
 <figcaption>Waiting Times for Set-up Exporters</figcaption>
+</figure> <!-- table -->
+</div>
+<div id="View_Dienst_Brok">
+<h2>Service Statistics - Broker Statistics</h2>
+<figure style="page-break-before:auto" id="B_W0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="RIdx"  rowspan="2">Object</th>
+<th class="CIdx"  colspan="4">Sum</th>
+<th class="CFett" colspan="3">Mediation Time</th>
+<th class="CFett" colspan="3">Dwelling Time</th>
+</tr>
+<tr>
+<th class="CIdx" title="StatOpenRequests">Open Requests</th>
+<th class="CIdx" title="StatSatisfiedRequests">Satisfied Requests</th>
+<th class="CIdx" title="StatOpenCapacity">Open Capacity</th>
+<th class="CIdx" title="StatMediatedCapacity">Mediated Capacity</th>
+<th class="CFett" title="StatMediationtime">Sum</th>
+<th class="CIdx" title="StatMediationtimeMu">Mean Value</th>
+<th class="CIdx" title="StatMediationtimeDelta">Standard Deviation</th>
+<th class="CFett" title="StatStaytime">Sum</th>
+<th class="CIdx" title="StatStaytimeMu">Mean Value</th>
+<th class="CIdx" title="StatStaytimeDelta">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx" title=".Proyecto.main.Broker"> Broker</th><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumP">0</td><td class="NumPFett">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumPFett">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Broker Statistics</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="B_SM0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Services</th>
+<th class="CIdx" title="serviceStat">Count</th>
+<th class="CIdx" title="serviceStat">Sum</th>
+<th class="CIdx" title="serviceStat">Mean Value</th>
+<th class="CIdx" title="serviceStat">Standard Deviation</th>
+<th class="CIdx" title="serviceStat">Minimum</th>
+<th class="CIdx" title="serviceStat">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx"> Failure</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Processing</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Set-up</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> StandardService</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Transport</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+</tbody>
+</table>
+<figcaption>Dwelling Time</figcaption>
+</figure> <!-- table -->
+<figure style="page-break-before:auto" id="B_SW0">
+<table class="Auswertungen">
+<thead>
+<tr>
+<th class="CIdx">Services</th>
+<th class="CIdx" title="serviceStat">Count</th>
+<th class="CIdx" title="serviceStat">Sum</th>
+<th class="CIdx" title="serviceStat">Mean Value</th>
+<th class="CIdx" title="serviceStat">Standard Deviation</th>
+<th class="CIdx" title="serviceStat">Minimum</th>
+<th class="CIdx" title="serviceStat">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="RIdx"> Failure</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Processing</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Set-up</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> StandardService</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+<tr>
+<th class="RIdx"> Transport</th><td class="NumP">0</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td><td class="NumP">0.0000</td></tr>
+</tbody>
+</table>
+<figcaption>Mediation Time</figcaption>
 </figure> <!-- table -->
 </div>
 </div>
