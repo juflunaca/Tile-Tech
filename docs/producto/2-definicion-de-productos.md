@@ -5,4 +5,4 @@ baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 cent
 
 
 
-<embed src="https://aunclic.alfa.com.co/staging/doc/225027853-FT.pdf" type="application/pdf" width="100%" height="300px" />
+<embed src="/Tile-Tech/1productos_baldosa.pdf" type="application/pdf" width="100%" height="400px" />

@@ -1,7 +1,6 @@
 # Proceso de aprendizaje
+A continuación se presentan los modulos de aprendizaje  de las habilidades desarrolladas durante este proyecto y lass secicones y entregables correspondientes que se han desarrollado a lo largo del proyecto el proyecto.
 
-
-## Modulo de automatización industrial
 
 ## Gerencia de producción
 <!--
@@ -10,7 +9,9 @@
 - [KPIS](./KPIS.md):
 -->
 ## Modulo de gestión de proyectos
-- [Planeación de proyectos](./1-planeacion-y-gestion):
+
+- [Planeación de proyectos](./1-planeacion-y-gestion)
+- [Protocolo de comunicaciones](./2-comunicaciones)
 
 ### Analisis economico
 
