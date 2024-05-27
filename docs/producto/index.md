@@ -11,4 +11,6 @@ Para el desarrollo de la propuesta de automatización se tuvieron en cuenta las 
 
 <!---
 [tecnomatix](/tecnomatix_report)
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 -->

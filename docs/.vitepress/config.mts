@@ -45,8 +45,10 @@ export default defineConfig({
   },
   outDir: '../dist',
   markdown: {
+    math: true,
     config: (md) => {
       md.use(footnote)
+      
     }
   }
 })
