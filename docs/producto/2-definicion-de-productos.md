@@ -1,8 +1,12 @@
 # Definición de productos
 
 
-El producto fabrico consta de:
-baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 6 milímetros**, con esmalte clase 1, 2 y 3. Un peso de baldosa de 0.37 kg.
+El producto fabrico consta de tres tipos diferentes de baldosas de porcelana todas con **tamaño de 20x20 centímetros** , un **grosor de 5.7 $\pm$ 0.3 milímetros** y Un peso de baldosa de 522 g. Las baldosas son empacadas en cajas de 35 o 28 baldosas dependiendo del producto.  Estas cajas de baldosas son empacadas en palets de 80 cajas
+
+baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 6 milímetros**, con esmalte clase 1, 2 y 3.
+<!--
+(19.8x19.8)
+-->
 
 ## Producto 1
 

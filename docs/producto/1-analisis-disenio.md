@@ -1,10 +1,11 @@
-# Analisís y  diseño
+# Estado de la planta previo a intervención:
+
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 8000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 35 o 28 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
 
 
-## Descripción del proceso productivo previo a intervencion
+## Etapas del proceso productivo 
 
-El proceso de la producción de baldosas cerámicas consta de las siguientes etapas:
-
+A continuación se describen las etapas del proceso productivo de baldosas cerámicas consta de las siguientes etapas:
 
 ### Molienda
 
@@ -31,12 +32,8 @@ La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla 
 ![Flujo de molino](1molienda-caracteristicas.png){width=80%}
 > Tomado de [2] pag 68
 
-Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Dentro del molino, un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor emite datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua. 
+Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino.Basado en la gráfica de cantidad de residuos en función del tiempo se tiene que el **tiempo de molienda es de 10 horas**.
 
-
-
-
-Basado en la gráfica de cantidad de residuos en función del tiempo se tiene que el tiempo de molienda es de 10 horas.
 ![Tiempo de molienda](1tiemposMolino.png){width=80%}
 > Tomado de [2] pag 44
 
@@ -179,15 +176,20 @@ A partir de la grafica del ciclo de calentamiento del horno se sabe que el proce
 
 ### Empaquetado:
 
-La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 35 baldosas por caja de empaquetado. Se tiene que la planta produce 240 cajas/hora  4 cajas/min equivalente a **15 seg por cajas**. En la estación se tienen 2 operarios que realizan el proceso de empaquetado.
+La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que este optimiza la distribución de carga de los productos. Se tiene que la planta produce 240 cajas/hora  4 cajas/min equivalente a **15 seg por cajas**. En la estación se tienen 2 operarios que realizan el proceso de empaquetado.
 
 ### Paletizado:
 
-El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]]. 
+El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
 
-## Estado de la planta:
+![paletizado](1paletizado-estiba.png)[width=80%]
 
-Se tiene que la fabrica opera por 2 turnos de 8 horas al dia 6 días a la semana. Donde se produce en promedio 8000 baldosas/hora lo que equivale a 228 cajas/hora. 
+Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 3 pisos de altura se tiene 120 cajas por palet y 3000 baldosas por palet.
+
+![paletizado](1paletizado-tamanio-standar.png){width=80%}
+
+
+
 
 
 

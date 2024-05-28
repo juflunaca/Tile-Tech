@@ -16,7 +16,7 @@ El equipo de trabajo esta comformado por:
 
 
 
-<TeamMember name="Andres Sebastian Serna Montano" role="Ingeníero Mecatrónico en formación" image="./resources/Andres.jpeg" />
-<TeamMember name="Valentina Hernandez Montes " role="Ingeníera Mecatrónica en formación" image="./resources/Valentina%20Hernandez.jpg" />
-<TeamMember name="Juan Sebastian Dueñas Salamanca" role="Ingeníero Mecatrónico en formación" image="./resources/Sebastian.jpeg" />
-<TeamMember name="Julian Felipe Luna Castro" role="Ingeníero Mecatrónico en formación" image="./resources/Julian%20Luna.jpg" />
+<TeamMember name="Andres Sebastian Serna Montano" role="Ingeníero Mecatrónico en formación" image="/Tile-Tech/media/Andres.jpeg" />
+<TeamMember name="Valentina Hernandez Montes " role="Ingeníera Mecatrónica en formación" image="/Tile-Tech/media/Valentina%20Hernandez.jpg" />
+<TeamMember name="Juan Sebastian Dueñas Salamanca" role="Ingeníero Mecatrónico en formación" image="/Tile-Tech/media/Sebastian.jpeg" />
+<TeamMember name="Julian Felipe Luna Castro" role="Ingeníero Mecatrónico en formación" image="/Tile-Tech/media/Julian%20Luna.jpg" />

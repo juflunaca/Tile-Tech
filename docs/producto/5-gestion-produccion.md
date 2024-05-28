@@ -18,7 +18,23 @@ Basado en la información anterior se realizó un mapa de flujo de valor para id
 
 ## Cuellos de botella y áreas de mejora 
 
+
+## Calidad 
 > Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%), esquinas rotas (9,9%), defectos de impresión y decoración (9,4%), bordes rotos (8%), defectos en el esmaltado inferior (5,4%), sombras ( 3,9%) y otros casos (2,6%). Teniendo en cuenta las cuestiones anteriores, se analizó el parámetro de tipos de grietas como la principal causa de creación de defectos en las baldosas, que se asoció con las máquinas de prensado
+> Tomado de [1]
+
+Basado en lo anterior iniciando con un parámetro de calidad estimado de 90% se obtiene la calidad correspondiente a cada uno de cada uno de los procesos segun su respectiva prevalencia en los defectos encontrados por el reporte:
+
+* grietas -> prensado : Q = 93.90 %
+* esquinas rotas, bordes rotos -> empaquetado: Q = 98.1%
+* defectos de impresión y decoración -> decoración : Q = 99.06%
+* defectos en el esmaltado inferior, sombras -> esmaltado: Q =99.07%
+* otros casos ->  molienda: Q = 99.85% atomizado: Q = 99.85%, secado: Q = 99.85%, cocción: Q = 99.85% 
+
+$Q_A = 0.9390 * 0.981 * 0.9906 * 0.9907 * 0.9985^4 = 0.8986$
+
+
+* -> empaquetado
 
 ## Indicadores claves de diseño
 
@@ -39,3 +55,5 @@ Basado en la información anterior se realizó un mapa de flujo de valor para id
 ## Modelos usado en el diseño
 - caja de empaque tomado de [Cardboard Insert](https://grabcad.com/library/cardboard-insert-1)
 
+## Referencias
+1. 

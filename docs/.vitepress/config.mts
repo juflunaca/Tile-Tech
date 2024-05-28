@@ -17,8 +17,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Página principal', link: '/' },
-      { text: 'Producto', link: '/producto/index' },
-      { text: 'Proceso', link: '/proceso/index' }
+      { text: 'Proceso', link: '/proceso/index'},
+      { text: 'Producto', link: '/producto/index' }
 
     ],
 
