@@ -1,24 +1,20 @@
-# Analisís y  diseño
+# Estado de la planta previo a intervención:
+
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 8000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 35 o 28 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
 
 
-## Descripción del proceso productivo previo a intervencion
+## Etapas del proceso productivo 
 
-El proceso de la producción de baldosas cerámicas consta de las siguientes etapas:
-
+A continuación se describen las etapas del proceso productivo de baldosas cerámicas consta de las siguientes etapas:
 
 ### Molienda
 
-En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-30%, arenas 10-20% , carbonatos 5-10% y caolines 1-5%) se dosifican en proporciones específicas y se introducen en el molino MTC 041 [[1](#referencias)]. Basado en su capacidad de 40000 litros y la tabla de caracteristicas estandar de de un molino se tiene que tiene una producción de 3500 kg/hora de material seco equivalente **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/h** barbortina humeda.  
-
-Dentro del molino, estos materiales se mezclan con agua y defloculantes, resultando en la formación de la barbotina, un compuesto líquido crucial para la fabricación de azulejos. La automatización de este proceso implica varios componentes y técnicas avanzadas.
-Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Dentro del molino, un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor emite datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua. La densidad de las barbotinas varía de 1690 a 1740 g/l [2]. En la molienda la barbotina sale con una humedad del 34% [[2](#referencias)].
-
-
-![especificaciones de molino](1molienda-SACMI-MTC.png){width=80%}
+En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-30%, arenas 10-20% , carbonatos 5-10% y caolines 1-5%) se dosifican en proporciones específicas y se introducen en el molino. Dentro del molino, estos materiales se mezclan con agua y defloculantes, resultando en la formación de la barbotina, un compuesto líquido crucial para la fabricación de azulejos. La densidad de las barbotinas se caracteriza por tener una humedad del 34%  y una densidad que varía entre 1690 a 1740 g/l  [[2](#referencias)].
 
 
 ![especificaciones de molino](1molienda-SACMI-MTC-2.png){width=80%}
-> Tomado de [1] pag 15
+
+![especificaciones de molino](1molienda-SACMI-MTC.png){width=80%}
 
 | dimension | units   | MTC-035 | MTC-041 |
 |-----------|---------|---------|---------|
@@ -28,16 +24,22 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 | D         | mm      | 2200    | 2200    |
 | E         | mm      | 2900    | 2900    |
 | F         | mm      | 9255    | 10550   |
+> Tomado de [1] pag 15
+
+La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco. Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino.
 
 
 ![Flujo de molino](1molienda-caracteristicas.png){width=80%}
 > Tomado de [2] pag 68
 
+Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino.Basado en la gráfica de cantidad de residuos en función del tiempo se tiene que el **tiempo de molienda es de 10 horas**.
 
+![Tiempo de molienda](1tiemposMolino.png){width=80%}
+> Tomado de [2] pag 44
 
 ### Atomizado
 
-En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM018 con una capacidad de producción de polvo atomizado de **4.240 kg/hora** de polvo con humedad del 6% que representa 3985 kg/hora de polvo seco [[3](#referencias)]. Pero se ve limitado por la capacidad del molino 
+En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
 
 ![Diagrama de atomización](1atomizacion-diagrama.png){width=80%}
 > Tomado de [2]
@@ -86,9 +88,18 @@ En el proceso de atomización, se inicia con la introducción de la barbotina ob
 
 ### Prensado 
 
-En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con molde tiene un area de trabajo de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. 
+En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con molde tiene un area de trabajo de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora  que equivalen a un peso aproximado de 6577 kg/hora.
 
-La cantidad de material que entra a la prensa se define a partir del molino quien limita la entrada a 3500 kg/h de material seco alrededor de **3700 kg/h** barbotina con 6% de humedad **1.03 kg/s**. Basado en la ficha técnica de piso pared Egeo blanco de Corona cada baldosa pesa tiene un peso aproximado de 327 g [[5](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora que equivalen a un peso aproximado de 4120 kg/hora. Por lo que no trabaja a su máxima capacidad. Basado en la capacidad limitada dle molino se logran producir **11300 baldosas/hora**.
+<!---
+preprensado: 0.522 kg x 15 u = 7.83 kg/ u golpe 
+prensado = 4.29 s/u 
+-->
+
+La cantidad de material que entra a la prensa se define a partir del molino quien limita la entrada a 3500 kg/h de material seco alrededor de **3700 kg/h** barbotina con 6% de humedad **1.03 kg/s**. Basado en la ficha técnica de piso pared Egeo blanco de Corona cada baldosa pesa tiene un peso aproximado de 522 g [[5](#referencias)]. Por lo que no trabaja a su máxima capacidad. Basado en la capacidad limitada dle molino se logran producir **7000 baldosas/hora**.
+
+
+$$ 3700 kg/h/0.522kg = 6704 u/h  $$$
+
 <!--
 -->
 
@@ -125,7 +136,13 @@ Teo : tiempo de secado en minutos	18.4
 
 El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades tecnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc. El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones.
 
-Al aplicar las capas de esmalte en el soporte cerámico convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado La velocidad de transporte es de aproximadamente 20-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por campana y se tienen 2 esmaltadoras. Teniendo en cuenta que la velocidad de la banda es de 20 m/min se establece que por cada minuto pasan 80 baldosas por cada esmaltadora por lo que entre ambas **9600 baldosas por hora** equivalente a  un periodo de 0.75 seg por baldosa . el esmaltado  pasa por una  Para el decorado se utiliza un sistema de serigrafía el cual por.
+Al aplicar las capas de esmalte en el soporte cerámico convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado La velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por campana y se tienen 2 esmaltadoras. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. el esmaltado  pasa por una  Para el decorado se utiliza un sistema de serigrafía el cual por.
+
+```
+20m/min*4= 80 baldosas/min
+10m/min*4= 40 baldosas/min
+
+```	
 
 ```	
 f = 4300 u/h 
@@ -133,6 +150,7 @@ T = 1/f
 T = 1/(4300 [u/h]) (3600 s/h) 
 T = 0.75 s/u
 ```	
+![](1esmaltadora.png)
 
 ### Cocción:
 
@@ -158,38 +176,20 @@ A partir de la grafica del ciclo de calentamiento del horno se sabe que el proce
 
 ### Empaquetado:
 
-La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 35 baldosas por caja de empaquetado. Se tiene que la planta produce 275 cajas/hora  4.5 cajas/min equivalente a **13 seg por cajas**. En la estación se tienen 2 operarios que realizan el proceso de empaquetado.
+La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que este optimiza la distribución de carga de los productos. Se tiene que la planta produce 240 cajas/hora  4 cajas/min equivalente a **15 seg por cajas**. En la estación se tienen 2 operarios que realizan el proceso de empaquetado.
 
 ### Paletizado:
 
-El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario.
+El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
 
-## Estado de la planta:
+![paletizado](1paletizado-estiba.png)[width=80%]
 
-Se tiene que la fabrica opera por 2 turnos de 8 horas al dia 6 días a la semana. Donde se produce en promedio 8000 baldosas/hora lo que equivale a 228 cajas/hora. 
+Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 3 pisos de altura se tiene 120 cajas por palet y 3000 baldosas por palet.
 
-## VSM (Value Stream Mapping)
-
-Basado en la información anterior se realizó un mapa de flujo de valor para identificar los procesos con mayor potencial de mejora y candidatos a ser automatizados. Para esto se utilizo la herramienta de tecnomatix.
-
-![teconmatix](1plant-simulation.png)
-
-
-## Cuellos de botella y áreas de mejora 
-
-> Entre las 588 muestras obtenidas, los defectos incluyen tipos de grietas (60,9%), esquinas rotas (9,9%), defectos de impresión y decoración (9,4%), bordes rotos (8%), defectos en el esmaltado inferior (5,4%), sombras ( 3,9%) y otros casos (2,6%). Teniendo en cuenta las cuestiones anteriores, se analizó el parámetro de tipos de grietas como la principal causa de creación de defectos en las baldosas, que se asoció con las máquinas de prensado
-
-## Indicadores claves de diseño
+![paletizado](1paletizado-tamanio-standar.png){width=80%}
 
 
 
-<embed src="/Tile-Tech/KPI.pdf" type="application/pdf" width="100%" height="600px" />
-
-[KPI](/KPI.pdf)
-
-
-## Modelos usado en el diseño
-- caja de empaque tomado de [Cardboard Insert](https://grabcad.com/library/cardboard-insert-1)
 
 
 
@@ -199,4 +199,4 @@ Basado en la información anterior se realizó un mapa de flujo de valor para id
 2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
 3. Preparacion de polvos ceramicos atomizacion.[SACMI](https://sacmi.com/es-ES/ceramics/Azulejos/Preparacion-de-polvos-ceramicos/atomizacion/ATM)
 4. [Catalogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
-5. [ ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosas.pdf)
+5. [ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosas.pdf)

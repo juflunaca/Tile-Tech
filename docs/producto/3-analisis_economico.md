@@ -1,3 +1,0 @@
-# Analisis económico
-
-
