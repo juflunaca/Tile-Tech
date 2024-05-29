@@ -34,7 +34,6 @@ Basado en lo anterior iniciando con un parámetro de calidad estimado de 90% se 
 $Q_A = 0.9390 * 0.981 * 0.9906 * 0.9907 * 0.9985^4 = 0.8986$
 
 
-* -> empaquetado
 
 ## Indicadores claves de diseño
 
