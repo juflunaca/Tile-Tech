@@ -99,12 +99,7 @@ Para seleccionar el robot a utilizar en la celda, se tuvieron en cuenta los sigu
 | Alcance | Mayor a 1200 mm |
 | Costo | El menor costo posible |
 
-Con esto en mente, se obtuvieron diferentes opciones: 
-1. KR 22 R1610-2
-2. Fanuc M-20iB/25
-3. Yaskawa GP20HL
-
-Revisando las características de los robots, se seleccionó el robot Kuka KR22 R1610-2:
+Revisando las características de diferentes robots, se seleccionó el robot Kuka KR22 R1610-2:
 
 ![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/ddd5089b-35da-4a2f-8567-270f4eead2d6)
 
