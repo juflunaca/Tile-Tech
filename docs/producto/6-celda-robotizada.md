@@ -135,6 +135,11 @@ Una vez identificados todos los elementos y las operaciones a realizar, se propo
 
 ## Selección de la mejor alternativa
 
+Se selecciona la alternativa 3 como la mejor opción, según los siguientes criterios:
+
+- Es la alternativa que menos espacio utiliza
+- Permite un fácil acceso al controlador
+- Permite una correcta visualización del proceso desde la perspectiva del operario
 
 
 ## Seguridad
@@ -157,6 +162,12 @@ Análisis de Regulaciones
 | RIA TR R15.506 ("TR 506") | Aborda la aplicabilidad de los requisitos establecidos en la norma ANSI/RIA R15.06-2012 para robots industriales existentes. Esta guía proporciona orientación sobre cómo aplicar los estándares de seguridad establecidos por la R15.06-2012 a los robots que ya están en funcionamiento en entornos industriales. | Básicamente resguardos y barreras físicas, detección de presencia, parada de emergencia, sistema de control de acceso para limitar quién puede operar o programar el robot y mantenerse una documentación completa de los procedimientos de seguridad, mantenimiento y operación del robot para referencia futura y fines de cumplimiento normativo. Adicionalmente, se requiere establecer un programa de mantenimiento preventivo y se deben realizar inspecciones regulares. | 
 | RIA TR R15.606 ("TR 606") | Se centra en proporcionar requisitos específicos y pautas de seguridad para robots colaborativos. Se basa en la norma ISO 10218-1 y 2, que establece requisitos de seguridad generales para robots industriales, pero se enfoca específicamente en aspectos relacionados con la seguridad de los cobots. | No aplica. |
 | ISO 10218-1,2:2011 | Especifica los requisitos y las directrices para el diseño seguro, las medidas de protección y la información para el uso de robots industriales. | Implementar sistemas de monitoreo continuo, y garantizar el fácil acceso a dispositivos de parada de emergencia. Utilizar protecciones físicas y electrónicas que se activen en caso de una situación peligrosa. Proveer manuales detallados y capacitación a los usuarios sobre los procedimientos seguros de operación y mantenimiento. |
+
+<sup> 1</sup> Asumiendo una fuente de 95dBA a una distancia de referencia de 1 metro, podemos calcular la distancia segura con la fórmula de atenuación del ruido: L2 = L1 - 20Log10(r2/r1), donde L1 es el nivel de ruido en la fuente (95 dBA), L2 es el nivel de ruido a la distancia deseada (90 dBA), r1 es la distancia de referencia desde la fuente (1 metro) y r2 es la distancia buscada, con lo que se consigue que son necesarios mínimo 1,78 metros de distancia segura por un periodo de 8 horas.
+
+<sup> 2</sup> Para resguardos fijos, 6 mm (0.25 pulgadas) de las partes peligrosas, altura 1.5-2.0 metros (59-78 pulgadas) del suelo. Botones de seguridad a menos de 0.6 metros (2 pies) del punto de operación, altura 0.9-1.2 metros (35-47 pulgadas) del suelo. Botones de parada de emergencia máximo 1.7 metros (5.6 pies) desde cualquier punto del área de trabajo, altura 0.9-1.4 metros (35-55 pulgadas) del suelo. Barreras de luz a distancia determinada por velocidad de aproximación y tiempo de respuesta, altura 0.9-1.5 metros (35-59 pulgadas) del suelo
+
+<sup> 3</sup> Se usa la fórmula Ds=Va×(Ts+Tr)+C, donde Ds es la distancia segura. Va es la velocidad de aproximación. Ts es el tiempo de respuesta del sistema de protección. Tr es el tiempo de respuesta del robot. C es el margen de seguridad adicional. Suponiendo Tiempo de respuesta del sistema de protección (Ts): 0.05 segundos, Tiempo de respuesta del robot (Tr): 0.1 segundos, Velocidad de aproximación (Va): 1.6 m/s y Margen de seguridad (C): 0.12 m, tenemos que la distancia segura a la que se deben ubicar los dispositivos de protección es de 0.36 metros (36 cm).
 
 ### Análisis de Riesgos y Medidas de Seguridad
 
@@ -210,35 +221,6 @@ Por lo tanto, se concluye que las medidas de seguridad y mitigación adecuadas s
 - Protectores auditivos y barreras acústicas.
 - Procedimientos de trabajo seguro y dispositivos de bloqueo y etiquetado.
 - Controles de acceso, como puertas con cerraduras y sistemas de control de acceso.
-
-
-
-
-
-
-
-
-
-
-
-
-<sup> 1</sup> Asumiendo una fuente de 95dBA a una distancia de referencia de 1 metro, podemos calcular la distancia segura con la fórmula de atenuación del ruido: L2 = L1 - 20Log10(r2/r1), donde L1 es el nivel de ruido en la fuente (95 dBA), L2 es el nivel de ruido a la distancia deseada (90 dBA), r1 es la distancia de referencia desde la fuente (1 metro) y r2 es la distancia buscada, con lo que se consigue que son necesarios mínimo 1,78 metros de distancia segura por un periodo de 8 horas.
-
-<sup> 2</sup> Para resguardos fijos, 6 mm (0.25 pulgadas) de las partes peligrosas, altura 1.5-2.0 metros (59-78 pulgadas) del suelo. Botones de seguridad a menos de 0.6 metros (2 pies) del punto de operación, altura 0.9-1.2 metros (35-47 pulgadas) del suelo. Botones de parada de emergencia máximo 1.7 metros (5.6 pies) desde cualquier punto del área de trabajo, altura 0.9-1.4 metros (35-55 pulgadas) del suelo. Barreras de luz a distancia determinada por velocidad de aproximación y tiempo de respuesta, altura 0.9-1.5 metros (35-59 pulgadas) del suelo
-
-<sup> 3</sup> Se usa la fórmula Ds=Va×(Ts+Tr)+C, donde Ds es la distancia segura. Va es la velocidad de aproximación. Ts es el tiempo de respuesta del sistema de protección. Tr es el tiempo de respuesta del robot. C es el margen de seguridad adicional. Suponiendo Tiempo de respuesta del sistema de protección (Ts): 0.05 segundos, Tiempo de respuesta del robot (Tr): 0.1 segundos, Velocidad de aproximación (Va): 1.6 m/s y Margen de seguridad (C): 0.12 m, tenemos que la distancia segura a la que se deben ubicar los dispositivos de protección es de 0.36 metros (36 cm).
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Referencias
