@@ -222,7 +222,12 @@ Por lo tanto, se concluye que las medidas de seguridad y mitigación adecuadas s
 - Procedimientos de trabajo seguro y dispositivos de bloqueo y etiquetado.
 - Controles de acceso, como puertas con cerraduras y sistemas de control de acceso.
 
+# Simulación de la celda robótica
 
-## Referencias
+Para simular la rutina de la celda robótica se utilizó el software RoboDK. A continuación se muestra el layout desarrollado en RoboDK
+
+![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/3d3eafb4-008e-43ff-976c-9ed0da5c364a)
+
+# Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
