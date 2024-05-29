@@ -2,8 +2,7 @@
 
 Para el diseño de la celda robótica se siguió la siguiente ruta:
 
-![diseno](https://github.com/juflunaca/Tile-Tech/assets/55969494/f7e5525f-650c-4970-a029-5d69ff3e62cf)
-
+![diseno_celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/b8df7e7d-288f-417f-8385-bd9d8e6847db)
 
 ## Estudio del proceso
 
@@ -36,6 +35,19 @@ _Tomado de [1]_
 
 4. **Altura máxima del arrume:** No sobrepasar el arrume a alturas mayores de 1.05 cm. incluyendo la estiba (Altura de arrume: 90 cm + Altura de estiba: 14 cm.) Esta altura esta basada en las dimensiones generales de camiones, contenedores y otros lugares de almacenamiento.
 
+5.  **Organización del palet:** Teniendo en cuenta las dimensiones del palet, la carga máxima que soporta y la altura máxima recomendada, se define que el palet se organizará de forma que cuente con 80 cajas. Esto resulta en un palet con las siguientes características:
+   
+   | Característica | Especificaciones |
+   | -------------- | -----------------|
+   | Peso Total | 1044 Kg |
+   | Altura total (incluyendo altura del palet | 952.4 mm |
+   | Cantidad de cajas por palet | 80 |
+   | Superficie del palet usada | 100% |
+
+   ![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/e2ec244c-e2d5-4913-916f-af95fccfe70b)
+
+   Simulación realizada con [Calculadora y configurador de pallets](https://www.ptchronos.com/es/calculadora-de-pallets)
+
 ## Subdivisión de tareas
 
 Teniendo el proceso en cuenta, se dividió el proceso en tareas realizables por el robot:
@@ -50,9 +62,9 @@ Teniendo el proceso en cuenta, se dividió el proceso en tareas realizables por 
 
 ## Diagrama de flujo
 
-A partir del punto anterior, se realizó un diagrama de flujo relacionando las tareas.
+A partir del punto anterior, se realizó un diagrama de flujo relacionando las tareas.}
 
-![diagrama_flujo](https://github.com/juflunaca/Tile-Tech/assets/55969494/bef9a7a3-75ce-48cb-a692-8b903ea81834)
+![flujo](https://github.com/juflunaca/Tile-Tech/assets/55969494/da066e21-11cb-40f5-ba46-27a2c7b40ddc)
 
 ## Lista de máquinas y otros elementos
 
@@ -62,6 +74,51 @@ Con esto en mente, se identificaron las máquinas y elementos que irán en la ce
 2. Controlador del robot
 3. Palet Americano
 4. Banda transportadora
+
+### Selección de equipos
+
+Se tuvo en cuenta la selcción del gripper. En este caso, se tuvieron en cuenta los siguientes aspectos principalmente:
+
+| Característica | Especificaciones |
+| ---------------| -----------------|
+| Capacidad de carga | Mayor a 13 Kg |
+| Rango de agarre | Mayor a 15 mm |
+| Peso | El menor peso posible |
+
+Con esto en mente, y revisando diferentes opciones de gripper para paletizado en el mercado, se decidió por el gripper **Onrobot 2FGP20**. 
+
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/a475ffa4-7ee1-4f8d-981e-f7639e3cefa6)
+
+Los datos técnicos se pueden encontrar en: [2FGP20 Datasheet](https://onrobot.com/sites/default/files/documents/Datasheet_2FGP20_EN_1.pdf)
+
+Para seleccionar el robot a utilizar en la celda, se tuvieron en cuenta los siguientes aspectos principalmente:
+
+| Característica | Especificaciones |
+| ---------------| -----------------|
+| Capacidad de carga | Mayor a 18 Kg (caja + gripper) |
+| Alcance | Mayor a 1200 mm |
+| Costo | El menor costo posible |
+
+Con esto en mente, se obtuvieron diferentes opciones: 
+1. KR 22 R1610-2
+2. Fanuc M-20iB/25
+3. Yaskawa GP20HL
+
+Revisando las características de los robots, se seleccionó el robot Kuka KR22 R1610-2:
+
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/ddd5089b-35da-4a2f-8567-270f4eead2d6)
+
+Área de trabajo
+
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/337b4fe1-496e-40e7-8705-8ff6a37cb63b)
+
+Los datos técnicos pueden encontrarse aquí: [KR22 R1610-2 Datos Técnicos](https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321011_es.pdf?rev=ea0b3ca65413451aab3208293739e619&hash=07B8DCCE4871A89E582997C3F8BB4971)
+
+Una vez seleccionado el robot, se revisó la documentación de Kuka para seleccionar el controlador. De esta manera, se seleccionó el controlador KR C5:
+
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/a584eee7-7987-4549-a71c-9fd46b409086)
+
+Los datos técnicos pueden encontrarse en: [KRC5](https://www.kuka.com/-/media/kuka-downloads/imported/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_en.pdf?rev=6209cd039c4a4716b0d1e7e67a4010a9&hash=4B878D33601BDE6539C52A52CB0CE88A)
 
 ## Alternativas de Layout
 
@@ -76,7 +133,16 @@ Una vez identificados todos los elementos y las operaciones a realizar, se propo
 ### Alternativa 3
 ![O3](https://github.com/juflunaca/Tile-Tech/assets/55969494/bb494ce3-39a6-4d63-bbf6-a1c60aa78eb6)
 
+## Selección de la mejor alternativa
 
+
+## Seguridad
+
+### Gestión de Riesgo
+Análisis de Regulaciones
+
+| Normativas Relevantes |
+|-------|--------|-------|
 ## Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
