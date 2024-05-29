@@ -68,7 +68,7 @@ Con esto en mente, se identificaron las máquinas y elementos que irán en la ce
 Una vez identificados todos los elementos y las operaciones a realizar, se proponen 3 alternativas de layout para la celda robótica:
 
 ### Alternativa 1
-![O1](https://github.com/juflunaca/Tile-Tech/assets/55969494/dc386494-cc86-4131-9ba6-3b89bc4ca2a8)
+![O1](https://github.com/juflunaca/Tile-Tech/assets/55969494/9f05ab70-eb70-4630-9c70-ca17ab1299a7)
 
 ### Alternativa 2
 ![O2](https://github.com/juflunaca/Tile-Tech/assets/55969494/e90249cf-e19a-4e6e-83f8-27d5315d76d2)
