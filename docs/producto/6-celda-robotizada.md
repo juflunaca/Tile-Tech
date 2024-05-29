@@ -52,19 +52,19 @@ _Tomado de [1]_
 
 Teniendo el proceso en cuenta, se dividió el proceso en tareas realizables por el robot:
 
-1.  Mover robot a la banda transportadora
-2.	Acercar el robot a la caja
+1. Mover gripper a la banda transportadora
+2.	Acercar el gripper a la caja
 3.	Agarrar la caja
 4.	Levantar la caja
 5.	Mover la caja hasta el palet
 6.	Ubicar la caja en el palet
-7.	Retornar robot a la banda transportadora
+7.	Retornar gripper a la banda transportadora
 
 ## Diagrama de flujo
 
 A partir del punto anterior, se realizó un diagrama de flujo relacionando las tareas.}
 
-![flujo](https://github.com/juflunaca/Tile-Tech/assets/55969494/da066e21-11cb-40f5-ba46-27a2c7b40ddc)
+![robot](https://github.com/juflunaca/Tile-Tech/assets/55969494/cc23fc8e-d4d9-496b-afac-d3cb7aa77b3c)
 
 ## Lista de máquinas y otros elementos
 
