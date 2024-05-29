@@ -136,13 +136,42 @@ Una vez identificados todos los elementos y las operaciones a realizar, se propo
 ## Selección de la mejor alternativa
 
 
+
 ## Seguridad
 
 ### Gestión de Riesgo
 Análisis de Regulaciones
 
-| Normativas Relevantes |
-|-------|--------|-------|
+| Norma | Tema | A tener en cuenta |
+| ----- | ---- | ----------------- |
+| OSHA Standards 1910 Subparte D | Cubre las superficies de trabajo para caminar y los requisitos generales. Las superficies de trabajo y tránsito deben estar libres de peligros conocidos que puedan causar caídas, resbalones o tropiezos. | Implementar barandillas, escaleras seguras, y superficies antideslizantes.|
+| OSHA Standards 1910 Subparte G | Aborda la salud ocupacional y el control ambiental, incluida la exposición al ruido ocupacional (1910.95) | Los empleados no deben estar expuestos a un nivel de ruido superior a 90 decibelios ponderados A (dBA) durante un período de 8 horas de trabajo<sup>1</sup>.|
+| OSHA Standards 1910 Subparte I | Relativo a los equipos de protección personal. | Cascos, guantes, gafas de seguridad. |
+| OSHA Standards 1910 Subparte J | Se enfoca en los controles ambientales generales, incluidos los procedimientos de bloqueo/etiquetado (1910.147). | Implementar procedimientos de bloqueo y etiquetado para evitar la activación accidental de equipos durante el mantenimiento. |
+| OSHA Standards 1910 Subparte O | Trata de la maquinaria y la protección de las máquinas, especificando los requisitos para la protección de los trabajadores | Instalar resguardos que protejan a los trabajadores de puntos de operación peligrosos y piezas móviles. Utilizar barreras físicas, cortinas de luz, y dispositivos de enclavamiento<sup>2</sup>. |
+| OSHA Standards 1910 Subparte S | Prácticas de trabajo eléctrico. | Dispositivos de Protección contra Sobrecorriente y Sistemas de Puesta a Tierra. |
+| ANSI/ISO 12100-2012 | Principles for Machinery Safety Design | Identificación de peligros, evaluación de riesgos, y reducción de riesgos mediante diseño inherente seguro, medidas de protección, y señales de advertencia. |
+
+<sup> 1</sup> Asumiendo una fuente de 95dBA a una distancia de referencia de 1 metro, podemos calcular la distancia segura con la fórmula de atenuación del ruido: L2 = L1 - 20Log10(r2/r1), donde L1 es el nivel de ruido en la fuente (95 dBA), L2 es el nivel de ruido a la distancia deseada (90 dBA), r1 es la distancia de referencia desde la fuente (1 metro) y r2 es la distancia buscada, con lo que se consigue que son necesarios mínimo 1,78 metros de distancia segura por un periodo de 8 horas.
+
+<sup> 2</sup>Para resguardos fijos, 6 mm (0.25 pulgadas) de las partes peligrosas, altura 1.5-2.0 metros (59-78 pulgadas) del suelo. Botones de seguridad a menos de 0.6 metros (2 pies) del punto de operación, altura 0.9-1.2 metros (35-47 pulgadas) del suelo. Botones de parada de emergencia máximo 1.7 metros (5.6 pies) desde cualquier punto del área de trabajo, altura 0.9-1.4 metros (35-55 pulgadas) del suelo. Barreras de luz a distancia determinada por velocidad de aproximación y tiempo de respuesta, altura 0.9-1.5 metros (35-59 pulgadas) del suelo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
