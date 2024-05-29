@@ -140,7 +140,7 @@ Se selecciona la alternativa 3 como la mejor opción, según los siguientes crit
 - Es la alternativa que menos espacio utiliza
 - Permite un fácil acceso al controlador
 - Permite una correcta visualización del proceso desde la perspectiva del operario
-
+- Mejor aprovechamiento del área de trabajo y alcance del robot
 
 ## Seguridad
 
