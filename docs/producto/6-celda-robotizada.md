@@ -225,6 +225,8 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 
 [![Alt text](https://img.youtube.com/vi/627i0lmmtzM/0.jpg)](https://www.youtube.com/watch?v=627i0lmmtzM)
 
+[Código de las rutinas del robot](/anexos/PickandPlace)
+
 ## Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
