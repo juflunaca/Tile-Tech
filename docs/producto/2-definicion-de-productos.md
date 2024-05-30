@@ -16,9 +16,9 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 | Peso        | 522 g                  | 522 g                      | 522 g                               |
 | Esmalte     | clase 1                | clase 2                    |  clase 3                            |
 | Acabado     | mate                   | brillante                  |  brillante                          |
-| Baldosas/caja | 25                  | 25                         | 25                                  |
-| Baldosas/estiba | 120               | 120                        | 120                                 |
-| Uso         | residencial   baños    | residencial bajo trafico | residencial cocina |
+| Baldosas/caja | 25                   | 25                         | 25                                  |
+| Baldosas/estiba | 80                 | 80                         | 80                                  |
+| Uso         | residencial   baños    | residencial bajo trafico   | residencial cocina                  |
 
 
 
