@@ -53,22 +53,22 @@ drying unint pressure -0.5 to 1.5 mbar
 - exhuast air intake temperature 90 to 120 C
 - flue gas outlet temeprature 60 to 80 C
 -->
+| DATOS TÉCNICOS                     |     | ATM006  | ATM012    | ATM018    | AMT036    | ATM052    | ATM065    |
+|------------------------------------|-----|---------|-----------|-----------|-----------|-----------|-----------|
+| Capacidad de evaporación nominal   | l/h | 600     | 1.200     | 1.800     | 3.600     | 5.200     | 6.500     |
+| Producción atomizado (@ 34% H2O)   | kg/h| 1.410   | 2.830     | 4.240     | 8.490     | 12.260    | 15.320    |
+| Potencia térmica nominal instalada | kcal/h | 540.000 | 1.050.000 | 1.500.000 | 3.000.000 | 4.300.000 | 5.500.000 |
+| Temp. aire entrada a torre         | °C  | 500-600 | 500-600   | 500-600   | 500-600   | 500-600   | 500-600   |
+| Temp. aire salida                  | °C  | 60-130  | 60-130    | 60-130    | 60-130    | 60-130    | 60-130    |
+| Temp. polvo atomizado              | °C  | 40-60   | 40-60     | 40-60     | 40-60     | 40-60     | 40-60     |
+| Humedad polvo atomizado            | %   | 4-7     | 4-7       | 4-7       | 4-7       | 4-7       | 4-7       |
+| Consumo térmico específico         | kcal/l | 750-850 | 700-850   | 700-850   | 700-850   | 700-850   | 700-850   |
+| Número de LANZAS                   | n.  | 3       | 6         | 7         | 9         | 10        | 12        |
+| Boquillas - máx. con LANZAS        | n.  | 6       | 12        | 14        | 18        | 20        | 24        |
+| Boquillas - máx. con CORONA        | n.  | 6       | 12        | 15        | 20        | 28        | 32        |
+| Ciclones separadores               | n°  | 1       | 1         | 1         | 2         | 2         | 2         |
+| Potencia eléctrica nominal instalada | kW | 14,0    | 22,5      | 35,5      | 63,5      | 90,0      | 125,0     |
 
-| DATOS TÉCNICOS                                   |          | ATM006  | ATM012    | ATM018    | AMT036    | ATM052    | ATM065    |
-|--------------------------------------------------|---------|----------|-----------|-----------|-----------|-----------|-----------|
-| Capacidad de evaporación nominal (a 0 mslm)      | l/h     | 600      | 1.200     | 1.800     | 3.600     | 5.200     | 6.500     |
-| Producción atomizado (@ 34% H2O)                 | kg/h    | 1.410    | 2.830     | 4.240     | 8.490     | 12.260    | 15.320    |
-| Potencia térmica nominal instalada               | kcal/h  | 540.000  | 1.050.000 | 1.500.000 | 3.000.000 | 4.300.000 | 5.500.000 |
-| Temperatura aire en entrada a la torre           | °C      | 500-600  | 500-600   | 500-600   | 500-600   | 500-600   | 500-600   |
-| Temperatura aire en salida                       | °C      | 60-130   | 60-130    | 60-130    | 60-130    | 60-130    | 60-130    |
-| Temperatura polvo atomizado                      | °C      | 40-60    | 40-60     | 40-60     | 40-60     | 40-60     | 40-60     |
-| Humedad polvo atomizado                          | %       | 4-7      | 4-7       | 4-7       | 4-7       | 4-7       | 4-7       |
-| Consumo térmico específico                       | kcal/l  | 750-850  | 700-850   | 700-850   | 700-850   | 700-850   | 700-850   |
-| Número de LANZAS                                 | n.      | 3        | 6         | 7         | 9         | 10        | 12        |
-| Boquillas - número máximo con LANZAS             | n.      | 6        | 12        | 14        | 18        | 20        | 24        |
-| Boquillas - número máximo con CORONA             | n.      | 6        | 12        | 15        | 20        | 28        | 32        |
-| Ciclones separadores                             | n°      | 1        | 1         | 1         | 2         | 2         | 2         |
-| Potencia eléctrica nominal instalada             | kW      | 14,0     | 22,5      | 35,5      | 63,5      | 90,0      | 125,0     |
 
 
 | DATOS TÉCNICOS                              |        | ATM090 | ATM110 | ATM140 | AMT180 | ATM200 | ATM250 |

@@ -27,7 +27,8 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 
 ![Baldosa cerámica](2clasificacion-baldosas.png)
 
-## Catálogo de productos
+## Referencias
+Los productos adaptados de los siguientes catálogos de productos de corona:
 * [Catalogo producto 1](/catalogos/1productos_baldosa.pdf) 
 * [Catalogo producto 2](/catalogos/1productos_baldosa2.pdf) 
 * [Catalogo producto 3](/catalogos/1productos_baldosa3.pdf) 
