@@ -34,23 +34,56 @@ garantizando  las condiciones dimensionales y de curvatura de las pieza.
 Cambio de proceso de empaquetado manual por un proceso automatizado para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas y reducir las perdidas por daños en el producto.
 
 ### Paletizado:
-
-Utilización de un robot para la formación de palets para mejorar la eficiencia y la seguridad de los operarios en el proceso.
-
+Implementación de una celda robotizada encargada del proceso de paletizado de las cajas de baldosas cerámicas buscando incrementar la eficiencia del proceso.
 
 ## Evaluación de las propuestas
+Se han considerado varios factores críticos como la eficiencia, la calidad del producto, la reducción de costos operativos y la capacidad de satisfacer la demanda del mercado. A continuación, se presenta un análisis de las distintas propuestas y la justificación para la selección realizada.
 
-Para evaluar las propuestas de automatización se realizó un análisis de costo-beneficio, teniendo en cuenta los costos de implementación y los beneficios esperados en términos de eficiencia, calidad y reducción de desperdicios. Se consideraron los siguientes criterios:
-- Costo de implementación
-- Tiempo de retorno de la inversión
-- Mejora en la eficiencia
-- Mejora en la calidad
-- Reducción de desperdicios
+### Análisis de las Propuestas
 
+#### Molino
+- **Automatización del control de humedad con sensor infrarrojo**: Esta propuesta asegura una adición precisa de agua en el molino, mejorando la calidad y consistencia de la barbotina. Sin embargo, el impacto en la capacidad de producción general es indirecto, ya que se enfoca más en la calidad del material que en la velocidad del proceso.
 
+#### Atomizador
+- **Sistema de control para barbotina y sólidos**: Implementar sensores y controles automáticos puede mejorar la calidad y eficiencia del atomizado, pero similar al molino, el impacto en la capacidad de producción es más en términos de calidad y reducción de defectos que en aumento de producción.
+- **Control de caudal, presión y temperatura**: Esto también apunta a mejorar la calidad del producto final y la eficiencia del proceso, evitando defectos y desperdicios.
 
+#### Prensado
+- **Control automático de densidad con sistema láser ultrasónico**: Asegura la consistencia de las baldosas, reduciendo defectos. Sin embargo, como en los casos anteriores, su impacto principal es en la calidad, no necesariamente en la capacidad de producción.
 
+#### Secado
+- **Control automatizado de temperatura y humedad**: Mejora la calidad del secado y reduce defectos, pero su impacto en la capacidad de producción es limitado.
 
+#### Esmaltado
+- **Control automatizado del caudal de esmalte**: Asegura una aplicación uniforme y consistente del esmalte, mejorando la calidad del producto final. Sin embargo, el cuello de botella en esta etapa sugiere que el aumento de la capacidad de producción requiere una expansión directa del equipo utilizado (i.e., adquisición de una nueva esmaltadora).
+
+#### Decoración
+- **Inspección visual automatizada**: Mejora el control de calidad, pero no impacta significativamente en la capacidad de producción.
+
+#### Cocción
+- **Control de variables de cocción y sistema de inspección**: Similar a otras propuestas, esto mejora la calidad del producto final y reduce defectos, pero su impacto en la capacidad de producción es limitado.
+
+#### Empaquetado
+- **Mejora del sistema automatizado**: Aquí se ve una oportunidad clara para aumentar la eficiencia y reducir costos laborales. Un sistema de empaquetado automatizado puede manejar volúmenes mayores y con mayor precisión que los trabajadores manuales, directamente impactando la capacidad de producción y eficiencia operativa.
+
+#### Paletizado
+- **Celda robotizada para paletizado**: Este proceso es crucial para manejar grandes volúmenes de producción eficientemente. La implementación de un robot KR 22 R1610 optimiza el proceso de paletizado, incrementando la velocidad y consistencia, y reduciendo el esfuerzo manual y errores.
+
+### Justificación de la Selección
+
+1. **Aumento de la producción de la etapa de esmaltado con una tercera esmaltadora**:
+   - **Razonamiento**: La etapa de esmaltado es identificada como un cuello de botella en la línea de producción actual. Aumentar la capacidad en esta etapa es crucial para incrementar la producción total. Adquirir una tercera esmaltadora permitirá un flujo más continuo de baldosas a través del proceso, alineándose con el aumento en la producción en las etapas previas y posteriores.
+   - **Impacto**: Directo aumento en la capacidad de producción, reduciendo tiempos de espera y mejorando la eficiencia global de la planta.
+
+2. **Automatización del empaquetado utilizando una empaquetadora**:
+   - **Razonamiento**: El empaquetado es una tarea intensiva en mano de obra y propensa a errores humanos. Automatizar este proceso con una empaquetadora mejora la precisión, la velocidad y la consistencia del empaquetado.
+   - **Impacto**: Reducción de costos laborales, aumento de la velocidad de empaquetado y mejora en la calidad del empaquetado, permitiendo manejar mayores volúmenes de producción eficientemente.
+
+3. **Uso de una celda robotizada con un robot KR 22 R1610 para el paletizado**:
+   - **Razonamiento**: El paletizado es una tarea repetitiva y físicamente demandante. Un robot KR 22 R1610 puede realizar esta tarea de manera rápida, precisa y sin necesidad de descansos, aumentando la eficiencia y reduciendo riesgos de lesiones laborales.
+   - **Impacto**: Incremento en la velocidad y consistencia del paletizado, reducción de errores y daños en los productos, y mayor eficiencia en el manejo de grandes volúmenes de producción.
+
+La selección de aumentar la producción de la etapa de esmaltado, automatizar el empaquetado y usar una celda robotizada para el paletizado se basa en una evaluación estratégica de cómo estas mejoras impactan directamente en la capacidad de producción, la eficiencia operativa y la calidad del producto final. Estas inversiones permiten una optimización integral de la línea de producción, abordando tanto los cuellos de botella actuales como mejorando procesos clave para manejar incrementos en la producción y reducir costos operativos a largo plazo.
 
 ## Entregables:
 
