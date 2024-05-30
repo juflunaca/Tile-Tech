@@ -12,7 +12,7 @@ Propuesta de automatización para un proceso de producción de baldosas cerámic
 
 ## Getting started 
 
-La documentación del proyecto fue creada usando vitepress. una libreria de Vue utilizando node js y sistema de empaque `yarn`. Puedes seguir la siguiente guía de [como compenzar a usar vitepress](https://vitepress.dev/guide/getting-started)
+La documentación del proyecto fue creada usando vitepress. una libreria de Vue utilizando node js y sistema de empaque `yarn`. Puedes seguir la siguiente guía de [como comenzar a usar vitepress](https://vitepress.dev/guide/getting-started)
 
 ### Pre requisito
 
@@ -23,7 +23,7 @@ Para instalar la libreria de vitepress
 
 ```
 yarn add -D vitepress
-``
+```
 
 Para hacer un despligue local para prueba de resultados
 

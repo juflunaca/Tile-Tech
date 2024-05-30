@@ -19,10 +19,6 @@ Basado en la información anterior se realizó un mapa de flujo de valor para id
 ![teconmatix](5plant-simulation.png)
 
 
-## Simulación de la planta posterior a la intervención 
-
-
-
 
 ## Cuellos de botella y áreas de mejora 
 
@@ -41,6 +37,11 @@ Basado en lo anterior iniciando con un parámetro de calidad estimado de 90% se 
 
 $Q_A = 0.9390 * 0.981 * 0.9906 * 0.9907 * 0.9985^4 = 0.8986$
 
+
+## Simulación de la planta posterior a la intervención 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g787zu8fRos?si=ISe74xTQL-Or5DCZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Indicadores claves de diseño

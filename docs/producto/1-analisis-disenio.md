@@ -1,6 +1,6 @@
 # Estado de la planta previo a intervención:
 
-Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 8000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 35 o 28 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 8000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 120 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
 
 
 ## Etapas del proceso productivo 
@@ -41,9 +41,18 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 
 En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
 
-![Diagrama de atomización](1atomizacion-diagrama.png){width=80%}
+![Diagrama de atomización](1atomizacion-parts.png){width=80%}
 > Tomado de [2]
 
+<!---
+slip temperature 20 to 70 C
+- slip pressure 20-30 bar
+drying unint pressure -0.5 to 1.5 mbar
+- inflowing hot air temperature 500 to 650 C
+- temperature of spry-dried pwoerd 40 to 70 C
+- exhuast air intake temperature 90 to 120 C
+- flue gas outlet temeprature 60 to 80 C
+-->
 
 | DATOS TÉCNICOS                                   |          | ATM006  | ATM012    | ATM018    | AMT036    | ATM052    | ATM065    |
 |--------------------------------------------------|---------|----------|-----------|-----------|-----------|-----------|-----------|
@@ -182,7 +191,7 @@ La clasificación y el embalaje es la penúltima etapa del proceso de fabricaci�
 
 El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
 
-![paletizado](1paletizado-estiba.png)[width=80%]
+![paletizado](1paletizado-estiba.png){width=80%}
 
 Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 3 pisos de altura se tiene 120 cajas por palet y 3000 baldosas por palet.
 

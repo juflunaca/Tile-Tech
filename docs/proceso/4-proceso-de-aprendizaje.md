@@ -25,3 +25,15 @@ A continuación se presentan los modulos de aprendizaje  de las habilidades desa
 ## Modulo gemelo digital
 
 ## Modulo de PLC y SCADA
+
+## Reflecciones
+<details>
+  <summary> </summary>
+
+### Grupal
+
+### Individual
+- [Juan Sebastian Dueñas](./reflexion-jd.pdf)
+  
+
+</details>
