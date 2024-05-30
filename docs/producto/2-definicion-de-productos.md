@@ -1,7 +1,7 @@
 # Definición de productos
 
 
-El producto fabrico consta de tres tipos diferentes de baldosas de porcelana todas con **tamaño de 20x20 centímetros** , un **grosor de 5.7 $\pm$ 0.3 milímetros** y Un peso de baldosa de 522 g. Las baldosas son empacadas en cajas de 25 baldosas dependiendo del producto.  Estas cajas de baldosas son empacadas en palets de 120 cajas
+El producto fabrico consta de tres tipos diferentes de baldosas de porcelana todas con **tamaño de 20x20 centímetros** , un **grosor de 5.7 $\pm$ 0.3 milímetros** y Un peso de baldosa de 522 g. Las baldosas son empacadas en cajas de 25 baldosas dependiendo del producto.  Estas cajas de baldosas son empacadas en palets de 80 cajas
 
 baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 <!--
