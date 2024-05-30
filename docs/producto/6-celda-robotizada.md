@@ -226,3 +226,5 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 ## Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
+2. OSHA Robotics Standards. [Manual](https://www.osha.gov/robotics/standards)
+3. Industrial Robot Cells: Designing for Safety and Effectiveness. [Manual](https://control.com/technical-articles/industrial-robot-cells-designing-for-safety-and-effectiveness/)
