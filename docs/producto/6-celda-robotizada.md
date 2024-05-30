@@ -225,7 +225,7 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 
 [![Alt text](https://img.youtube.com/vi/627i0lmmtzM/0.jpg)](https://www.youtube.com/watch?v=627i0lmmtzM)
 
-[Código de las rutinas del robot](/anexos/PickandPlace)
+[Código de las rutinas del robot]([/anexos/PickandPlace](https://github.com/juflunaca/Tile-Tech/blob/main/anexos/PickandPlace.src))
 
 ## Referencias
 
