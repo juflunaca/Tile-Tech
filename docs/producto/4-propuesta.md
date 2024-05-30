@@ -36,7 +36,7 @@ Implementación de un sistema automatizado para la inspección visual y control 
 Mejora del sistema automatizado de empaquetado existente para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas.
 
 ### Paletizado:
-
+Implementación de una celda robotizada encargada del proceso de paletizado de las cajas de baldosas cerámicas buscando incrementar la eficiencia del proceso.
 
 ## Evaluación de las propuestas
 
