@@ -1,10 +1,9 @@
 # Gestion de producción 
 
-El analisis de la gestion de producción sera realizado utilizando la herramienta de tecnomatix, la cual permite simular el proceso de produccion de la empresa antes y despues de la intervención.
+El análisis de la gestión de producción sera realizado utilizando la herramienta de tecnomatix, la cual permite simular el proceso de producción de la empresa antes y después de la intervención.
 
 
-
-
+![production table](5production-table.png)
 
 ## VSM (Value Stream Mapping)
 

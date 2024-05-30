@@ -23,9 +23,6 @@ Instalación de un sistema automatizado para el manejo de la temperatura y el co
 
 Implementación de un controlador automatizado para regular el caudal del esmalte durante el proceso de esmaltado asegurando una aplicación uniforme y consistente del esmalte dependiendo del tipo de baldosa.
 
-### Control de calidad:
-
-Desarrollo e implementación de un sistema de inspección visual automatizada para detectar defectos en las baldosas decoradas, garantizando altos estándares de calidad.
 
 ### Cocción:
 

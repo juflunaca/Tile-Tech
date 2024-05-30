@@ -1,6 +1,6 @@
 # Estado de la planta previo a intervención:
 
-Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 8000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 120 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
 
 
 ## Etapas del proceso productivo 
@@ -26,7 +26,7 @@ En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-
 | F         | mm      | 9255    | 10550   |
 > Tomado de [1] pag 15
 
-La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco. Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino.
+La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se logra una producción de **13400 baldosas/h** .
 
 
 ![Flujo de molino](1molienda-caracteristicas.png){width=80%}
@@ -39,7 +39,7 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 
 ### Atomizado
 
-En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
+En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
 
 ![Diagrama de atomización](1atomizacion-parts.png){width=80%}
 > Tomado de [2]
@@ -97,7 +97,7 @@ drying unint pressure -0.5 to 1.5 mbar
 
 ### Prensado 
 
-En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con molde tiene un area de trabajo de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora  que equivalen a un peso aproximado de 6577 kg/hora.
+En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con un molde para 2 piezas de 60x60. Puede estimarse un area de trabajo util de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora  que equivalen a un peso aproximado de 6577 kg/hora.
 
 <!---
 preprensado: 0.522 kg x 15 u = 7.83 kg/ u golpe 
@@ -139,9 +139,10 @@ Lm : lado mayor en mm	200
 Teo : tiempo de secado en minutos	18.4
 ```
 
+El secador utilizado es EVA el cual cuenta con 260 canastos los cuales pueden cargar de a 12 baldosas. La velocidad de la banda es de 20 m/min. Se tiene que por cada minuto pasan 60 baldosas por lo que se tiene una producción de **7200 baldosas/hora** equivalente a un takt time de **0.5 seg por baldosa**.
+$260*12*60 min/18.4 min = 10170$
 
-
-### Esmaltado y decoración:
+### Esmaltado:
 
 El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades tecnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc. El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones.
 
@@ -180,12 +181,25 @@ Las dimensiones y curvatura de las piezas se miden de forma automática, pero la
 ![ciclo de cocción del horno](1coccion-ciclo-del-horno.png)
 > Tomado de [2] pag 218
 
-A partir de la grafica del ciclo de calentamiento del horno se sabe que el proceso de cocción dura 55 min.
+A partir de la grafica del ciclo de calentamiento del horno se sabe que el proceso de cocción dura 45 min.
+
+El horno utilizado es el horno SACMI maestro. Un horno de longitud variable por modulos. Se utiliza una longitud de 160 m y una velocidad de 3.5 m/min.  Se escoje igualmente un inlet 3850 mm y con un numero de piezas esperado de 12 piezas entrando al horno simultaneamente y ingreso de 3 filas de piezas por metro recorrido. Esto resulta en una capacidad de producción  de 4300 baldosas/hora.
+
+$ 14 * 3 * 3.5 m/min (60 min/h) = 8820 u/h$
+
+
+![](1horno-maestro.png)
 
 
 ### Empaquetado:
 
-La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que este optimiza la distribución de carga de los productos. Se tiene que la planta produce 240 cajas/hora  4 cajas/min equivalente a **15 seg por cajas**. En la estación se tienen 2 operarios que realizan el proceso de empaquetado.
+La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que este optimiza la distribución de carga de los productos. Se tiene que la planta produce 294 cajas/hora (7350 baldosas/hora),  4.9 cajas/min equivalente a **15 seg por cajas**. En la estación se tienen 4 operarios que realizan el proceso de empaquetado.
+
+<!---
+$
+ 4.9 cajas/min * 25 baldosas/caja  (60 min/1 h) = 7350 baldosas/min
+$
+-->
 
 ### Paletizado:
 
@@ -193,7 +207,7 @@ El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas pa
 
 ![paletizado](1paletizado-estiba.png){width=80%}
 
-Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 3 pisos de altura se tiene 120 cajas por palet y 3000 baldosas por palet.
+Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
 
 ![paletizado](1paletizado-tamanio-standar.png){width=80%}
 

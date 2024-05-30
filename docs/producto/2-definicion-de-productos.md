@@ -9,7 +9,7 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 -->
 
 
-| Tipo        | PISO PARED EGEO BLANCO | PARED ADRIATICO AZUL CLARO | CUADRADO PARED GARDEN HOJAS MULTICO |
+| Tipo        | PISO PARED EGEO BLANCO | PARED ADRIATICO AZUL CLARO | (N)CER  PRISMA MENTA                |
 |-------------|------------------------|----------------------------|-------------------------------------|
 | Decorado    | ![](4baldosa1.png)     | ![](4baldosa2.png)         | ![](4baldosa3.png)                  |
 | Formato     | 20x20x6 cm             | 20x20x6 cm                 | 20x20x6 cm                          |
@@ -18,7 +18,7 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 | Acabado     | mate                   | brillante                  |  brillante                          |
 | Baldosas/caja | 25                  | 25                         | 25                                  |
 | Baldosas/estiba | 120               | 120                        | 120                                 |
-| Uso         | uso general            | recubrimiento piscina alta durabilidad | decoración cocina alta calidad decorado |
+| Uso         | residencial   baños    | residencial bajo trafico | residencial cocina |
 
 
 
