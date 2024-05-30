@@ -223,8 +223,7 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 
 ![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/3d3eafb4-008e-43ff-976c-9ed0da5c364a)
 
-Vídeo de la simulación: 
-[![](https://markdown-videos.deta.dev/youtube/627i0lmmtzM)](https://youtu.be/627i0lmmtzM?si=ZhcJ1GTuC6UGRoT3)
+[![Alt text](https://img.youtube.com/vi/627i0lmmtzM/0.jpg)](https://www.youtube.com/watch?v=627i0lmmtzM)
 
 ## Referencias
 
