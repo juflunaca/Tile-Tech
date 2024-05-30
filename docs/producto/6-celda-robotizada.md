@@ -223,6 +223,10 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 
 ![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/3d3eafb4-008e-43ff-976c-9ed0da5c364a)
 
+[![Alt text](https://img.youtube.com/vi/627i0lmmtzM/0.jpg)](https://www.youtube.com/watch?v=627i0lmmtzM)
+
+Es posible encontrar el código de la rutina del robot en la sección de Anexos.
+
 ## Referencias
 
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
