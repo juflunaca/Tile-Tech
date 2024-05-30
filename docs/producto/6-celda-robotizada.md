@@ -177,6 +177,9 @@ Nos basamos en la RIA TR R15.306 (“TR 306”) para la evaluación de riesgos:
 - Caída de Objetos: Posibilidad de que las baldosas cerámicas se caigan o desplacen durante el proceso de paletizado, causando lesiones por impacto.
 - Exposición al Ruido: Riesgo de exposición a niveles elevados de ruido generado por el funcionamiento del robot y las máquinas periféricas.
 - Interferencia con Operaciones Manuales: Peligro de colisión o lesiones al interactuar con el robot durante la carga, descarga o mantenimiento.
+
+Simulación de Rutina de Paletizado
+<iframe width="560" height="315" src="https://youtu.be/627i0lmmtzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 - Acceso No Autorizado: Posibilidad de acceso no autorizado a la zona de trabajo del robot mientras está en funcionamiento.
 
 Esto puede ser representado por la siguiente tabla:
