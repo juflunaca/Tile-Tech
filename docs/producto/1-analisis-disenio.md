@@ -1,6 +1,6 @@
 # Estado de la planta previo a intervención:
 
-Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md)
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho.
 
 
 ## Etapas del proceso productivo 
@@ -26,7 +26,7 @@ En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-
 | F         | mm      | 9255    | 10550   |
 > Tomado de [1] pag 15
 
-La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se logra una producción de **13400 baldosas/h** .
+La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se tiene un potencial de producción de **13400 baldosas/h** .
 
 
 ![Flujo de molino](1molienda-caracteristicas.png){width=80%}
@@ -47,7 +47,7 @@ En el proceso de atomización, se inicia con la introducción de la barbotina ob
 <!---
 slip temperature 20 to 70 C
 - slip pressure 20-30 bar
-drying unint pressure -0.5 to 1.5 mbar
+drying unit pressure -0.5 to 1.5 mbar
 - inflowing hot air temperature 500 to 650 C
 - temperature of spry-dried pwoerd 40 to 70 C
 - exhuast air intake temperature 90 to 120 C
@@ -145,6 +145,11 @@ $260*12*60 min/18.4 min = 10170$
 ### Esmaltado:
 
 El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades tecnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc. El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones.
+
+El esmaltado cumple tres funciones:
+1.	Decora: Se utiliza con objetivo artístico y estético por la variedad de esmaltes disponibles. 
+2.	Impermeabiliza: El esmalte sobre la pieza cerámica evita que la humedad penetre en la pieza. 
+3.	 Aporta dureza y resistencia a la pieza
 
 Al aplicar las capas de esmalte en el soporte cerámico convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado La velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por rodillo y se utilizan 2 esmaltadoras RIGMA RR-w2CB. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. 
 
