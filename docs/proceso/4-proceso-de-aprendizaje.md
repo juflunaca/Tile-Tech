@@ -34,7 +34,7 @@ A continuación se presentan los modulos de aprendizaje  de las habilidades desa
 - [Reflexión grupal](/reflexion-grupal.pdf)
 
 ### Individual
-- [Juan Sebastian Dueñas](Tile-Tech/reflexion-jd.pdf)
+- [Juan Sebastian Dueñas](/reflexion-jd.pdf)
 - [Valentina Hernandez](/reflexion-vh.pdf)
 - [Julian Luna](/reflexion-jl.pdf)
 - [Andres Serna](/reflexion-as.pdf)
