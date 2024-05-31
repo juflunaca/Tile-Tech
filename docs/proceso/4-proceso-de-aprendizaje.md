@@ -26,7 +26,7 @@ A continuación se presentan los modulos de aprendizaje  de las habilidades desa
 
 ## Modulo de PLC y SCADA
 
-## Reflecciones
+## Reflexiones
 <details>
   <summary> </summary>
 
