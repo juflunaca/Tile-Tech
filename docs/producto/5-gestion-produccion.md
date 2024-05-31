@@ -1,8 +1,6 @@
 # Gestion de producción 
 
-El análisis de la gestión de producción se realiza utilizando la información recopilada anterior sobre la capacidad productiva del cada proceso. Resumen del cual puede observarse en la siguiente tabla. 
-
-![production table](5production-table.png)
+El análisis de la gestión de producción se realiza utilizando la información recopilada anterior sobre la capacidad productiva del cada proceso. 
 
 ## VSM (Value Stream Mapping)
 
@@ -40,12 +38,16 @@ Una vez establecidos estos parámetros se realiza la simulación del proceso uti
 
 
 ## Cuellos de botella y áreas de mejora 
+Se puede ver la capaciddad de producción de cada proceso en la siguiente tabla:
 
+![production table](5production-table.png)
+
+Esto nos permite identificar que los cuellos de botella se encuentran en los procesos de esmaltado, empaquetado y paletizado.
 
 ## Simulación de la planta posterior a la intervención 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g787zu8fRos?si=ISe74xTQL-Or5DCZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2vX36CS_SRg?si=4c0oOeXH0hdLJu_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Indicadores claves de diseño
@@ -57,14 +59,13 @@ Una vez establecidos estos parámetros se realiza la simulación del proceso uti
 [KPI](/KPI.pdf)
 
 ## Reporte de tecnomatix previo a intervención
-<iframe src="/Tile-Tech/report_tecnomatix_previous.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
+<iframe src="/Tile-Tech/analis-economico.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
 
 
 ## Reporte de tecnomatix posterior a intervención
 <iframe src="/Tile-Tech/report_tecnomatix_after.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
 
 
-<iframe src="/Tile-Tech/tecnomatix_report.html"  width="90%" height="400" frameborder="0" allowfullscreen></iframe>
 
 <!---
 ## Modelos usado en el diseño
