@@ -31,13 +31,13 @@ A continuación se presentan los modulos de aprendizaje  de las habilidades desa
   <summary> </summary>
 
 ### Grupal
-- [Reflexión grupal](/Tile-Tech/reflexion-grupal.pdf)
+- [Reflexión grupal](/reflexion-grupal.pdf)
 
 ### Individual
 - [Juan Sebastian Dueñas](Tile-Tech/reflexion-jd.pdf)
-- [Valentina Hernandez](/Tile-Tech/reflexion-vh.pdf)
-- [Julian Luna](/Tile-Tech/reflexion-jl.pdf)
-- [Andres Serna](/Tile-Tech/reflexion-as.pdf)
+- [Valentina Hernandez](/reflexion-vh.pdf)
+- [Julian Luna](/reflexion-jl.pdf)
+- [Andres Serna](/reflexion-as.pdf)
   
 
 </details>
