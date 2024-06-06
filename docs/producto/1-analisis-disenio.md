@@ -12,9 +12,9 @@ A continuación se describen las etapas del proceso productivo de baldosas cerá
 En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-30%, arenas 10-20% , carbonatos 5-10% y caolines 1-5%) se dosifican en proporciones específicas y se introducen en el molino. Dentro del molino, estos materiales se mezclan con agua y defloculantes, resultando en la formación de la barbotina, un compuesto líquido crucial para la fabricación de azulejos. La densidad de las barbotinas se caracteriza por tener una humedad del 34%  y una densidad que varía entre 1690 a 1740 g/l  [[2](#referencias)].
 
 
-![especificaciones de molino](1molienda-SACMI-MTC-2.png){width=80%}
+![especificaciones de molino](analisis-disenio/1molienda-SACMI-MTC-2.png){width=80%}
 
-![especificaciones de molino](1molienda-SACMI-MTC.png){width=80%}
+![especificaciones de molino](analisis-disenio/1molienda-SACMI-MTC.png){width=80%}
 
 | dimension | units   | MTC-035 | MTC-041 |
 |-----------|---------|---------|---------|
@@ -29,19 +29,19 @@ En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-
 La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se tiene un potencial de producción de **13400 baldosas/h** .
 
 
-![Flujo de molino](1molienda-caracteristicas.png){width=80%}
+![Flujo de molino](analisis-disenio/1molienda-caracteristicas.png){width=80%}
 > Tomado de [2] pag 68
 
 Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino.Basado en la gráfica de cantidad de residuos en función del tiempo se tiene que el **tiempo de molienda es de 10 horas**.
 
-![Tiempo de molienda](1tiemposMolino.png){width=80%}
+![Tiempo de molienda](analisis-disenio/1tiemposMolino.png){width=80%}
 > Tomado de [2] pag 44
 
 ### Atomizado
 
 En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
 
-![Diagrama de atomización](1atomizacion-parts.png){width=80%}
+![Diagrama de atomización](analisis-disenio/1atomizacion-parts.png){width=80%}
 > Tomado de [2]
 
 <!---
@@ -114,7 +114,7 @@ $$ 3700 kg/h/0.522kg = 6704 u/h  $$$
 
 
 
-![prensa](1prensado-PH-press.png){width=80%}
+![prensa](analisis-disenio/1prensado-PH-press.png){width=80%}
 > Tomado de [2] pag 166 a 173
 
 
@@ -124,7 +124,7 @@ En el proceso de secado se busca eliminar la humedad de las baldosas cerámicas.
 Durante el secado se realiza una transferencia de calor desde el ambiente al cuerpo cerámico a secar lo que produce la evaporación del agua.  Los secadores horizontales son de tipo horno monoestrato de rodillos. En este caso las piezas se mueven por encima de los rodillos en horizontal y el aire caliente con el que entran en contacto viene de quemadores que están en los laterales del horno. La temperatura máxima de este tipo de secadores está en los 350oC y los ciclos de secado son menores, entre 15 y 25 minutos. 
 
 
-![prensa](1secado-table.png){width=80%}
+![prensa](analisis-disenio/1secado-table.png){width=80%}
 
 Basado en la ecuación de secado se tiene que el tiempo de secado es de 18 minutos. 
 
@@ -166,7 +166,7 @@ T = 1/(4300 [u/h]) (3600 s/h)
 T = 0.75 s/u
 ```	
 
-![](1esmaltadora.png)
+![esmaltadora](analisis-disenio/1esmaltadora.png)
 
 ### Cocción:
 
@@ -184,7 +184,7 @@ La etapa de enfriamiento, que comprende entre el 40% y el 50% de la longitud del
 
 Las dimensiones y curvatura de las piezas se miden de forma automática, pero la manipulación de los valores que determinan estas variables es manual. Se propone automatizar la manipulación de éstas. Adicionalmente, la inspección visual y control de temperatura del aire del quemador se realizan manualmente. Se propone su automatización.
 
-![ciclo de cocción del horno](1coccion-ciclo-del-horno.png)
+![ciclo de cocción del horno](analisis-disenio/1coccion-ciclo-del-horno.png)
 > Tomado de [2] pag 218
 
 A partir de la grafica del ciclo de calentamiento del horno se sabe que el proceso de cocción dura 45 min.
@@ -194,7 +194,7 @@ El horno utilizado es el horno SACMI maestro. Un horno de longitud variable por 
 $ 14 * 3 * 3.5 m/min (60 min/h) = 8820 u/h$
 
 
-![](1horno-maestro.png)
+![](analisis-disenio/1horno-maestro.png)
 
 
 ### Empaquetado:
@@ -211,15 +211,19 @@ $
 
 El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
 
-![paletizado](1paletizado-estiba.png){width=80%}
+![paletizado](analisis-disenio/1paletizado-estiba.png){width=80%}
 
 Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
 
-![paletizado](1paletizado-tamanio-standar.png){width=80%}
+![paletizado](analisis-disenio/1paletizado-tamanio-standar.png){width=80%}
 
 
 
+<!--
+## Selección calificación de baldosas
+SYNTHESIS Y GENUSIS
 
+-->
 
 
 ## Referencias

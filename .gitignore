@@ -5,3 +5,4 @@ dist/
 
 ## ignore temp files
 *.bak
+*.log
