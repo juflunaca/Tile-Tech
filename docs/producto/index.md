@@ -15,7 +15,11 @@ Para el desarrollo de la propuesta de automatización se tuvieron en cuenta las 
 
 ## [Celda robotizada](./6-celda-robotizada)
 
-## [Integración](./7-integracion)
+## [Transformación digital industria 4.0](./7-transformacion-digital)
+
+## [SCADA](./8-SCADA)
+
+## [Integración](./9-integracion)
 
 <!---
 [tecnomatix](/tecnomatix_report)
