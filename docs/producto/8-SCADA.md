@@ -1,5 +1,3 @@
-## Transformación digital industria 4.0
+## SCADA
 
-Para abordar la temática de la transformación digital en la industria 4.0, se propone la implementación de un gemelo digital con NX.
-
-![](./gemelo-digital/sensor-proximidadd.png)
+Para el desarrollo de una interfaz SCADA para monitoreo del proceso se utiliza la herramienta ignition .
