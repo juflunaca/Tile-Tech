@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.00" TargetName="MainProgram" TargetType="Program" ContainsContext="true" Owner="ThinkPad" ExportDate="Thu Jun 06 20:41:02 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.00" TargetName="MainProgram" TargetType="Program" ContainsContext="true" Owner="ThinkPad" ExportDate="Fri Jun 07 17:45:38 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="PLC">
 <DataTypes Use="Context">
 </DataTypes>
@@ -10,7 +10,31 @@
 </Module>
 </Modules>
 <Tags Use="Context">
+<Tag Name="actuador_derecho" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
 <Tag Name="actuador_frontal" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="actuador_giro" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="actuador_izquierdo" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[0]]>
 </Data>
@@ -34,6 +58,14 @@
 <DataValue DataType="INT" Radix="Decimal" Value="0"/>
 </Data>
 </Tag>
+<Tag Name="actuador_trasero" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
 <Tag Name="banda_1" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[0]]>
@@ -50,6 +82,22 @@
 <DataValue DataType="INT" Radix="Decimal" Value="0"/>
 </Data>
 </Tag>
+<Tag Name="crear_caja" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="manual" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
 <Tag Name="proximidad_1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[1]]>
@@ -59,6 +107,14 @@
 </Data>
 </Tag>
 <Tag Name="proximidad_2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="reset" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[0]]>
 </Data>
@@ -92,20 +148,28 @@
 <DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </Data>
 </Tag>
-<Tag Name="start" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Tag Name="sensor_trasero" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
-<![CDATA[0]]>
+<![CDATA[0.00000000e+000]]>
 </Data>
 <Data Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</Data>
+</Tag>
+<Tag Name="start" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
 </Data>
 </Tag>
 <Tag Name="stop" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
-<![CDATA[0]]>
+<![CDATA[1]]>
 </Data>
 <Data Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
 </Data>
 </Tag>
 <Tag Name="testigo" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
@@ -233,6 +297,38 @@
 </Data>
 </Tag>
 <Tag Name="Action_007" TagType="Base" DataType="SFC_ACTION" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[2097152,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SFC_ACTION">
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0020_0000"/>
+<DataValueMember Name="A" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Q" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PauseTimer" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Action_008" TagType="Base" DataType="SFC_ACTION" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[2097152,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SFC_ACTION">
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0020_0000"/>
+<DataValueMember Name="A" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Q" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PauseTimer" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Action_009" TagType="Base" DataType="SFC_ACTION" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[[2097152,0,0,0]]]>
 </Data>
@@ -464,6 +560,87 @@
 </Structure>
 </Data>
 </Tag>
+<Tag Name="Step_008" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[2097152,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SFC_STEP">
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0020_0000"/>
+<DataValueMember Name="X" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmLow" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmHigh" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PauseTimer" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Step_009" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[2097152,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SFC_STEP">
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0020_0000"/>
+<DataValueMember Name="X" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmLow" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmHigh" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PauseTimer" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Step_010" TagType="Base" DataType="SFC_STEP" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[2097152,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="SFC_STEP">
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0020_0000"/>
+<DataValueMember Name="X" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LS" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmLow" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AlarmHigh" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PauseTimer" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="T" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="TMax" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Count" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitLow" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LimitHigh" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
 <Tag Name="Tran_000" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[1]]>
@@ -528,13 +705,37 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </Data>
 </Tag>
+<Tag Name="Tran_008" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Tran_009" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Tran_010" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
 </Tags>
 <Routines>
 <Routine Name="MainRoutine" Type="RLL">
 <RLLContent>
 <Rung Number="0" Type="N">
 <Text>
-<![CDATA[OTE(testigo);]]>
+<![CDATA[MOD(sensor_trasero,360,sensor_trasero)OTE(testigo);]]>
 </Text>
 </Rung>
 <Rung Number="1" Type="N">
@@ -544,19 +745,36 @@
 </Rung>
 <Rung Number="2" Type="N">
 <Text>
-<![CDATA[XIC(start)XIC(stop)OTE(salida_a)[OTE(salida_b) ,OTE(salida_c) ];]]>
+<![CDATA[XIC(start)XIC(stop)[XIO(manual) JSR(production,0) ,XIC(manual) JSR(manual_set,0) ]OTE(salida_a)[OTE(salida_b) ,OTE(salida_c) ];]]>
 </Text>
 </Rung>
 <Rung Number="3" Type="N">
 <Text>
-<![CDATA[JSR(manual_set,0);]]>
+<![CDATA[XIC(reset)SFR(production,Step_002);]]>
 </Text>
 </Rung>
 </RLLContent>
 </Routine>
 <Routine Name="manual_set" Type="SFC">
 <SFCContent SheetSize="Letter - 8.5 x 11 in" SheetOrientation="Landscape" StepName="Step" TransitionName="Tran" ActionName="Action" StopName="Stop">
-<Step ID="0" X="360" Y="120" Operand="Step_002" HideDesc="false" DescX="400" DescY="100" DescWidth="0" InitialStep="true" PresetUsesExpr="false" LimitHighUsesExpr="false"
+<Step ID="0" X="160" Y="40" Operand="Step_009" HideDesc="false" DescX="200" DescY="20" DescWidth="0" InitialStep="true" PresetUsesExpr="false" LimitHighUsesExpr="false"
+ LimitLowUsesExpr="false" ShowActions="true"/>
+<Transition ID="1" X="160" Y="180" Operand="Tran_002" HideDesc="false" DescX="240" DescY="160" DescWidth="0">
+<Condition>
+<STContent>
+<Line Number="0">
+<![CDATA[1]]>
+</Line>
+</STContent>
+</Condition>
+</Transition>
+<DirectedLink FromID="0" ToID="1" Show="true"/>
+<DirectedLink FromID="1" ToID="0" Show="true"/>
+</SFCContent>
+</Routine>
+<Routine Name="production" Type="SFC">
+<SFCContent SheetSize="Letter - 8.5 x 11 in" SheetOrientation="Landscape" StepName="Step" TransitionName="Tran" ActionName="Action" StopName="Stop">
+<Step ID="0" X="380" Y="60" Operand="Step_002" HideDesc="false" DescX="420" DescY="40" DescWidth="0" InitialStep="true" PresetUsesExpr="false" LimitHighUsesExpr="false"
  LimitLowUsesExpr="false" ShowActions="true">
 <Action ID="1" Operand="Action_003" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
 <Body>
@@ -570,6 +788,18 @@
 <Line Number="2">
 <![CDATA[actuador_sup_1:=60;]]>
 </Line>
+<Line Number="3">
+<![CDATA[actuador_frontal:=0;]]>
+</Line>
+<Line Number="4">
+<![CDATA[actuador_derecho:=0;]]>
+</Line>
+<Line Number="5">
+<![CDATA[actuador_izquierdo:=0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[actuador_trasero:=0;]]>
+</Line>
 </STContent>
 </Body>
 </Action>
@@ -580,10 +810,10 @@
 <Body>
 <STContent>
 <Line Number="0">
-<![CDATA[banda_1:= 300;]]>
+<![CDATA[banda_1:= 400;]]>
 </Line>
 <Line Number="1">
-<![CDATA[actuador_frontal:=-30;]]>
+<![CDATA[actuador_frontal:=-35;]]>
 </Line>
 <Line Number="2">
 <![CDATA[actuador_sup_1:=60;]]>
@@ -592,28 +822,52 @@
 <![CDATA[actuador_sup_2:=0;]]>
 </Line>
 <Line Number="4">
-<![CDATA[]]>
+<![CDATA[actuador_giro:=0;]]>
 </Line>
 <Line Number="5">
+<![CDATA[crear_caja:=0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
 <![CDATA[]]>
 </Line>
 </STContent>
 </Body>
 </Action>
 </Step>
-<Step ID="4" X="300" Y="1220" Operand="Step_004" HideDesc="false" DescX="340" DescY="1200" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+<Step ID="4" X="320" Y="1020" Operand="Step_004" HideDesc="false" DescX="360" DescY="1000" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
  LimitLowUsesExpr="false" ShowActions="true">
 <Action ID="5" Operand="Action_004" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
 <Body>
 <STContent>
 <Line Number="0">
-<![CDATA[banda_2:=300;]]>
+<![CDATA[banda_2:=0;]]>
+</Line>
+<Line Number="1">
+<![CDATA[actuador_frontal:=90;]]>
+</Line>
+<Line Number="2">
+<![CDATA[actuador_derecho:=90;]]>
+</Line>
+<Line Number="3">
+<![CDATA[actuador_izquierdo:=90;]]>
+</Line>
+<Line Number="4">
+<![CDATA[actuador_trasero:=90;]]>
+</Line>
+<Line Number="5">
+<![CDATA[]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
 </Line>
 </STContent>
 </Body>
 </Action>
 </Step>
-<Step ID="6" X="300" Y="1380" Operand="Step_005" HideDesc="false" DescX="340" DescY="1360" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+<Step ID="6" X="360" Y="1380" Operand="Step_005" HideDesc="false" DescX="400" DescY="1360" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
  LimitLowUsesExpr="false" ShowActions="true">
 <Action ID="7" Operand="Action_005" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
 <Body>
@@ -624,11 +878,17 @@
 <Line Number="1">
 <![CDATA[actuador_sup_2:=60;]]>
 </Line>
+<Line Number="2">
+<![CDATA[actuador_giro:=-40;]]>
+</Line>
+<Line Number="3">
+<![CDATA[]]>
+</Line>
 </STContent>
 </Body>
 </Action>
 </Step>
-<Step ID="8" X="300" Y="1580" Operand="Step_006" HideDesc="false" DescX="340" DescY="1560" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+<Step ID="8" X="300" Y="2060" Operand="Step_006" HideDesc="false" DescX="340" DescY="2040" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
  LimitLowUsesExpr="false" ShowActions="true">
 <Action ID="9" Operand="Action_006" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
 <Body>
@@ -643,7 +903,7 @@
 </Body>
 </Action>
 </Step>
-<Step ID="10" X="300" Y="640" Operand="Step_007" HideDesc="false" DescX="340" DescY="620" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+<Step ID="10" X="300" Y="800" Operand="Step_007" HideDesc="false" DescX="340" DescY="780" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
  LimitLowUsesExpr="false" ShowActions="true">
 <Action ID="11" Operand="Action_007" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
 <Body>
@@ -651,29 +911,56 @@
 <Line Number="0">
 <![CDATA[actuador_sup_1:=0;]]>
 </Line>
+<Line Number="1">
+<![CDATA[banda_2:=100;]]>
+</Line>
 </STContent>
 </Body>
 </Action>
 </Step>
-<Transition ID="12" X="340" Y="280" Operand="Tran_002" HideDesc="false" DescX="420" DescY="260" DescWidth="0">
+<Step ID="12" X="320" Y="1640" Operand="Step_008" HideDesc="false" DescX="360" DescY="1620" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+ LimitLowUsesExpr="false" ShowActions="true">
+<Action ID="13" Operand="Action_008" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
+<Body>
+<STContent>
+<Line Number="0">
+<![CDATA[actuador_frontal:=0;]]>
+</Line>
+<Line Number="1">
+<![CDATA[actuador_derecho:=0;]]>
+</Line>
+<Line Number="2">
+<![CDATA[actuador_izquierdo:=0;]]>
+</Line>
+<Line Number="3">
+<![CDATA[actuador_trasero:=0;]]>
+</Line>
+</STContent>
+</Body>
+</Action>
+</Step>
+<Step ID="14" X="300" Y="620" Operand="Step_010" HideDesc="false" DescX="340" DescY="600" DescWidth="0" InitialStep="false" PresetUsesExpr="false" LimitHighUsesExpr="false"
+ LimitLowUsesExpr="false" ShowActions="true">
+<Action ID="15" Operand="Action_009" Qualifier="NonStored" IsBoolean="false" PresetUsesExpr="false">
+<Body>
+<STContent>
+<Line Number="0">
+<![CDATA[crear_caja:= 1;]]>
+</Line>
+</STContent>
+</Body>
+</Action>
+</Step>
+<Transition ID="16" X="320" Y="1220" Operand="Tran_003" HideDesc="false" DescX="400" DescY="1200" DescWidth="0">
 <Condition>
 <STContent>
 <Line Number="0">
-<![CDATA[start]]>
+<![CDATA[sensor_trasero>=85;]]>
 </Line>
 </STContent>
 </Condition>
 </Transition>
-<Transition ID="13" X="300" Y="1120" Operand="Tran_003" HideDesc="false" DescX="720" DescY="1380" DescWidth="0">
-<Condition>
-<STContent>
-<Line Number="0">
-<![CDATA[not proximidad_2;]]>
-</Line>
-</STContent>
-</Condition>
-</Transition>
-<Transition ID="14" X="300" Y="1300" Operand="Tran_004" HideDesc="false" DescX="380" DescY="1280" DescWidth="0">
+<Transition ID="17" X="320" Y="960" Operand="Tran_004" HideDesc="false" DescX="400" DescY="940" DescWidth="0">
 <Condition>
 <STContent>
 <Line Number="0">
@@ -682,7 +969,7 @@
 </STContent>
 </Condition>
 </Transition>
-<Transition ID="15" X="300" Y="1460" Operand="Tran_005" HideDesc="false" DescX="380" DescY="1440" DescWidth="0">
+<Transition ID="18" X="320" Y="1540" Operand="Tran_005" HideDesc="false" DescX="400" DescY="1520" DescWidth="0">
 <Condition>
 <STContent>
 <Line Number="0">
@@ -694,7 +981,7 @@
 </STContent>
 </Condition>
 </Transition>
-<Transition ID="16" X="300" Y="1660" Operand="Tran_006" HideDesc="false" DescX="380" DescY="1640" DescWidth="0">
+<Transition ID="19" X="300" Y="2140" Operand="Tran_006" HideDesc="false" DescX="380" DescY="2120" DescWidth="0">
 <Condition>
 <STContent>
 <Line Number="0">
@@ -703,7 +990,7 @@
 </STContent>
 </Condition>
 </Transition>
-<Transition ID="17" X="300" Y="560" Operand="Tran_007" HideDesc="false" DescX="380" DescY="540" DescWidth="0">
+<Transition ID="20" X="300" Y="720" Operand="Tran_007" HideDesc="false" DescX="380" DescY="700" DescWidth="0">
 <Condition>
 <STContent>
 <Line Number="0">
@@ -712,27 +999,54 @@
 </STContent>
 </Condition>
 </Transition>
-<Branch ID="18" Y="357" BranchType="Selection" BranchFlow="Converge">
-<Leg ID="19"/>
-<Leg ID="20"/>
+<Transition ID="21" X="320" Y="1720" Operand="Tran_008" HideDesc="false" DescX="400" DescY="1700" DescWidth="0">
+<Condition>
+<STContent>
+<Line Number="0">
+<![CDATA[sensor_trasero<=5;]]>
+</Line>
+</STContent>
+</Condition>
+</Transition>
+<Transition ID="22" X="380" Y="180" Operand="Tran_009" HideDesc="false" DescX="460" DescY="160" DescWidth="0">
+<Condition>
+<STContent>
+<Line Number="0">
+<![CDATA[start]]>
+</Line>
+</STContent>
+</Condition>
+</Transition>
+<Transition ID="23" X="300" Y="540" Operand="Tran_010" HideDesc="false" DescX="380" DescY="520" DescWidth="0">
+<Condition>
+<STContent>
+<Line Number="0">
+<![CDATA[sensor_sup_1>=55;]]>
+</Line>
+</STContent>
+</Condition>
+</Transition>
+<Branch ID="24" Y="2220" BranchType="Selection" BranchFlow="Converge">
+<Leg ID="25"/>
+<Leg ID="26"/>
 </Branch>
-<DirectedLink FromID="0" ToID="12" Show="true"/>
-<DirectedLink FromID="2" ToID="17" Show="true"/>
-<DirectedLink FromID="4" ToID="14" Show="true"/>
-<DirectedLink FromID="6" ToID="15" Show="true"/>
-<DirectedLink FromID="8" ToID="16" Show="true"/>
-<DirectedLink FromID="12" ToID="19" Show="true"/>
-<DirectedLink FromID="13" ToID="4" Show="true"/>
-<DirectedLink FromID="14" ToID="6" Show="true"/>
-<DirectedLink FromID="15" ToID="8" Show="true"/>
-<DirectedLink FromID="16" ToID="20" Show="true"/>
-<DirectedLink FromID="17" ToID="10" Show="true"/>
-<DirectedLink FromID="18" ToID="2" Show="true"/>
-<TextBox ID="21" X="500" Y="1140" Width="0">
-<Text>
-<![CDATA[armar caja]]>
-</Text>
-</TextBox>
+<DirectedLink FromID="0" ToID="22" Show="true"/>
+<DirectedLink FromID="2" ToID="23" Show="true"/>
+<DirectedLink FromID="4" ToID="16" Show="true"/>
+<DirectedLink FromID="6" ToID="18" Show="true"/>
+<DirectedLink FromID="8" ToID="19" Show="true"/>
+<DirectedLink FromID="10" ToID="17" Show="true"/>
+<DirectedLink FromID="12" ToID="21" Show="true"/>
+<DirectedLink FromID="14" ToID="20" Show="true"/>
+<DirectedLink FromID="16" ToID="6" Show="true"/>
+<DirectedLink FromID="17" ToID="4" Show="true"/>
+<DirectedLink FromID="18" ToID="12" Show="true"/>
+<DirectedLink FromID="19" ToID="25" Show="true"/>
+<DirectedLink FromID="20" ToID="10" Show="true"/>
+<DirectedLink FromID="21" ToID="8" Show="true"/>
+<DirectedLink FromID="22" ToID="26" Show="true"/>
+<DirectedLink FromID="23" ToID="14" Show="true"/>
+<DirectedLink FromID="24" ToID="2" Show="true"/>
 </SFCContent>
 </Routine>
 </Routines>
