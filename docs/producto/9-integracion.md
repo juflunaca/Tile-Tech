@@ -1,2 +1,0 @@
-# Integración virtual comissioning
-
