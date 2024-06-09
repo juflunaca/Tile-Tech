@@ -28,6 +28,9 @@ actividades planteadas por cronograma
 
 - Estructura de costos
 
+proceso de estimación de costos
+
+
 -->
 
 ## BOM

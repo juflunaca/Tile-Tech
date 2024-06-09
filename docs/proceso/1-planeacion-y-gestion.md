@@ -10,7 +10,10 @@
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
 * Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
+![OBJETIVOS DEL PROYECTO](objetivos.png)
+
 ## Descripción del proceso previo a la intervención
+
 Para mayor detalle sobre el funcionamiento del proceso remitirse a [descripción del proceso productivo previo a la intervención](../producto/1-analisis-disenio.md#descripción-del-proceso-productivo-previo-a-intervencion)
 
 
@@ -57,7 +60,6 @@ El alcance del proyecto incluirá el diseño, desarrollo, implementación y pues
 
 ![NECESIDADES DE AUTOMATIZACIÓN](tabla-de-necesidades-de-producto.png)
 
--
 
 
 ### Metas de Eficiencia:

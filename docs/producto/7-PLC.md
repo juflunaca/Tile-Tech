@@ -4,8 +4,10 @@ Para el control de la planta se desarrollo las rutinas de control mediante studi
 
 ## Dobladora de Cajas
 
+Una de las etapas a automaizar es el empaquetado donde se remplaza el trabajo manual por una dobladora de cajas. Para controlar su movimiento se inicia por identificar las señales que se conectarían al PLC.
 
-### Lista de Entradas y Salidas para la 
+
+### Lista de Entradas y Salidas 
 
 |      Nombre            |      Tipo      |      Descripción                     |
 |------------------------|----------------|--------------------------------------|
@@ -24,7 +26,14 @@ Para el control de la planta se desarrollo las rutinas de control mediante studi
 |      stop              |      Entrada   |      Botón de parada                 |
 |      testigo           |      Salida    |      Indicador luminoso              |
 
-```ladder	
+### Etapas y lógica de control
+
+La empacadora se controla mediante un PLC el cual maneja una rutina main en desarrollada en lenguaje ladder que se encarga de controlar el comportamiento general, encargada del arranque y parada, selección de modo de operación entre producción y manual; asi como el llamado a subrutinas de control que desarrollan la secuencia especifica del movimiento. Dentro del modo manual se tiene control individual de cada una de las señales este se uso para verificación de funcionamiento y ajuste de la maquina. Por otro lado el modo de producción tiene la rutina completa de movimiento efectuado por la maquina. Este fue desarrollado en lenguaje GRAFCET.
 
 ```
+flowchart LR
+  Start --> Stop
+
+```
+
 
