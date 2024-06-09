@@ -3,7 +3,8 @@ import TeamMember from '.vitepress/components/TeamMember.vue'
 </script>
 
 # Quienes somos
-El equipo de trabajo esta comformado por:
+
+El equipo de trabajo esta conformado por un grupo de 4 ingenieros mecatrónicos en formación de la universidad Nacional de Colombia.
 
 
 <!---

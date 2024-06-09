@@ -90,3 +90,9 @@ Costos Operativos: Fondos necesarios para cubrir los costos operativos del proye
 * *Desarrollo de Habilidades blandas:* Se requerirá capacitación adicional para desarrollar habilidades de trabajo en equipo, gestión de proyectos, resolución de problemas y comunicación efectiva.
 * *Capacitación en Seguridad:* Programas de capacitación en seguridad laboral y manejo de equipos de automatización para garantizar un entorno de trabajo seguro.
 * *Asistencia Técnica:* Posibilidad de contar con asistencia técnica externa para resolver problemas técnicos complejos o para optimizar el funcionamiento de los sistemas automatizados.
+
+
+<!--
+resultados, análisis y estadísticas
+
+-->
