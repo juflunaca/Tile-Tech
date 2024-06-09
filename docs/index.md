@@ -6,8 +6,8 @@ hero:
   image:
       src: tile-tech-logo.jpg
       alt: Hero Image
-  name: "Tile tech"
-  text: "Propuesta de automatización para el mejoramiento de un proceso de producción cerámica"
+  name: "Tile Tech"
+  text: "Automatización para tu proceso de producción cerámica"
   tagline: "We enhance tile production"
   actions:
     - theme: brand
@@ -29,3 +29,7 @@ features:
     link: /proceso/4-proceso-de-aprendizaje
 ---
 
+
+A continuación encontraras nuestra propuesta de automatización para el mejoramiento de un proceso de producción cerámica
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOryg0T-8Ps?si=zwQEkovh5ce04zeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,12 +1,27 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import { config } from "dotenv";
+import { withMermaid, MermaidConfig, MermaidPluginConfig } from "vitepress-plugin-mermaid";
+
 
 config();
 
+const mermaidConfig: MermaidConfig = {
+  // Refer to MermaidAPI configuration options
+  // For example:
+  theme: 'default', // or 'dark', etc.
+  startOnLoad: true,
+  // Add other Mermaid configuration options here
+};
+
+// Define your Mermaid Plugin configuration
+const mermaidPluginConfig: MermaidPluginConfig = {
+  class: "mermaid my-class", // set additional CSS classes for parent container
+};
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineConfig(
+  withMermaid({
   title: "Tile tech",
   description: "Tile tech is a automation proposal to improve the production process of ceramic plant",
   base: process.env.BASE_PATH ??'/Tile-Tech/',
@@ -40,7 +55,11 @@ export default defineConfig({
           { text: 'Análisis económico', link: '/producto/3-analisis-economico'},
           { text: 'Propuesta de automatización', link: '/producto/4-propuesta'},
           { text: 'Gestión de producción', link: '/producto/5-gestion-produccion'},
-          { text: 'Celda robotizada', link: '/producto/6-celda-robotizada' }
+          { text: 'Celda robotizada', link: '/producto/6-celda-robotizada' },
+          { text: 'Programación de PLCs', link: '/producto/7-PLC' },
+          { text: 'Transformación digital', link: '/producto/8-transformación digital'},
+          { text: 'SCADA', link: '/producto/9-SCADA' },
+          { text: 'Integración de sistemas', link: '/producto/10-integracion' }
         ]
       }
     ],
@@ -56,8 +75,14 @@ export default defineConfig({
       md.use(footnote)
       
     }
-  }
+  },
+  // Add Mermaid configuration
+  mermaid: mermaidConfig,
+  // Add Mermaid Plugin configuration
+  mermaidPlugin: mermaidPluginConfig,
 })
+
+)
 
 /*
 
