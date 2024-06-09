@@ -1,12 +1,11 @@
 # Gestion de producción 
 
-El análisis de la gestión de producción se realiza utilizando la información recopilada anterior sobre la capacidad productiva del cada proceso. 
+El análisis de la gestión de producción se realiza utilizando la información recopilada sobre la capacidad productiva de cada proceso.
 
 ## VSM (Value Stream Mapping)
+Basado en la información previa se puede establecer los tiempos de ciclo (T/C) y los change over o setup times (C/O) que requieren cada proceso. Por facilidad estos son representados en un un mapa de flujo de valor para identificar los procesos con mayor potencial de mejora y candidatos a ser automatizados.
 
-Igualmente se realizó un mapa de flujo de valor para identificar los procesos con mayor potencial de mejora y candidatos a ser automatizados. 
-
-![VSM](5vsm-actual.png)
+![VSM](gestion-produccion/5vsm-actual.png)
 
 
 ## Calidad 
@@ -25,27 +24,51 @@ Basado en el siguiente reporte y tomando un parámetro de calidad estimado de 90
 
 $Q_A = 0.9390 * 0.981 * 0.9906 * 0.9907 * 0.9985^4 = 0.8986$
 
+
 ## Availability
 
-Para el de cálculo de la disponibilidad se toma en cuenta la información de la tabla de producción y se asume que la disponibilidad de cada proceso es la misma.
+La disponibilidad o availability hace referencia a la capacidad de un sistema de estar operativo en un momento dado. Se calcula mediante la siguiente fórmula:
 
-Una vez establecidos estos parámetros se realiza la simulación del proceso utilizando la herramienta *Tecnomatix* y se observa la interacción de los procesos en conjunto.
+$$A = \frac{MTBF}{MTBF +MTTM} $$
+
+Siendo MTBF el tiempo medio entre fallos y MTTM el tiempo medio de mantenimiento o reparación.
+
+## Paradas planeadas y no planeadas
+
+Basado en investigaciones sobre el sector productivo se tiene que es común realizar una parada de 8 horas cada 2 meses por mantenimiento,  por otro lado por paradas generales o overhall de planta se espera tener en promedio una parada de 8 días al año.  Esto se traduce en un promedio de un 1 dia de parada mes. Por lo que los cálculos de producción se realizan en base a 29 días de operación. 
+
+
+
+$$A = \frac{29*24}{29*24 + (8 + 1*24)} = 0.956$$
+
+Obteniendo un resultado de un availability del 95.6%. Se asume que la disponibilidad de cada proceso es la misma.
+
+Una vez establecidos estos parámetros se realiza la simulación del proceso utilizando la herramienta *Tecnomatix* y se observa la interacción de los procesos en su conjunto.
 
 ## Simulación de la planta previo a la intervención
 
-![teconmatix](5plant-simulation.png)
+![teconmatix](gestion-produccion/5plant-simulation-before.png)
 
 
 
 ## Cuellos de botella y áreas de mejora 
-Se puede ver la capaciddad de producción de cada proceso en la siguiente tabla:
 
-![production table](5production-table.png)
+En la siguiente tabla se puede ver la capacidad de producción de cada proceso:
+
+![production table](gestion-produccion/production-table-before.png)
 
 Esto nos permite identificar que los cuellos de botella se encuentran en los procesos de esmaltado, empaquetado y paletizado.
 
 ## Simulación de la planta posterior a la intervención 
 
+Después de realizar la [propuesta de automatización](4-propuesta) se realiza una nueva simulación de la planta con los nuevos procesos mejorados obteniendo los siguientes resultados.
+
+![teconmatix](gestion-produccion/5plant-simulation-after.png)
+
+
+![production table after](gestion-produccion/production-table-after.png)
+
+Igualmente se realiza un video donde se observa la simulación de la planta en su totalidad tanto antes como después de la intervención permitiendo comparar su producción resultante.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2vX36CS_SRg?si=4c0oOeXH0hdLJu_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -58,8 +81,12 @@ Esto nos permite identificar que los cuellos de botella se encuentran en los pro
 
 [KPI](/KPI.pdf)
 
+
+A continuación se anexan los reportes de la simulación de la planta antes y después de la intervención.
+
 ## Reporte de tecnomatix previo a intervención
-<iframe src="/Tile-Tech/analis-economico.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
+
+<iframe src="/Tile-Tech/report_tecnomatix_previous.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
 
 
 ## Reporte de tecnomatix posterior a intervención

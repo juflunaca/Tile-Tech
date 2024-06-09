@@ -1,9 +1,24 @@
 # Análisis económico
 
+El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion).
+
+
+## Costos de producción
+
+Se hace un estimado del costo incurrido por la fabrica de baldosas.
+
+
+
+## Costos de inversión
+
+Para ello, se consideran los costos de inversión, los costos operativos, los ingresos esperados y el periodo de recuperación de la inversión.
+
+
 El producto 1 tiene un valor comercial de $ 30.800 $COP/m^2$  que equivale a $ 1.232 COP/u asumiendo que la fabrica de cerámicas obtiene una ganancia de 7% respecto al precio de venta del producto, se tiene una ganancia de $ 258.720 COP y una ganancia mensual de 130 millones de pesos. 
 Con un aumento de 10% en la producción de baldosas. Se tiene un aumento de ganancias 13 millones de pesos mensuales. 
 
-<iframe src="/analisis-economico.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
+
+<embed src="/Tile-Tech/analisis-economico.pdf" type="application/pdf" width="100%" height="600px" />
 
 <!---
 ## modelo de negocio

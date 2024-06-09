@@ -10,7 +10,7 @@
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
 * Garantizar la consistencia y calidad del producto final para cumplir con los estándares del mercado y las expectativas de los clientes.
 
-![OBJETIVOS DEL PROYECTO](objetivos.png)
+![OBJETIVOS DEL PROYECTO](objetivos.png){width=80%}
 
 ## Descripción del proceso previo a la intervención
 
