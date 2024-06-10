@@ -2,7 +2,7 @@
 
 ## Estado de la planta previo a intervención:
 
-Se tiene que la fábrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
+Se tiene que la fábrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosas se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fábrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
 
 
 
@@ -19,7 +19,7 @@ En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-
 
 ![especificaciones de molino](analisis-disenio/1molienda-SACMI-MTC.png){width=80%}
 
-| dimension | units   | MTC-035 | MTC-041 |
+| Dimensión | Unidades | MTC-035 | MTC-041 |
 |-----------|---------|---------|---------|
 | A         | mm      | 10935   | 12230   |
 | B         | mm      | 3570    | 3570    |
@@ -29,20 +29,20 @@ En el proceso de molienda, las materias primas (arcilla 40-60%, feldespatos  20-
 | F         | mm      | 9255    | 10550   |
 > Tomado de [1] pag 15
 
-La fabrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se tiene un potencial de producción de **13400 baldosas/h** .
+La fábrica cuenta con 2 molinos MTC 041 [[1](#referencias)]. Basado en la tabla de características estándar de un molino y teniendo en cuenta  su capacidad de 40000 litros, se tiene como resultado una producción de 3500 kg/hora de material seco (6700  baldosas).  Esto es equivalente a **5300 kg/h** barbotina con 34% de humedad o **1.473 kg/s** barbortina húmeda por cada molino. Con los dos molinos trabajando a capacidad máxima se tiene un potencial de producción de **13400 baldosas/h** .
 
 
 ![Flujo de molino](analisis-disenio/1molienda-caracteristicas.png){width=80%}
 > Tomado de [2] pag 68
 
-Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino.Basado en la gráfica de cantidad de residuos en función del tiempo se tiene que el **tiempo de molienda es de 10 horas**.
+Las materias primas se transportan mediante un sistema de bandas transportadoras. Cada banda transportadora se ajusta individualmente para controlar la velocidad, lo que permite dosificar con precisión las proporciones de cada material. Estas bandas convergen en una banda transportadora común que lleva los materiales mezclados hacia el molino. Basado en la gráfica de cantidad de impurezas en función del tiempo, se tiene que el **tiempo de molienda es de 10 horas**.
 
 ![Tiempo de molienda](analisis-disenio/1tiemposMolino.png){width=80%}
 > Tomado de [2] pag 44
 
 ### Atomizado
 
-En el proceso de atomización, se inicia con la introducción de la barbotina obtenido del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándolo a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** de polvo con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)]. Pero se ve limitado por la capacidad del molino.
+El proceso de atomización se inicia con la introducción de la barbotina obtenida del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándola a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)].
 
 ![Diagrama de atomización](analisis-disenio/1atomizacion-parts.png){width=80%}
 > Tomado de [2]
@@ -107,14 +107,6 @@ preprensado: 0.522 kg x 15 u = 7.83 kg/ u golpe
 prensado = 4.29 s/u 
 -->
 
-La cantidad de material que entra a la prensa se define a partir del molino quien limita la entrada a 3500 kg/h de material seco alrededor de **3700 kg/h** barbotina con 6% de humedad **1.03 kg/s**. Basado en la ficha técnica de piso pared Egeo blanco de Corona cada baldosa pesa tiene un peso aproximado de 522 g [[5](#referencias)]. Por lo que no trabaja a su máxima capacidad. Basado en la capacidad limitada dle molino se logran producir **7000 baldosas/hora**.
-
-
-$$ 3700 kg/h/0.522kg = 6704 u/h  $$$
-
-<!--
--->
-
 
 
 ![prensa](analisis-disenio/1prensado-PH-press.png){width=80%}
@@ -142,19 +134,20 @@ Lm : lado mayor en mm	200
 Teo : tiempo de secado en minutos	18.4
 ```
 
-El secador utilizado es EVA el cual cuenta con 260 canastos los cuales pueden cargar de a 12 baldosas. La velocidad de la banda es de 20 m/min. Se tiene que por cada minuto pasan 60 baldosas por lo que se tiene una producción de **7200 baldosas/hora** equivalente a un takt time de **0.5 seg por baldosa**.
-$260*12*60 min/18.4 min = 10170$
+El secador utilizado es EVA, que cuenta con 260 canastos, los cuales pueden cargar 12 baldosas. Por lo que se tiene una producción de **10170 baldosas/hora** equivalente a un takt time de **0.35 seg por baldosa**.
+
+$\frac{260*12*60 min}{18.4 min} = 10170$
 
 ### Esmaltado:
 
-El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades tecnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc. El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones.
+El esmaltado es un tratamiento que se utiliza para otorgar una serie de propiedades técnicas y estéticas como la impermeabilidad, facilidad de limpieza, brillo, color,resistencia química y mecánica etc. El esmaltado se realiza en continuo y los métodos más empleados son: por pulverización, en cortina, en seco o las decoraciones.
 
 El esmaltado cumple tres funciones:
 1.	Decora: Se utiliza con objetivo artístico y estético por la variedad de esmaltes disponibles. 
 2.	Impermeabiliza: El esmalte sobre la pieza cerámica evita que la humedad penetre en la pieza. 
 3.	 Aporta dureza y resistencia a la pieza
 
-Al aplicar las capas de esmalte en el soporte cerámico convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado La velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por rodillo y se utilizan 2 esmaltadoras RIGMA RR-w2CB. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. 
+Al aplicar las capas de esmalte en el soporte cerámico se convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado la velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por rodillo y se utilizan 2 esmaltadoras RIGMA RR-w2CB. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. 
 
 <!---
 20m/min*4= 80 baldosas/min
@@ -216,7 +209,7 @@ El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas pa
 
 ![paletizado](analisis-disenio/1paletizado-estiba.png){width=80%}
 
-Se define que la fabrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
+Se define que la fábrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
 
 ![paletizado](analisis-disenio/1paletizado-tamanio-standar.png){width=80%}
 

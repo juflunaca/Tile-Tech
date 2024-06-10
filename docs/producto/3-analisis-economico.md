@@ -45,9 +45,19 @@ El producto 1 tiene un valor comercial de $ 30.800 $COP/m^2$  que equivale a $ 1
 Con un aumento de 10% en la producción de baldosas. Se tiene un aumento de ganancias 13 millones de pesos mensuales. 
 
 
+
+
+
+[Anexo análisis económico](/analisis-economico)
+
+<details>
+  <summary> Análisis económico </summary>
 <embed src="/Tile-Tech/analisis-economico.pdf" type="application/pdf" width="100%" height="600px" />
+</details>
 
 <!---
+<iframe src="/Tile-Tech/analis-economico.htm" type="application/pdf" width="100%" height="600px" ></iframe>
+
 ## modelo de negocio
 
 - Segmentos de mercado: plantas de fabricación de cerámica de tamaño mediano. Que busquen aumentar su producción y requieran de automatización
