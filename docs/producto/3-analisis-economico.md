@@ -1,12 +1,25 @@
 # Análisis económico
 
-El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion).
+El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes antes de la intervención, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion#cuellos-de-botella-y-áreas-de-mejora).
 
 
 ## Costos de producción
 
-Se hace un estimado del costo incurrido por la fabrica de baldosas.
+Para determinar los costos de producción se consideran los costos de insumos, mano de obra y otros costos asociados a la producción de baldosas cerámicas.
 
+### Costos de insumos
+
+![costos insumos](analisis-economico/costos-insumos.png)
+
+### Costo recursos Humano
+La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador. Causandose un costo mensual de $212.472.000  COP.
+
+![costos recurso humano](analisis-economico/recurso-humano.png)
+
+
+
+
+Se hace un estimado del costo incurrido por la fabrica de baldosas.
 
 
 ## Costos de inversión

@@ -1,6 +1,6 @@
-# Gestion de producción 
+# Gestión de producción 
 
-El análisis de la gestión de producción se realiza utilizando la información recopilada sobre la capacidad productiva de cada proceso.
+El análisis de la gestión de producción se realiza utilizando la información recopilada sobre la [capacidad productiva de cada proceso](1-analisis-disenio#etapas-del-proceso-productivo).
 
 ## VSM (Value Stream Mapping)
 Basado en la información previa se puede establecer los tiempos de ciclo (T/C) y los change over o setup times (C/O) que requieren cada proceso. Por facilidad estos son representados en un un mapa de flujo de valor para identificar los procesos con mayor potencial de mejora y candidatos a ser automatizados.
@@ -33,9 +33,8 @@ $$A = \frac{MTBF}{MTBF +MTTM} $$
 
 Siendo MTBF el tiempo medio entre fallos y MTTM el tiempo medio de mantenimiento o reparación.
 
-## Paradas planeadas y no planeadas
 
-Basado en investigaciones sobre el sector productivo se tiene que es común realizar una parada de 8 horas cada 2 meses por mantenimiento,  por otro lado por paradas generales o overhall de planta se espera tener en promedio una parada de 8 días al año.  Esto se traduce en un promedio de un 1 dia de parada mes. Por lo que los cálculos de producción se realizan en base a 29 días de operación. 
+Basado en la investigación sobre paradas se tiene un  promedio de un 1 dia de parada mes. Por lo que los cálculos de producción se realizan en base a 29 días de operación. 
 
 
 
@@ -59,6 +58,15 @@ En la siguiente tabla se puede ver la capacidad de producción de cada proceso:
 
 Esto nos permite identificar que los cuellos de botella se encuentran en los procesos de esmaltado, empaquetado y paletizado.
 
+Viendo que el cuello de botella que restringe el proceso se encuentra en el esmaltado se establece el volumen real de producción de la planta. Para ello se  calcula la reducción de capacidad causada por perdidas debido a la calidad a la disponibilidad de la fabrica. Para la calidad no se toma el valor de calidad general de la planta ya que perdidas por calidad en procesos anteriores a la esmaltadora pueden compensarse con la capacidad excedente de producción que se tiene en estos procesos. Se calcula la calidad a partir del esmaltado que incluye los procesos de decorado, cocción y empaquetado obteniendo una calidad de 96.13%.
+
+$$ Q = 0.9907*0.9906*0.9985*0.981=0.9613$$
+
+
+![production bruta](gestion-produccion/production-bruta-before.png)
+
+Se obtiene como resultado una producción bruta de  **190.564[m^2/mes]** de baldosas mensuales.
+
 ## Simulación de la planta posterior a la intervención 
 
 Después de realizar la [propuesta de automatización](4-propuesta) se realiza una nueva simulación de la planta con los nuevos procesos mejorados obteniendo los siguientes resultados.
@@ -71,6 +79,8 @@ Después de realizar la [propuesta de automatización](4-propuesta) se realiza u
 Igualmente se realiza un video donde se observa la simulación de la planta en su totalidad tanto antes como después de la intervención permitiendo comparar su producción resultante.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2vX36CS_SRg?si=4c0oOeXH0hdLJu_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 
 ## Indicadores claves de diseño

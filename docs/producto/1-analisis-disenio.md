@@ -1,10 +1,10 @@
-# Estado de la planta previo a intervención:
+# Análisis para el diseño
 
-Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho.
+## Estado de la planta previo a intervención:
 
-## Paradas planeadas y no planeadas
+Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
 
-Basado en investigaciones sobre el sector productivo se tiene que es común realizar una parada de 8 horas cada 2 meses por mantenimiento,  por otro lado por paradas generales o overhall de planta se espera tener en promedio una parada de 8 días al año.  Esto se traduce en un promedio de un 1 dia de parada mes. Por lo que los cálculos de producción se realizan en base a 29 días de operación.
+
 
 ## Etapas del proceso productivo 
 

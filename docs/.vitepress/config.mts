@@ -50,11 +50,11 @@ export default defineConfig(
       {
         text: 'Producto', link: '/producto/index',
         items: [
-          { text: 'Análisis de diseño', link: '/producto/1-analisis-disenio'},
+          { text: 'Análisis para el diseño', link: '/producto/1-analisis-disenio'},
           { text: 'Definición de producto', link: '/producto/2-definicion-de-productos'},
-          { text: 'Análisis económico', link: '/producto/3-analisis-economico'},
           { text: 'Propuesta de automatización', link: '/producto/4-propuesta'},
           { text: 'Gestión de producción', link: '/producto/5-gestion-produccion'},
+          { text: 'Análisis económico', link: '/producto/3-analisis-economico'},
           { text: 'Celda robotizada', link: '/producto/6-celda-robotizada' },
           { text: 'Programación de PLCs', link: '/producto/7-PLC' },
           { text: 'Transformación digital', link: '/producto/8-transformación digital'},
