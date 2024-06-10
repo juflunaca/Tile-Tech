@@ -2,7 +2,7 @@
 
 Para el diseño de la celda robótica se siguió la siguiente ruta:
 
-![diseno_celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/b8df7e7d-288f-417f-8385-bd9d8e6847db)
+![diseno_celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/b8df7e7d-288f-417f-8385-bd9d8e6847db){width=40%}
 
 ## Estudio del proceso
 
@@ -20,7 +20,7 @@ c.	Se puede incluir algún otro material de embalaje entre los bultos para evita
 
 2. **Estabilidad de la carga:** Si la estabilidad del estibado no se puede lograr mediante el uso de elementos como zunchos, esquineros, plástico strech u otros mecanismos de inmovilización, se recomienda realizar el cruzamiento de las cajas en los dos o tres últimos niveles del estibado.
 
-![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/b45eb812-3549-4880-a62c-dcb269593959)
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/b45eb812-3549-4880-a62c-dcb269593959){width=80%}
 
 _Tomado de [1]_
 
@@ -40,7 +40,7 @@ _Tomado de [1]_
    | Característica | Especificaciones |
    | -------------- | -----------------|
    | Peso Total | 1044 Kg |
-   | Altura total (incluyendo altura del palet | 952.4 mm |
+   | Altura total (incluyendo altura del palet) | 952.4 mm |
    | Cantidad de cajas por palet | 80 |
    | Superficie del palet usada | 100% |
 
@@ -223,7 +223,7 @@ Para simular la rutina de la celda robótica se utilizó el software RoboDK. A c
 
 ![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/3d3eafb4-008e-43ff-976c-9ed0da5c364a)
 
-[![Alt text](https://img.youtube.com/vi/627i0lmmtzM/0.jpg)](https://www.youtube.com/watch?v=627i0lmmtzM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/627i0lmmtzM?si=hJQjSsamhF24Ow1i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Es posible encontrar el código de la rutina del robot en la sección de Anexos.
 

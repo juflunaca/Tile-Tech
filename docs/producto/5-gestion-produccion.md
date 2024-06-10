@@ -17,13 +17,14 @@ Basado en el siguiente reporte y tomando un parámetro de calidad estimado de 90
 
 
 * grietas -> prensado : Q = 93.90 %
-* esquinas rotas, bordes rotos -> empaquetado: Q = 98.1%
+* esquinas rotas, bordes rotos -> empaquetado y paletizado: Q = 98.1%
 * defectos de impresión y decoración -> decoración : Q = 99.06%
 * defectos en el esmaltado inferior, sombras -> esmaltado: Q =99.07%
 * otros casos ->  molienda: Q = 99.85% atomizado: Q = 99.85%, secado: Q = 99.85%, cocción: Q = 99.85% 
 
 $Q_A = 0.9390 * 0.981 * 0.9906 * 0.9907 * 0.9985^4 = 0.8986$
 
+Cabe destacar que las baldosas que tienen defectos de fabricación son reutilizadas ingresando como materia prima en el proceso de molienda.
 
 ## Availability
 
@@ -65,7 +66,7 @@ $$ Q = 0.9907*0.9906*0.9985*0.981=0.9613$$
 
 ![production bruta](gestion-produccion/production-bruta-before.png)
 
-Se obtiene como resultado una producción bruta de  **190.564[m^2/mes]** de baldosas mensuales.
+Se obtiene como resultado una producción bruta de  **190.564 [m^2/mes]** de baldosas mensuales.
 
 ## Simulación de la planta posterior a la intervención 
 
@@ -76,7 +77,14 @@ Después de realizar la [propuesta de automatización](4-propuesta) se realiza u
 
 ![production table after](gestion-produccion/production-table-after.png)
 
-Igualmente se realiza un video donde se observa la simulación de la planta en su totalidad tanto antes como después de la intervención permitiendo comparar su producción resultante.
+Se establece el nuevo volumen real de producción de la planta. Para ello se observa que el nuevo cuello de botella se encuentra en el horno.  Se calcula la reducción de capacidad causada por perdidas debido a la calidad a la disponibilidad de la fabrica. Se mide la calidad a partir del horno donde intervienen el proceso de cocción, empaquetado y paletizado obteniendo una calidad de 97,95%. y se  tiene la misma disponibilidad del 95.6%.
+
+$$ Q = 0.9985*0.981=0.9795$$
+
+
+![production bruta despues de intervención](gestion-produccion/production-bruta-after.png)
+
+A continuación se muestra un video donde se evidencia la simulación de la planta en su totalidad tanto antes como después de la intervención permitiendo comparar su producción resultante.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2vX36CS_SRg?si=4c0oOeXH0hdLJu_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

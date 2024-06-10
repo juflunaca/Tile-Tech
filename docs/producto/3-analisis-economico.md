@@ -12,6 +12,7 @@ Para determinar los costos de producción se consideran los costos de insumos, m
 ![costos insumos](analisis-economico/costos-insumos.png)
 
 ### Costo recursos Humano
+
 La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador. Causandose un costo mensual de $212.472.000  COP.
 
 ![costos recurso humano](analisis-economico/recurso-humano.png)
@@ -20,6 +21,19 @@ La planta antes de la intervención requiere el siguiente recurso humano. Para c
 
 
 Se hace un estimado del costo incurrido por la fabrica de baldosas.
+
+
+| Concepto                        | Monto            |
+|---------------------------------|------------------|
+| Materia primas                  | $ 2.231.422.848  |
+| Servicios públicos              | $ 758.641.960    |
+| RECURSO HUMANO                  | $ 212.472.000    |
+| Servicios (Mantenimiento) 1% ventas | $ 57.021.888   |
+| Depreciación (15 AÑOS)          | $ 5.461.832      |
+| **TOTAL COSTOS**                | **$ 3.265.020.528** |
+| GASTOS 25%                      | $ 816.255.132    |
+| **TOTAL EGRESOS**               | **$ 4.081.275.659** |
+
 
 
 ## Costos de inversión

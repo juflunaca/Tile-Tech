@@ -4,7 +4,7 @@
 
 **Objetivo general:** Automatizar una planta de manufactura de baldosas cerámicas que permita la fabricación de tres productos diferentes, mejorando la eficiencia y flexibilidad del proceso.
 
-### Objetivos de Proyecto:
+### Objetivos del Proyecto
 
 * Aumentar la producción mensual de baldosas cerámicas en un 15%.
 * Mejorar la eficiencia del proceso de producción para reducir los costos operativos en un 10% y aumentar la rentabilidad en un 7%.
@@ -21,28 +21,28 @@ Para mayor detalle sobre el funcionamiento del proceso remitirse a [descripción
 
 Podemos definir el alcance del proyecto a partir de los siguientes componentes:
 
-### Alcance Funcional:
+### Alcance funcional
 
-El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 6 milímetros**, con esmalte clase 1, 2 y 3 como esta definido en la [definición de producto](../producto/2-definicion-de-productos.md). También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
+El proyecto se centrará en la automatización de subprocesos específicos, como el transporte, atomizador de secado, prensado, secado, esmaltado, decoración, cocción y empaquetado, para una línea de producción de baldosas cerámicas con 3 tipos de esmalte: azulejos con **tamaño de 20x20 centímetros** y un **grosor de 6 milímetros**, con esmalte clase 1, 2 y 3 como está establecido en la [definición de producto](../producto/2-definicion-de-productos.md). También se diseñará un sistema de supervisión y control del proceso de manufactura, se realizará la instalación de las mejoras realizadas y se conectarán con otros dispositivos y sistemas de manera segura a través de internet. No se incluirán otros procesos no mencionados en esta lista.
 
 
-### Alcance Tecnológico: 
+### Alcance tecnológico
 
-La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para los subprocesos identificados que asi lo requieran.
+La automatización se basará en tecnologías disponibles y probadas, con énfasis en la integración de sistemas de control y sensores para monitorear y controlar variables críticas en cada subproceso, desde la implementación de los sistemas de control automatizado hasta su puesta en marcha y validación, incluyendo la programación de lógica de control para los subprocesos identificados que así lo requieran.
 
-### Alcance Geográfico: 
+### Alcance geográfico
 
 Se trabajará exclusivamente en un entorno de gemelo digital, sin implementación física en fábrica.
 
-### Alcance de Recursos: 
+### Alcance de recursos
 
 Se utilizarán los recursos disponibles dentro del presupuesto asignado para el proyecto, incluyendo equipos, software, personal y el tiempo de implementación indicado en el cronograma.
 
-### Compatibilidad con Equipos Existentes: 
+### Compatibilidad con equipos existentes
 
 La automatización propuesta deberá ser compatible con los equipos y sistemas existentes en la planta de producción.
 
-### Seguridad y Regulaciones: 
+### Seguridad y regulaciones
 
 La implementación de la automatización deberá cumplir con todas las normativas de seguridad laboral y regulaciones ambientales aplicables.
 
@@ -50,7 +50,7 @@ La implementación de la automatización deberá cumplir con todas las normativa
 
 Para mayor detalle sobre la propuesta de automatización remitirse a [propuesta de automatización](../producto/4-propuesta.md)
 
-## Exclusiones del Alcance:
+## Exclusiones del alcance
 
 * No se incluye la automatización de otros procesos no mencionados, como la preparación de materias primas.
 * No se considera la implementación de sistemas de automatización para áreas no relacionadas con la producción de baldosas cerámicas.
@@ -62,13 +62,13 @@ El alcance del proyecto incluirá el diseño, desarrollo, implementación y pues
 
 
 
-### Metas de Eficiencia:
+### Metas de eficiencia
 
 * Reducir el tiempo de ciclo del proceso de producción en un 13%.
 * Lograr una utilización de equipos del 85% o más.
 * Optimizar el consumo de energía durante el proceso de producción para reducir los costos operativos en un 10%.
 
-### Metas de Calidad:
+### Metas de calidad
 
 Reducir la tasa de productos defectuosos por debajo del 2% al finalizar el primer año de implementación del proyecto.
 Asegurar la uniformidad del producto final para garantizar que todas las baldosas cerámicas cumplan con las especificaciones de tamaño, grosor y acabado.
@@ -77,14 +77,14 @@ Asegurar la consistencia en la absorción de agua de acuerdo con los estándares
 
 ## Recursos
 
-### Recursos Financieros:
+### Recursos Financieros
 
 Presupuesto para Implementación: Fondos necesarios para adquirir equipos, materiales y software requeridos para la automatización del proceso de producción.
 Fondos para Capacitación: Recursos destinados a la capacitación del equipo en el uso de nuevas tecnologías y herramientas relacionadas con la automatización.
 Reserva para Contingencias: Fondos adicionales destinados a cubrir gastos imprevistos o cambios en los requisitos del proyecto.
 Costos Operativos: Fondos necesarios para cubrir los costos operativos del proyecto, como electricidad, mantenimiento y otros gastos misceláneos.
 
-### Recursos Humanos y Capacitación:
+### Recursos Humanos y Capacitación
 
 * *Equipo de Implementación:* Ingenieros mecatrónicos con habilidades en diseño, programación, electrónica y automatización industrial.
 * *Supervisores del Proyecto:* Será necesario contar con la supervisión y orientación de profesores con experiencia en áreas relacionadas, quienes guiarán y supervisarán el progreso del proyecto.
