@@ -5,7 +5,7 @@ Partes Interesadas:
 * Estudiantes:
     * Andrés Sebastián Serna Montaño
     * Julián Felipe Luna Castro
-    * Juan Sebastián Dueñas Salamanca
+    * Juan Sebastian Dueñas Salamanca
     * Valentina Hernández Montes
 
 * Profesores:

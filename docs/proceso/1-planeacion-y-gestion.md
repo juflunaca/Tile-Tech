@@ -50,7 +50,9 @@ La implementación de la automatización deberá cumplir con todas las normativa
 
 Para mayor detalle sobre la propuesta de automatización remitirse a [propuesta de automatización](../producto/4-propuesta.md)
 
-## Exclusiones del alcance
+## Exclusiones
+
+Dentro del proyecto
 
 * No se incluye la automatización de otros procesos no mencionados, como la preparación de materias primas.
 * No se considera la implementación de sistemas de automatización para áreas no relacionadas con la producción de baldosas cerámicas.
@@ -77,21 +79,21 @@ Asegurar la consistencia en la absorción de agua de acuerdo con los estándares
 
 ## Recursos
 
-### Recursos Financieros
+### Recursos financieros
 
-Presupuesto para Implementación: Fondos necesarios para adquirir equipos, materiales y software requeridos para la automatización del proceso de producción.
-Fondos para Capacitación: Recursos destinados a la capacitación del equipo en el uso de nuevas tecnologías y herramientas relacionadas con la automatización.
+* **Presupuesto para Implementación:** Fondos necesarios para adquirir equipos, materiales y software requeridos para la automatización del proceso de producción.
+* **Fondos para Capacitación:** Recursos destinados a la capacitación del equipo en el uso de nuevas tecnologías y herramientas relacionadas con la automatización.
 Reserva para Contingencias: Fondos adicionales destinados a cubrir gastos imprevistos o cambios en los requisitos del proyecto.
-Costos Operativos: Fondos necesarios para cubrir los costos operativos del proyecto, como electricidad, mantenimiento y otros gastos misceláneos.
++ **Costos Operativos:** Fondos necesarios para cubrir los costos operativos del proyecto, como electricidad, mantenimiento y otros gastos misceláneos.
 
-### Recursos Humanos y Capacitación
+### Recursos humanos y capacitación
 
-* *Equipo de Implementación:* Ingenieros mecatrónicos con habilidades en diseño, programación, electrónica y automatización industrial.
-* *Supervisores del Proyecto:* Será necesario contar con la supervisión y orientación de profesores con experiencia en áreas relacionadas, quienes guiarán y supervisarán el progreso del proyecto.
-* *Capacitación en Nuevas Tecnologías:* El equipo de estudiantes necesitará capacitación en el uso de tecnologías específicas, como software de diseño CAD, software de control de procesos, y sistemas de automatización.
-* *Desarrollo de Habilidades blandas:* Se requerirá capacitación adicional para desarrollar habilidades de trabajo en equipo, gestión de proyectos, resolución de problemas y comunicación efectiva.
-* *Capacitación en Seguridad:* Programas de capacitación en seguridad laboral y manejo de equipos de automatización para garantizar un entorno de trabajo seguro.
-* *Asistencia Técnica:* Posibilidad de contar con asistencia técnica externa para resolver problemas técnicos complejos o para optimizar el funcionamiento de los sistemas automatizados.
+* *Equipo de implementación:* Ingenieros mecatrónicos en formación con habilidades en diseño, programación, electrónica y automatización industrial.
+* *Supervisores del proyecto:* Será necesario contar con la supervisión y orientación de profesores con experiencia en áreas relacionadas, quienes guiarán y supervisarán el progreso del proyecto.
+* *Capacitación en nuevas tecnologías:* El equipo de estudiantes necesitará capacitación en el uso de tecnologías específicas, como software de diseño CAD, software de control de procesos, y sistemas de automatización.
+* *Desarrollo de habilidades blandas:* Se requerirá capacitación adicional para desarrollar habilidades de trabajo en equipo, gestión de proyectos, resolución de problemas y comunicación efectiva.
+* *Capacitación en seguridad:* Programas de capacitación en seguridad laboral y manejo de equipos de automatización para garantizar un entorno de trabajo seguro.
+* *Asistencia técnica:* Posibilidad de contar con asistencia técnica externa para resolver problemas técnicos complejos o para optimizar el funcionamiento de los sistemas automatizados.
 
 
 <!--

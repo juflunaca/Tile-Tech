@@ -1,8 +1,8 @@
 # Proceso de aprendizaje
-A continuación se presentan los modulos de aprendizaje  de las habilidades desarrolladas durante este proyecto y lass secicones y entregables correspondientes que se han desarrollado a lo largo del proyecto el proyecto.
+A continuación se presentan los módulos de aprendizaje  de las habilidades desarrolladas durante este proyecto y las secciones y entregables correspondientes que se han desarrollado a lo largo del proyecto.
 
 
-## Gerencia de producción
+## Módulo Gerencia de producción
 - [VSM](../producto/5-gestion-produccion.md#vsm-value-stream-mapping)
 - [Indicadores de gestión](../producto/5-gestion-produccion.md#indicadores-claves-de-diseño)
 
@@ -11,20 +11,23 @@ A continuación se presentan los modulos de aprendizaje  de las habilidades desa
 - [VSM](./VSM.md): 
 - [KPIS](./KPIS.md):
 -->
-## Modulo de gestión de proyectos
+## Módulo de gestión de proyectos
 
 - [Planeación de proyectos](./1-planeacion-y-gestion)
 - [Comunicaciones entre partes](./2-comunicaciones)
 
-### Analisis economico
-- [Analisis economico](../producto/3-analisis-economico)
+### Análisis economico
+- [Análisis económico](../producto/3-analisis-economico)
 
-## Modulo de robotica
+## Módulo de robótica
 - [Celda robotizada](../producto/6-celda-robotizada)
 
-## Modulo gemelo digital
+## Módulo gemelo digital
+- [Gemelo digital en NX](../producto/8-transformacion-digital.md)
 
-## Modulo de PLC y SCADA
+## Módulo de PLC y SCADA
+- [Lógica de PLC](../producto/7-PLC.md)
+- [SCADA](../producto/9-SCADA.md)
 
 ## Reflexiones
 <details>

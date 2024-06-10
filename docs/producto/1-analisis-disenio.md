@@ -2,7 +2,7 @@
 
 ## Estado de la planta previo a intervención:
 
-Se tiene que la fabrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
+Se tiene que la fábrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosa se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fabrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
 
 
 
