@@ -3,25 +3,28 @@
 El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes antes de la intervención, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion#cuellos-de-botella-y-áreas-de-mejora).
 
 
-## Costos de producción
+## Análisis de ingresos y egresos  mensuales por producción
+
+### Ingresos
+
+### Costos de producción
 
 Para determinar los costos de producción se consideran los costos de insumos, mano de obra y otros costos asociados a la producción de baldosas cerámicas.
 
-### Costos de insumos
+#### Costos de insumos
 
 ![costos insumos](analisis-economico/costos-insumos.png)
 
-### Costo recursos Humano
+#### Costo recursos Humano
 
 La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador. Causandose un costo mensual de $212.472.000  COP.
 
 ![costos recurso humano](analisis-economico/recurso-humano.png)
 
 
-
-
 Se hace un estimado del costo incurrido por la fabrica de baldosas.
 
+#### Consolidado
 
 | Concepto                        | Monto            |
 |---------------------------------|------------------|
@@ -35,6 +38,10 @@ Se hace un estimado del costo incurrido por la fabrica de baldosas.
 | **TOTAL EGRESOS**               | **$ 4.081.275.659** |
 
 
+<details>
+  <summary> Anexo análisis ingresos y egresos de producción </summary>
+<embed src="/Tile-Tech/analisis-economico/analisis-economico-ACTUAL.pdf" type="application/pdf" width="100%" height="600px" />
+</details>
 
 ## Costos de inversión
 
@@ -48,17 +55,25 @@ Con un aumento de 10% en la producción de baldosas. Se tiene un aumento de gana
 
 
 
-[Anexo análisis económico](/analisis-economico)
 
 <details>
-  <summary> Análisis económico </summary>
-<embed src="/Tile-Tech/analisis-economico.pdf" type="application/pdf" width="100%" height="600px" />
+  <summary> Anexo Análisis económico </summary>
+
+[Descargar anexo](/analisis-economico/analisis-economico.pdf)
+<embed src="/Tile-Tech/analisis-economico/analisis-economico.pdf" type="application/pdf" width="100%" height="600px" />
+
 </details>
+
+
 
 <!---
 <iframe src="/Tile-Tech/analis-economico.htm" type="application/pdf" width="100%" height="600px" ></iframe>
 
-## modelo de negocio
+<iframe src="/Tile-Tech/analis-economico.htm"  width="100%" height="600px" ></iframe>
+
+-->
+
+## Modelo de negocio
 
 - Segmentos de mercado: plantas de fabricación de cerámica de tamaño mediano. Que busquen aumentar su producción y requieran de automatización
 
@@ -82,8 +97,6 @@ actividades planteadas por cronograma
 
 proceso de estimación de costos
 
-
--->
 
 ## BOM
 Se anexa el Build of materials (BOM), el cual contiene la lista de los materiales necesarios para la elaboración del proyecto.
