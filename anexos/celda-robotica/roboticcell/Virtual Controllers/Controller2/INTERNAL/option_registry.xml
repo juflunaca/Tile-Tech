@@ -1,0 +1,5 @@
+<?xml version = "1.0" encoding="utf-8" ?>
+<option_registry xmlns="urn:abb-robotics-registry-option">
+<entry option="pmrc_gui" path="C:/Users/valeh/AppData/Local/ABB/RobotWare/RobotWare_6.15.7032/options/pmrc"/>
+<entry option="gtpuSDK" path="C:/Users/valeh/AppData/Local/ABB/RobotWare/RobotWare_6.15.7032/options/gtpusdk"/>
+</option_registry>

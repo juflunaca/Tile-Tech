@@ -1,0 +1,145 @@
+MODULE pmrcUser (SYSMODULE)
+  !***********************************************************
+  !
+  ! Module: pmrcUser
+  !
+  !
+  ! Description
+  !   This is the additional system module for PickMaster. 
+  !
+  ! Copyright (c) ABB Automation Technology Products 2006.
+  ! All rights reserved
+  !
+  !***********************************************************
+
+  !
+  ! Default user tooldatas
+  !
+  TASK PERS tooldata pmPickTool1 := [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]];
+  TASK PERS tooldata pmCalibTool1 := [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]];
+  TASK PERS tooldata pmSearchTool1 := [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]];
+
+  !
+  ! Default user workobjects
+  !
+  TASK PERS wobjdata pmInfeeder1_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmInfeeder2_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmInfeeder3_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmInfeeder4_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmOutfeeder1_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmOutfeeder2_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmOutfeeder3_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmOutfeeder4_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmPallet1_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS wobjdata pmSlipsheet1_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+
+  !***********************************************************
+  !
+  ! Trap TrapDIToolEvents
+  !
+  !   This routine waits for the right signal values to be set.
+  !   The variables warningTime and pollRate can be changed for
+  !   user optimization.
+  !
+  !   warningTime - The time in seconds before a warning is
+  !                 displayed about a signal waiting on right value.
+  !
+  !   pollRate - The time in seconds for how often the wait statement
+  !              will be evaluated when waiting for the right values.
+  !       
+  !***********************************************************
+  TRAP TrapDIToolEvents
+    VAR num warningTime := 5;
+    VAR num pollRate := 0.1; 
+
+    PmCheckToolEventInputSignals warningTime, pollRate;
+  ENDTRAP
+
+  !***********************************************************
+  !
+  ! Trap TrapGIToolEvents
+  !
+  !   This routine waits for the right signal values to be set.
+  !   The variables warningTime and pollRate can be changed for
+  !   user optimization.
+  !
+  !   warningTime - The time in seconds before a warning is
+  !                 displayed about a signal waiting on right value.
+  !
+  !   pollRate - The time in seconds for how often the wait statement
+  !              will be evaluated when waiting for the right values.
+  !       
+  !***********************************************************
+  TRAP TrapGIToolEvents
+    VAR num warningTime := 5;
+    VAR num pollRate := 0.1;
+
+    PmCheckToolEventInputSignals warningTime, pollRate;
+  ENDTRAP
+  
+  !***********************************************************
+  !
+  ! Procedure PmLoadReady
+  !
+  !   Sets the pmSystem_LoadReadyX signal for the executing
+  !   motion task. This event routine is executed when the
+  !   RESET event is triggered.
+  !
+  !***********************************************************
+  
+  PROC PmLoadReady ()
+    VAR string taskname;
+        
+    taskname := GetTaskName();
+    
+    TEST taskname
+      CASE "T_ROB1":
+        SetDO \Sync ,pmSystem_doLoadReady1,1;
+      CASE "T_ROB2":
+        SetDO \Sync ,pmSystem_doLoadReady2,1;
+      CASE "T_ROB3":
+        SetDO \Sync ,pmSystem_doLoadReady3,1;
+      CASE "T_ROB4":
+        SetDO \Sync ,pmSystem_doLoadReady4,1;
+      CASE "T_ROB5":
+        SetDO \Sync ,pmSystem_doLoadReady5,1;
+      CASE "T_ROB6":
+        SetDO \Sync ,pmSystem_doLoadReady6,1;        
+    ENDTEST
+  ENDPROC
+  
+  !***********************************************************
+  !
+  ! Procedure PmLoadReadySignalReset
+  !
+  !   Reset all pmSystem_doLoadReadyX signals in all motion task.
+  !   This event routine is executed when the START, RESTART and
+  !   POWER_ON event is triggered.
+  !
+  !***********************************************************
+  
+  PROC PmLoadReadySignalReset ()
+     
+    SetDO pmSystem_doLoadReady1,0;
+    SetDO pmSystem_doLoadReady2,0;
+    SetDO pmSystem_doLoadReady3,0;
+    SetDO pmSystem_doLoadReady4,0;
+    SetDO pmSystem_doLoadReady5,0;
+    SetDO pmSystem_doLoadReady6,0;        
+  ENDPROC
+  
+  !***********************************************************
+  !
+  ! Procedure PmResetProjStartFlagAtStart
+  !
+  !   Reset the global persistent boolean ProjectStart in all motion task.
+  !   This event routine is executed when the START event is triggered.
+  !
+  !***********************************************************
+  
+  PROC PmResetProjStartFlagAtStart ()
+     
+    ProjectStart:=FALSE;
+  ENDPROC   
+ 
+ENDMODULE

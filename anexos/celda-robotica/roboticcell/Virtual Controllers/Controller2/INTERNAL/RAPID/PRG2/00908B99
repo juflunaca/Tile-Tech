@@ -1,0 +1,635 @@
+MODULE pmrcSys (SYSMODULE, NOSTEPIN)
+  !***********************************************************
+  !
+  ! Module: pmrcSys
+  !
+  !
+  ! Description
+  !   This is the additional system module for PickMaster. 
+  !
+  ! Copyright (c) ABB Automation Technology Products 2006.
+  ! All rights reserved
+  !
+  !***********************************************************
+
+  !
+  ! Global persistent to control project start via I/O
+  !
+  PERS bool ProjectStart:=FALSE;
+
+  !
+  ! Local temporary persistent decalarated variables.
+  !
+  LOCAL PERS loaddata curr_Load := [0.001,[0,0,0.001],[1,0,0,0],0,0,0];
+  LOCAL PERS wobjdata curr_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  LOCAL PERS tooldata curr_Tool := [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]];
+
+  !
+  ! Default workobject for PM_HOME Work Area, same as wobj0.
+  ! Used to identifie different PM_HOME work area in a multi move system.
+  !
+  TASK PERS wobjdata pm_home_WObj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+
+  !
+  ! Tool events check inputs data
+  !
+  CONST num pm_ToolEventsArrSize := 72;
+  CONST num pm_MaxActionNumIndex := 1000;
+  CONST num pm_LoopWidth := 8;
+  CONST num pm_DigitalInputSignal := pm_ToolEventsArrSize - 1;
+  CONST num pm_GroupDigitalInputSignal := pm_ToolEventsArrSize;
+    
+  VAR num pm_NumOfActions := 0;
+  VAR num pm_LastUsedIndex := 0;
+  VAR num pm_LastActionNumExecInTrap := -1;
+ 
+  VAR num pm_ActionNums{pm_ToolEventsArrSize};
+  VAR num pm_SignalType{pm_ToolEventsArrSize};
+  VAR string pm_SignalNames{pm_ToolEventsArrSize};
+  VAR intnum pm_IntNos{pm_ToolEventsArrSize};
+
+  ! Tool events check digital inputs
+  VAR signaldi pm_diSignals{pm_ToolEventsArrSize};
+  VAR dionum pm_diValues{pm_ToolEventsArrSize};
+
+  ! Tool events check group inputs
+  VAR signalgi pm_giSignals{pm_ToolEventsArrSize};
+  ! Note: the unused num array pm_giValues remains here to maintain backward compatibility
+  VAR num pm_giValues{pm_ToolEventsArrSize};
+  VAR dnum pm_giDValues{pm_ToolEventsArrSize};
+
+  ! Variables to store position used for intermediate movements.
+  TASK PERS robtarget PmLastRobTgt := [[0,0,0],[0,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+  TASK PERS wobjdata PmLastWobj := [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+  TASK PERS tooldata PmLastTool := [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]];
+  
+  ! Rapid error numbers
+  VAR errnum ERR_PPA_ERR_WHL_SEARCH := -1;
+    
+  !***********************************************************
+  !
+  ! Procedure PmDoAction
+  !
+  !   This routine setup event and all modal data. The move
+  !   is ordered when all modal data are setup.
+  !
+  !***********************************************************
+
+  PROC PmDoAction(VAR pm_wadescr WorkArea, VAR pm_targetdata Tgt, VAR pm_actiondata Act)
+    VAR pm_eventdata Event;
+    VAR signaldo doSignal;
+    VAR signalgo goSignal;
+    VAR num NumOfTriggEvents := 0;
+    VAR num ArrSize := 0;
+    VAR triggdata TriggArr{8};
+    VAR stoppointdata curr_StopPoint;
+    VAR num TriggEventTime;
+    VAR string signalname;
+    VAR string targetActionType := "N/A";
+    VAR errnum ERR_PPA_TOO_MANY_TOOLEVENTS := 88;
+
+    IF pm_NumOfActions = pm_MaxActionNumIndex THEN
+      pm_NumOfActions := 1;
+    ELSE
+      Incr pm_NumOfActions;
+    ENDIF
+
+    ArrSize := Dim(TriggArr,1);
+    WHILE PmGetEvent(WorkArea, Tgt.TargetHandle, Act.ActionHandle, Event) DO
+      IF NumOfTriggEvents >= ArrSize THEN
+        RAISE ERR_PPA_TOO_MANY_TOOLEVENTS;
+      ELSE
+        TEST Event.Type
+          CASE PM_EVENT_PROC:
+            Incr NumOfTriggEvents;
+            TriggEquip TriggArr{NumOfTriggEvents}, Event.Dist, Event.Time, \ProcID := Event.ProcId, Event.Value;
+          CASE PM_EVENT_DO:
+            Incr NumOfTriggEvents;
+            GetDataVal Event.SignalName,doSignal;
+            IF Act.type = PM_TARGET_POS AND Tgt.StopPointData.type = 2 THEN
+              TriggEventTime := Event.time - Tgt.stopPointData.stoptime / 2;         
+              IF TriggEventTime >= 0.001 THEN
+                TriggIO TriggArr{NumOfTriggEvents}, TriggEventTime, \Time, \DOp := doSignal, Event.Value;
+              ELSE
+                TriggIO TriggArr{NumOfTriggEvents}, 0.001, \Time, \DOp := doSignal, Event.Value \DODelay := -TriggEventTime + 0.001;
+              ENDIF
+            ELSE
+              TriggEquip TriggArr{NumOfTriggEvents}, Event.Dist, Event.Time, \DOp := doSignal, Event.Value;
+            ENDIF
+          CASE PM_EVENT_GO:
+            Incr NumOfTriggEvents;
+            GetDataVal Event.SignalName,goSignal;
+            IF Act.type = PM_TARGET_POS AND Tgt.StopPointData.type = 2 THEN
+              TriggEventTime := Event.time - Tgt.stopPointData.stoptime / 2;         
+              IF TriggEventTime >= 0.001 THEN
+                TriggIO TriggArr{NumOfTriggEvents}, TriggEventTime, \Time, \GOp := goSignal, SetDvalue := Event.DValue;
+              ELSE
+				TriggIO TriggArr{NumOfTriggEvents}, 0.001, \Time, \GOp := goSignal, SetDvalue := Event.DValue \DODelay := -TriggEventTime + 0.001;
+              ENDIF
+            ELSE
+              TriggEquip TriggArr{NumOfTriggEvents}, Event.Dist, Event.Time, \GOp := goSignal, SetDvalue := Event.DValue;
+            ENDIF
+          CASE PM_EVENT_WAIT_DI:
+            Incr NumOfTriggEvents;
+            
+            ! Wait events require concurrency to be turned off
+            Act.UseConc := FALSE;
+
+            IF pm_LastUsedIndex = (pm_ToolEventsArrSize - 2) THEN
+              pm_LastUsedIndex := 1;
+            ELSE
+              Incr pm_LastUsedIndex;
+            ENDIF
+
+            pm_ActionNums{pm_LastUsedIndex} := pm_NumOfActions;
+            pm_SignalType{pm_LastUsedIndex} := pm_DigitalInputSignal;
+
+            GetDataVal Event.SignalName,pm_diSignals{pm_LastUsedIndex};
+            pm_SignalNames{pm_LastUsedIndex} := Event.SignalName;
+            pm_diValues{pm_LastUsedIndex} := Event.Value;
+            IDelete pm_IntNos{pm_LastUsedIndex};
+            CONNECT pm_IntNos{pm_LastUsedIndex} WITH TrapDIToolEvents;
+            TriggCheckIO TriggArr{NumOfTriggEvents}, 0, pm_diSignals{pm_LastUsedIndex}, EQ, pm_diValues{pm_LastUsedIndex}\StopMove, pm_IntNos{pm_LastUsedIndex};
+          CASE PM_EVENT_WAIT_GI:
+            Incr NumOfTriggEvents;
+            
+            ! Wait events require concurrency to be turned off
+            Act.UseConc := FALSE;
+
+            IF pm_LastUsedIndex = (pm_ToolEventsArrSize - 2) THEN
+              pm_LastUsedIndex := 1;
+            ELSE
+              Incr pm_LastUsedIndex;
+            ENDIF
+
+            pm_ActionNums{pm_LastUsedIndex} := pm_NumOfActions;
+            pm_SignalType{pm_LastUsedIndex} := pm_GroupDigitalInputSignal;
+
+            GetDataVal Event.SignalName,pm_giSignals{pm_LastUsedIndex};
+            pm_SignalNames{pm_LastUsedIndex} := Event.SignalName;
+            ! Note: the unused num array pm_giValues remains here to maintain backward compatibility
+            pm_giValues{pm_LastUsedIndex} := Event.Value;
+            pm_giDValues{pm_LastUsedIndex} := Event.DValue;
+            IDelete pm_IntNos{pm_LastUsedIndex};
+            CONNECT pm_IntNos{pm_LastUsedIndex} WITH TrapGIToolEvents;
+            TriggCheckIO TriggArr{NumOfTriggEvents}, 0, pm_giSignals{pm_LastUsedIndex}, EQ, CheckDvalue := pm_giDValues{pm_LastUsedIndex}\StopMove, pm_IntNos{pm_LastUsedIndex};
+          DEFAULT:
+            PmErrorLog 2356, ERRSTR_TASK, ValToStr(Event.Type), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+        ENDTEST
+      ENDIF	
+    ENDWHILE 
+
+    TEST Act.Type
+      CASE PM_APPROACH_POS:
+        curr_Load := Tgt.AppProdsLoad;
+      CASE PM_TARGET_POS:
+        curr_Load := Tgt.AppProdsLoad;
+        curr_StopPoint := Tgt.StopPointData;
+      CASE PM_DEPART_POS:
+        curr_Load := Tgt.DepProdsLoad;
+      DEFAULT:
+        PmErrorLog 2357, ERRSTR_TASK, ValToStr(Act.Type), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+    ENDTEST	
+    curr_WObj := Tgt.TargetWobj;
+    curr_Tool := Tgt.TargetTool;
+
+    PathAccLim Act.Accel.AccLim\AccMax := Act.Accel.AccMax, Act.Accel.DecelLim\DecelMax := Act.Accel.DecelMax;  
+    AccSet Act.Accel.acc, Act.Accel.Ramp;
+    GripLoad curr_Load;
+    IF Act.ArmConfMon = TRUE THEN
+      ConfL\On;
+      ConfJ\On;
+    ELSE
+      ConfL\Off;
+      ConfJ\Off;
+    ENDIF
+    IF Act.SingAreaType = PM_SING_AREA_WRI THEN
+      SingArea\Wrist;
+    ELSEIF Act.SingAreaType = PM_SING_AREA_LOCK_AXIS4 THEN
+      SingArea\LockAxis4;
+    ELSE
+      SingArea\Off;
+    ENDIF  
+
+    TEST NumOfTriggEvents
+      CASE 0:
+        IF Act.Move = PM_SEARCH_LIN THEN
+          PmDoSearch WorkArea,Tgt.TargetHandle,Act.RobTgt,Act.Speed,Act.Search,curr_Tool,curr_WObj;
+          PmAckTarget WorkArea,Tgt,PM_ACK;
+        ELSE
+          PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed,Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+        ENDIF
+      CASE 1:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 2:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 3:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 4:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3}\T4 := TriggArr{4},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 5:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3}\T4 := TriggArr{4}\T5 := TriggArr{5},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 6:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3}\T4 := TriggArr{4}\T5 := TriggArr{5}\T6 := TriggArr{6},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 7:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3}\T4 := TriggArr{4}\T5 := TriggArr{5}\T6 := TriggArr{6}\T7 := TriggArr{7},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      CASE 8:
+        PmDoMove1 Act.Move,Act.UseConc,Act.RobTgt,Act.Speed\T1 := TriggArr{1}\T2 := TriggArr{2}\T3 := TriggArr{3}\T4 := TriggArr{4}\T5 := TriggArr{5}\T6 := TriggArr{6}\T7 := TriggArr{7}\T8 := TriggArr{8},Act.Zone,curr_StopPoint,curr_Tool,curr_WObj;
+      DEFAULT:
+        PmErrorLog 2355, ERRSTR_TASK, ValToStr(NumOfTriggEvents), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+    ENDTEST
+
+  ERROR
+    TEST ERRNO
+      CASE ERR_SYM_ACCESS:
+        IF Event.SignalName = "" THEN
+          signalname := "<no signal>"; 
+        ELSE
+          signalname := Event.SignalName;
+        ENDIF	
+        PmErrorLog 2354, ERRSTR_TASK, signalname, ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED\ErrorHandler := TRUE;
+        RaiseToUser \BreakOff;
+      CASE PM_ERR_PALLET_REDUCED:
+        PmAckTarget WorkArea,Tgt,PM_ACK;
+        RAISE;
+      CASE PM_ERR_PALLET_EMPTY:
+        PmAckTarget WorkArea,Tgt,PM_ACK;
+        RAISE;
+      CASE PM_ERR_JOB_EMPTY:
+        PmAckTarget WorkArea,Tgt,PM_ACK;
+        RAISE;	
+      CASE ERR_PPA_TOO_MANY_TOOLEVENTS:
+        TEST Act.Type
+          CASE PM_APPROACH_POS:
+            targetActionType := "APPROACH";
+          CASE PM_TARGET_POS:
+            targetActionType := "PICK/PLACE";
+          CASE PM_DEPART_POS:
+            targetActionType := "DEPART";
+        ENDTEST
+        PmErrorLog 2385, ERRSTR_TASK, ValToStr(ArrSize), targetActionType, PmGetWaName(WorkArea),ERRSTR_CONTEXT\ErrorHandler := TRUE;
+        RAISE;
+      DEFAULT:
+        RAISE;
+    ENDTEST
+  ENDPROC
+  
+  !***********************************************************
+  !
+  ! Procedure PmDoMove1
+  !
+  !   This routine evaluates if concurrency is used.
+  !   The move is ordered after evaluation.
+  !
+  !***********************************************************
+
+  PROC PmDoMove1(pm_movetype Move, bool Conc, robtarget ToPoint, speeddata Speed, \VAR triggdata T1,
+               \VAR triggdata T2, \VAR triggdata T3, \VAR triggdata T4, \VAR triggdata T5, \VAR triggdata T6, 
+               \VAR triggdata T7, \VAR triggdata T8, zonedata Zone, stoppointdata Inpos, PERS tooldata Tool,
+               PERS wobjdata WObj)
+    IF Conc = TRUE THEN
+      PmDoMove2 Move\Conc,ToPoint,Speed\T1?T1\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone,Inpos,Tool,WObj;
+    ELSE
+      PmDoMove2 Move,ToPoint,Speed\T1?T1\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone,Inpos,Tool,WObj;
+    ENDIF
+  ERROR
+    RaiseToUser \BreakOff;
+  ENDPROC
+
+  !***********************************************************
+  !
+  ! Procedure PmDoMove2
+  !
+  !   This routine evaluates if stoppoint is used.
+  !   The move is ordered after evaluation.
+  !
+  !***********************************************************
+
+  PROC PmDoMove2(pm_movetype Move, \switch Conc, robtarget ToPoint, speeddata Speed, \VAR triggdata T1, 
+               \VAR triggdata T2, \VAR triggdata T3, \VAR triggdata T4, \VAR triggdata T5, \VAR triggdata T6,
+               \VAR triggdata T7, \VAR triggdata T8, zonedata Zone, stoppointdata Inpos, PERS tooldata Tool,
+               PERS wobjdata WObj)  	
+    IF (Inpos.type=1) OR (Inpos.type=2) OR (Inpos.type=3) THEN
+      PmDoMove3 Move\Conc?Conc,ToPoint,Speed\T1?T1\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone\Inpos := Inpos,Tool,WObj;
+    ELSE
+      PmDoMove3 Move\Conc?Conc,ToPoint,Speed\T1?T1\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone,Tool,WObj;
+    ENDIF
+  ERROR
+    RaiseToUser \BreakOff;
+  ENDPROC
+
+  !***********************************************************
+  !
+  ! Procedure PmDoMove3
+  !
+  !   This routine evaluates if there are any trig events on 
+  !   path and which type of movement is used.
+  !   The move is ordered after evaluation.
+  !
+  !***********************************************************
+
+  PROC PmDoMove3(pm_movetype Move, \switch Conc, robtarget ToPoint, speeddata Speed, \VAR triggdata T1, 
+               \VAR triggdata T2, \VAR triggdata T3, \VAR triggdata T4, \VAR triggdata T5, \VAR triggdata T6,
+               \VAR triggdata T7, \VAR triggdata T8, zonedata Zone, \stoppointdata Inpos, PERS tooldata Tool,
+               PERS wobjdata WObj)
+
+    VAR bool MaxConcReached := FALSE;
+
+    TEST Move
+      CASE PM_MOVE_LIN:
+        MoveL\Conc?Conc,ToPoint,Speed,Zone\Inpos?Inpos,Tool\WObj := WObj;
+        IF MaxConcReached THEN
+          MoveL ToPoint,Speed,Zone\Inpos?Inpos,Tool\WObj := WObj;
+          MaxConcReached := FALSE;
+        ENDIF
+      CASE PM_MOVE_JOINT:
+        MoveJ\Conc?Conc,ToPoint,Speed,Zone\Inpos?Inpos,Tool\WObj := WObj;
+        IF MaxConcReached THEN
+          MoveJ ToPoint,Speed,Zone\Inpos?Inpos,Tool\WObj := WObj;
+          MaxConcReached := FALSE;
+        ENDIF
+      CASE PM_TRIGG_LIN:
+        TriggL\Conc?Conc,ToPoint,Speed,T1,\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone\Inpos?Inpos,Tool\WObj := WObj;
+        IF MaxConcReached THEN
+          TriggL ToPoint,Speed,T1,\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone\Inpos?Inpos,Tool\WObj := WObj;
+          MaxConcReached := FALSE;
+        ENDIF
+      CASE PM_TRIGG_JOINT:
+        TriggJ\Conc?Conc,ToPoint,Speed,T1,\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone\Inpos?Inpos,Tool\WObj := WObj;
+        IF MaxConcReached THEN
+          TriggJ ToPoint,Speed,T1,\T2?T2\T3?T3\T4?T4\T5?T5\T6?T6\T7?T7\T8?T8,Zone\Inpos?Inpos,Tool\WObj := WObj;
+          MaxConcReached := FALSE;
+        ENDIF
+      DEFAULT:
+        PmErrorLog 2358, ERRSTR_TASK, ValToStr(Move), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+    ENDTEST
+  ERROR
+    IF ERRNO = ERR_CONC_MAX THEN
+      SkipWarn;
+      MaxConcReached := TRUE;
+      TRYNEXT;
+    ELSE
+      RaiseToUser \BreakOff;
+    ENDIF
+  ENDPROC
+
+  !***********************************************************
+  !
+  ! Procedure PmDoSearch
+  !
+  !   This routine performs a search movement and takes
+  !   proper actions depending on the result of the search.
+  !
+  !***********************************************************
+
+  PROC PmDoSearch(VAR pm_wadescr WorkArea, VAR pm_targethandle TargetHandle, robtarget ToPoint, speeddata Speed, pm_searchdata SearchData, PERS tooldata Tool, PERS wobjdata WObj)
+    VAR robtarget SearchPoint;
+    VAR signaldi diSearchSignal;
+    VAR bool SearchError := FALSE;
+    VAR pm_wainfo WorkAreaInfo;
+
+    BookErrNo ERR_PPA_ERR_WHL_SEARCH;
+    GetDataVal SearchData.SignalName,diSearchSignal;
+
+    PmGetWaInfo WorkArea, WorkAreaInfo;
+
+    TEST SearchData.StopType
+      CASE PM_STOP_NOT_USED:
+        TEST SearchData.IOTriggType
+          CASE PM_BOTH_FLANKS:
+            SearchL\Sup,diSearchSignal\Flanks,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_HIGH_LEVEL:
+            SearchL\Sup,diSearchSignal\HighLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_POS_FLANK:
+            SearchL\Sup,diSearchSignal\PosFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_LOW_LEVEL:
+            SearchL\Sup,diSearchSignal\LowLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_NEG_FLANK:
+            SearchL\Sup,diSearchSignal\NegFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          DEFAULT:
+            PmErrorLog 2386, ERRSTR_TASK, ValToStr(SearchData.IOTriggType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+        ENDTEST    
+      CASE PM_STOP:
+        TEST SearchData.IOTriggType
+          CASE PM_BOTH_FLANKS:
+            SearchL\Stop,diSearchSignal\Flanks,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_HIGH_LEVEL:
+            SearchL\Stop,diSearchSignal\HighLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_POS_FLANK:
+            SearchL\Stop,diSearchSignal\PosFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_LOW_LEVEL:
+            SearchL\Stop,diSearchSignal\LowLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_NEG_FLANK:
+            SearchL\Stop,diSearchSignal\NegFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          DEFAULT:        
+            PmErrorLog 2386, ERRSTR_TASK, ValToStr(SearchData.IOTriggType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+        ENDTEST    
+      CASE PM_SSTOP:
+        TEST SearchData.IOTriggType
+          CASE PM_BOTH_FLANKS:
+            SearchL\SStop,diSearchSignal\Flanks,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_HIGH_LEVEL:
+            SearchL\SStop,diSearchSignal\HighLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_POS_FLANK:
+            SearchL\SStop,diSearchSignal\PosFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_LOW_LEVEL:
+            SearchL\SStop,diSearchSignal\LowLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_NEG_FLANK:
+            SearchL\SStop,diSearchSignal\NegFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          DEFAULT:    
+            PmErrorLog 2386, ERRSTR_TASK, ValToStr(SearchData.IOTriggType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+         ENDTEST   
+      CASE PM_PSTOP:
+        TEST SearchData.IOTriggType
+          CASE PM_BOTH_FLANKS:
+            SearchL\PStop,diSearchSignal\Flanks,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_HIGH_LEVEL:
+            SearchL\PStop,diSearchSignal\HighLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_POS_FLANK:
+            SearchL\PStop,diSearchSignal\PosFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;          
+          CASE PM_LOW_LEVEL:
+            SearchL\PStop,diSearchSignal\LowLevel,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          CASE PM_NEG_FLANK:
+            SearchL\PStop,diSearchSignal\NegFlank,SearchPoint,ToPoint,Speed,Tool\WObj := WObj;
+          DEFAULT:    
+            PmErrorLog 2386, ERRSTR_TASK, ValToStr(SearchData.IOTriggType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+        ENDTEST  
+      DEFAULT:
+        PmErrorLog 2362, ERRSTR_TASK, ValToStr(SearchData.StopType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+    ENDTEST
+    
+    TEST SearchData.SearchType
+      CASE PM_SEARCH_X:
+        PmSearchAdjust WorkArea,SearchData.SearchType,SearchPoint.trans.x;
+      CASE PM_SEARCH_Y:
+        PmSearchAdjust WorkArea,SearchData.SearchType,SearchPoint.trans.y;
+      CASE PM_SEARCH_Z:
+        PmSearchAdjust WorkArea,SearchData.SearchType,SearchPoint.trans.z;
+      DEFAULT:
+        PmErrorLog 2361, ERRSTR_TASK, ValToStr(SearchData.SearchType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+    ENDTEST
+    
+    IF SearchError = TRUE THEN
+      RAISE ERR_PPA_ERR_WHL_SEARCH;
+    ENDIF
+    
+    ERROR
+      TEST ERRNO
+        CASE ERR_WHLSEARCH:
+          SearchError := TRUE;
+          SearchPoint := ToPoint;
+          TRYNEXT;
+        CASE PM_ERR_PALLET_REDUCED, ERR_PPA_ERR_WHL_SEARCH:
+          IF SearchError = TRUE THEN
+            TEST SearchData.SearchType
+              CASE PM_SEARCH_X:
+                PmErrorLog 2363, ERRSTR_TASK, ValToStr(SearchPoint.trans.x), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED\ErrorHandler := TRUE;
+              CASE PM_SEARCH_Y:
+                PmErrorLog 2363, ERRSTR_TASK, ValToStr(SearchPoint.trans.y), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED\ErrorHandler := TRUE;
+              CASE PM_SEARCH_Z:
+                PmErrorLog 2363, ERRSTR_TASK, ValToStr(SearchPoint.trans.z), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED\ErrorHandler := TRUE;
+              DEFAULT:
+                PmErrorLog 2361, ERRSTR_TASK, ValToStr(SearchData.SearchType), ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED\ErrorHandler := TRUE;
+            ENDTEST
+            RAISE ERR_WHLSEARCH;
+          ELSE
+            RAISE;
+          ENDIF
+        CASE PM_ERR_PALLET_EMPTY:
+          IF WorkAreaInfo.IsMaster THEN
+            RAISE PM_ERR_JOB_EMPTY;
+          ELSE
+            RAISE;
+          ENDIF
+        DEFAULT:
+          RaiseToUser \BreakOff;
+      ENDTEST
+  ENDPROC
+
+  !***********************************************************
+  !
+  ! Proc CheckToolEventInputSignals()
+  !
+  !   This routine checks which event that has occure, catch all
+  !   tool event signals, di and gi, and then waits for all signals
+  !   to be set to correct value at the same time. But only for
+  !   the first trigg for an action, the rest is skipped.
+  !
+  !***********************************************************
+  
+  PROC PmCheckToolEventInputSignals(num waitingTime, num pollTime)
+    VAR num loopCounter := 0;
+    VAR num actionNumber := 0;
+    VAR num iteration := 0;
+    VAR num storeDIIndex{8} := [0,0,0,0,0,0,0,0];
+    VAR num storeGIIndex{8} := [0,0,0,0,0,0,0,0];
+    VAR num countDIHits := 0;
+    VAR num countGIHits := 0;
+    VAR bool ready := FALSE;
+
+    WHILE ready = FALSE AND loopCounter < (pm_ToolEventsArrSize - 2) DO	
+      Incr loopCounter;	  
+      IF INTNO = pm_IntNos{loopCounter} THEN
+        actionNumber := pm_ActionNums{loopCounter};
+        IF actionNumber = pm_LastActionNumExecInTrap THEN
+          ! If trap is ran already for this action number, do nothing
+        ELSE  
+          pm_LastActionNumExecInTrap := actionNumber;
+          ! Loop seven lower and higher index for same action no 
+          FOR i FROM (loopCounter - pm_LoopWidth) TO (loopCounter + pm_LoopWidth) STEP 1 DO
+            ! Adjust limits if near start or end of array
+            IF i < 1 THEN
+              iteration := i + pm_ToolEventsArrSize -2;
+            ELSEIF i > (pm_ToolEventsArrSize - 2) THEN
+              iteration := i - pm_ToolEventsArrSize + 2;
+            ELSE
+             iteration := i;
+            ENDIF
+            ! If same actiono, check signal type and store signalxx and value
+            IF actionNumber = pm_ActionNums{iteration} THEN
+              IF pm_SignalType{iteration} = pm_DigitalInputSignal THEN
+                Incr countDIHits;				
+                storeDIIndex{countDIHits} := iteration;
+              ELSEIF pm_SignalType{iteration} = pm_GroupDigitalInputSignal THEN
+                Incr countGIHits;				
+                storeGIIndex{countGIHits} := iteration;
+              ENDIF
+            ENDIF 
+          ENDFOR
+
+          PmSetupDummyIO;
+
+          ! Initiate all index with dummy values
+          FOR x FROM 1 TO 8 DO
+            IF storeDIIndex{x} = 0 THEN
+              storeDIIndex{x} := pm_DigitalInputSignal;
+            ENDIF			
+          ENDFOR		  
+          FOR x FROM 1 TO 8 DO
+            IF storeGIIndex{x} = 0 THEN
+              storeGIIndex{x} := pm_GroupDigitalInputSignal;
+            ENDIF
+          ENDFOR
+
+          ! Wait until all signal conditions used in TriggCheckIO/TriggL for this action
+          ! are true.
+          WaitUntil pm_diSignals{storeDIIndex{1}} = pm_diValues{storeDIIndex{1}} AND
+                    pm_diSignals{storeDIIndex{2}} = pm_diValues{storeDIIndex{2}} AND
+                    pm_diSignals{storeDIIndex{3}} = pm_diValues{storeDIIndex{3}} AND
+                    pm_diSignals{storeDIIndex{4}} = pm_diValues{storeDIIndex{4}} AND
+                    pm_diSignals{storeDIIndex{5}} = pm_diValues{storeDIIndex{5}} AND
+                    pm_diSignals{storeDIIndex{6}} = pm_diValues{storeDIIndex{6}} AND
+                    pm_diSignals{storeDIIndex{7}} = pm_diValues{storeDIIndex{7}} AND
+                    pm_diSignals{storeDIIndex{8}} = pm_diValues{storeDIIndex{8}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{1}}) = pm_giDValues{storeGIIndex{1}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{2}}) = pm_giDValues{storeGIIndex{2}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{3}}) = pm_giDValues{storeGIIndex{3}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{4}}) = pm_giDValues{storeGIIndex{4}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{5}}) = pm_giDValues{storeGIIndex{5}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{6}}) = pm_giDValues{storeGIIndex{6}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{7}}) = pm_giDValues{storeGIIndex{7}} AND
+                    GInputDnum(pm_giSignals{storeGIIndex{8}}) = pm_giDValues{storeGIIndex{8}} \MaxTime := waitingTime \PollRate := pollTime;
+          StartMove;
+        ENDIF
+        ready := TRUE;
+      ENDIF		
+    ENDWHILE
+  ERROR
+    IF ERRNO = ERR_WAIT_MAXTIME THEN
+      SkipWarn;
+      waitingTime := 3600;
+      FOR i FROM 1 TO 8 DO
+        IF pm_diSignals{storeDIIndex{i}} <> pm_diValues{storeDIIndex{i}} THEN
+          PmErrorLog 2364, ERRSTR_TASK, pm_SignalNames{storeDIIndex{i}}, ValToStr(pm_diValues{storeDIIndex{i}}), ERRSTR_CONTEXT, ValToStr(waitingTime)\ErrorHandler := TRUE;
+        ENDIF	
+        IF GInputDnum(pm_giSignals{storeGIIndex{i}}) <> pm_giDValues{storeGIIndex{i}} THEN
+          PmErrorLog 2364, ERRSTR_TASK, pm_SignalNames{storeGIIndex{i}}, ValToStr(pm_giDValues{storeGIIndex{i}}), ERRSTR_CONTEXT, ValToStr(waitingTime)\ErrorHandler := TRUE;
+        ENDIF
+      ENDFOR		
+      RETRY;      	
+    ENDIF 
+  ENDPROC
+  
+  !***********************************************************
+  !
+  ! Procedure PmSetupDummyIO
+  !
+  !   Setup dummy signals as Alias to be used in PmDoAction.
+  !
+  !***********************************************************
+  
+  PROC PmSetupDummyIO ()
+    VAR string diDummy := "pmProject_diNoWait";
+    VAR string giDummy := "pmProject_giNoWait";
+
+    AliasIO diDummy, pm_diSignals{pm_DigitalInputSignal};
+    AliasIO giDummy, pm_giSignals{pm_GroupDigitalInputSignal};
+
+    pm_diValues{pm_DigitalInputSignal} := 0;
+    pm_giValues{pm_DigitalInputSignal} := 0;
+    pm_giDValues{pm_DigitalInputSignal} := 0;
+    pm_diValues{pm_GroupDigitalInputSignal} := 0;
+    pm_giValues{pm_GroupDigitalInputSignal} := 0;
+    pm_giDValues{pm_GroupDigitalInputSignal} := 0;	
+  ENDPROC  
+ENDMODULE
