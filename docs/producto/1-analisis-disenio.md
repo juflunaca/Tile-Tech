@@ -192,6 +192,14 @@ $ 14 * 3 * 3.5 m/min (60 min/h) = 8820 u/h$
 
 ![](analisis-disenio/1horno-maestro.png)
 
+### Control de calidad:
+
+Debido a procesos inherentes dentro de la fabricación de baldosas se tienen fluctuaciones en la calidad del producto. Dentro de la estación de control de calidad se separa las baldosas en tipo 1 y tipo 2 siendo las primeras de la mejor calidad y las segundas de calidad estándar. La maquina utilizada para este proceso es la SACMI Synthesis and Genusis La cual tiene una taza de producción de 150 unidades/min que equivale a 9000 baldosas hora. Estas se clasifican en 2 categorías. Categoría 1 la cual es de primera calidad y  categoría 2 que es de calidad estándar. Se tiene que la planta produce en las baldosas de calidad 1 y calidad 2 en una proporción de 4:1 es decir 80% y 20% respectivamente.
+
+![control_de_calidad](analisis-disenio/control_calidad.png){width=80%}
+
+![control_de_calidad](analisis-disenio/control_calidad_2.png){width=80%}
+
 
 ### Empaquetado:
 
@@ -229,3 +237,5 @@ SYNTHESIS Y GENUSIS
 3. Preparacion de polvos ceramicos atomizacion.[SACMI](https://sacmi.com/es-ES/ceramics/Azulejos/Preparacion-de-polvos-ceramicos/atomizacion/ATM)
 4. [Catalogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
 5. [ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosas.pdf)
+6. [Video de referencia de proceso de empaquedato](https://youtu.be/rk26any7pKM?si=Vo3NG7W6ul343CLb)
+

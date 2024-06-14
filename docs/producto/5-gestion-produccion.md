@@ -59,7 +59,7 @@ En la siguiente tabla se puede ver la capacidad de producción de cada proceso:
 
 Esto nos permite identificar que los cuellos de botella se encuentran en los procesos de esmaltado, empaquetado y paletizado.
 
-Viendo que el cuello de botella que restringe el proceso se encuentra en el esmaltado se establece el volumen real de producción de la planta. Para ello se  calcula la reducción de capacidad causada por perdidas debido a la calidad a la disponibilidad de la fabrica. Para la calidad no se toma el valor de calidad general de la planta ya que perdidas por calidad en procesos anteriores a la esmaltadora pueden compensarse con la capacidad excedente de producción que se tiene en estos procesos. Se calcula la calidad a partir del esmaltado que incluye los procesos de decorado, cocción y empaquetado obteniendo una calidad de 96.13%.
+Viendo que el cuello de botella que restringe el proceso se encuentra en el esmaltado se establece el volumen real de producción de la planta. Para ello se  calcula la reducción de capacidad causada por perdidas debido a la calidad a la disponibilidad de la fábrica. Para la calidad no se toma el valor de calidad general de la planta ya que perdidas por calidad en procesos anteriores a la esmaltadora pueden compensarse con la capacidad excedente de producción que se tiene en estos procesos. Se calcula la calidad a partir del esmaltado que incluye los procesos de decorado, cocción y empaquetado obteniendo una calidad de 96.13%.
 
 $$ Q = 0.9907*0.9906*0.9985*0.981=0.9613$$
 
@@ -102,13 +102,20 @@ A continuación se muestra un video donde se evidencia la simulación de la plan
 
 A continuación se anexan los reportes de la simulación de la planta antes y después de la intervención.
 
-## Reporte de tecnomatix previo a intervención
 
+## Reporte de tecnomatix 
+
+<details>
+  <summary> Anexo reporte de tecnomatix previo a intervención </summary>
 <iframe src="/Tile-Tech/report_tecnomatix_previous.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
 
+</details>
 
-## Reporte de tecnomatix posterior a intervención
+<details>
+  <summary> Anexo reporte de tecnomatix posterior a intervención </summary>
 <iframe src="/Tile-Tech/report_tecnomatix_after.pdf" type="application/pdf" width="100%" height="600px" ></iframe>
+
+</details>
 
 
 
@@ -118,4 +125,5 @@ A continuación se anexan los reportes de la simulación de la planta antes y de
 -->
 
 ## Referencias
+
 1. 

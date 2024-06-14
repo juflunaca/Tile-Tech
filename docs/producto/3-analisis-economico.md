@@ -3,23 +3,40 @@
 El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes antes de la intervención, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion#cuellos-de-botella-y-áreas-de-mejora).
 
 
-## Análisis de ingresos y egresos  mensuales por producción
+## Análisis de ingresos y egresos  mensuales de la fábrica
+
+Se inicia por hacer un estudio y determinar como era la situación de la fábrica antes de la intervención. Para tener una base de los costos de producción asi como los ingresos recibidos para fundamentar los beneficios que produce de la propuesta de automatización.
+
+## Antes de intervención
 
 ### Ingresos
 
+Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se tiene que el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. Basado en el costo de mercado de los productos de referencia Corona que fueron adaptados para definir los productos de la fabrica se tiene que el costo la caja de baldosas de de $38.113 COP para calidad tipo 1 y  30800 para las baldosas de calidad tipo 2.
+Obeniendo un ingreso de ventas de $5.399 millones de pesos mensuales.
+![ingrso](analisis-economico/before/ingresos.png)
+
 ### Costos de producción
 
-Para determinar los costos de producción se consideran los costos de insumos, mano de obra y otros costos asociados a la producción de baldosas cerámicas.
+Por otro lado para determinar los costos de producción se consideran los costos de insumos, mano de obra, costos de servicio de energia gas y agua; asi como los otros gastos asociados a la producción de baldosas cerámicas, como lo pueden ser el overhead de administración de la fabrica.
 
 #### Costos de insumos
+Para el cálculo de los costos de insumos se consideran los costos de las materias primas necesarias para la producción de baldosas cerámicas. Teniendo la producción mensual de baldosas asy como su peso de 522 g se calcula la cantidad de material necesario. se descompuso respecto a su porcentaje de composición de  Se tiene que el costo de las materias primas es de $ 2.231.422.848 COP mensuales.
+$$ *522 g =  [kg]$$
 
-![costos insumos](analisis-economico/costos-insumos.png)
+- Arcilla	49,01%
+- Feldespatos	24,51%
+- Arenas	14,70%
+- Carbonatos	6,86%
+- Caolines	2,94%
+- Esmalte	1,97%
+
+![costos insumos](analisis-economico/before/costos-insumos.png)
 
 #### Costo recursos Humano
 
 La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador. Causandose un costo mensual de $212.472.000  COP.
 
-![costos recurso humano](analisis-economico/recurso-humano.png)
+![costos recurso humano](analisis-economico/before/recurso-humano.png)
 
 
 Se hace un estimado del costo incurrido por la fabrica de baldosas.
@@ -43,7 +60,8 @@ Se hace un estimado del costo incurrido por la fabrica de baldosas.
 <embed src="/Tile-Tech/analisis-economico/analisis-economico-ACTUAL.pdf" type="application/pdf" width="100%" height="600px" />
 </details>
 
-## Costos de inversión
+
+## Análisis económico del proyecto
 
 Para ello, se consideran los costos de inversión, los costos operativos, los ingresos esperados y el periodo de recuperación de la inversión.
 
