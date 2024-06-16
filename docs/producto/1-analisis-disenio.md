@@ -134,9 +134,11 @@ Lm : lado mayor en mm	200
 Teo : tiempo de secado en minutos	18.4
 ```
 
-El secador utilizado es EVA, que cuenta con 260 canastos, los cuales pueden cargar 12 baldosas. Por lo que se tiene una producción de **10170 baldosas/hora** equivalente a un takt time de **0.35 seg por baldosa**.
+El secador utilizado es EVA 792, que cuenta con 260 canastos, los cuales pueden cargar 12 baldosas. Por lo que se tiene una producción de **10170 baldosas/hora** equivalente a un takt time de **0.35 seg por baldosa**.
 
 $\frac{260*12*60 min}{18.4 min} = 10170$
+
+![](analisis-disenio/secado-eva.png)
 
 ### Esmaltado:
 
@@ -147,7 +149,7 @@ El esmaltado cumple tres funciones:
 2.	Impermeabiliza: El esmalte sobre la pieza cerámica evita que la humedad penetre en la pieza. 
 3.	 Aporta dureza y resistencia a la pieza
 
-Al aplicar las capas de esmalte en el soporte cerámico se convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado la velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por rodillo y se utilizan 2 esmaltadoras RIGMA RR-w2CB. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. 
+Al aplicar las capas de esmalte en el soporte cerámico se convierten en un recubrimiento compacto de partículas denominado capa consolidada. La serigrafía es el método más empleado para la decoración de baldosas cerámicas por su facilidad de aplicación en las líneas de esmaltado. Se usa en monococción, bicocción y tercer fuego. Durante el proceso de esmaltado la velocidad de transporte es de aproximadamente 2-25 m/min. Existen varios tipos de esmaltado como lo son campana, hilera, discos rotatorios, aerógrafo y sistemas de goteo. Se establece que el tipo de esmaltadora es por rodillo y se utilizan 2 esmaltadoras RIGMA RR-w2CB. Teniendo en cuenta que la velocidad de la banda es de 15 m/min se establece que por cada minuto pasan 60 baldosas por cada esmaltadora por lo que entre ambas **7200 baldosas por hora** equivalente a  un takt time de **0.5 seg por baldosa**. La esmaladora utilizada es la RR-W2CB de RIGMA.
 
 <!---
 20m/min*4= 80 baldosas/min
@@ -238,4 +240,5 @@ SYNTHESIS Y GENUSIS
 4. [Catalogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
 5. [ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosas.pdf)
 6. [Video de referencia de proceso de empaquedato](https://youtu.be/rk26any7pKM?si=Vo3NG7W6ul343CLb)
-
+7. [Calago secadora SACMI EVA ](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/EVA-Sacmi-(EN-IT-ES)_1.pdf)
+8. [Catalogo 2 de prensa SACMI](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/Serie-2000-Sacmi-(EN-IT-ES).pdf)
