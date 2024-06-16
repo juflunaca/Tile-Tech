@@ -57,7 +57,8 @@ export default defineConfig(
           { text: 'Análisis económico', link: '/producto/3-analisis-economico'},
           { text: 'Celda robotizada', link: '/producto/6-celda-robotizada' },
           { text: 'Programación de PLCs', link: '/producto/7-PLC' },
-          { text: 'Gemelo digital', link: '/producto/8-transformacion-digital'},
+          { text: 'Digital Factory', link: '/producto/8-digital-factory'},
+          { text: 'Transformación digital', link: '/producto/8-transformacion-digital'},
           { text: 'SCADA', link: '/producto/9-SCADA' },
           { text: 'Integración de sistemas', link: '/producto/10-integracion' }
         ]

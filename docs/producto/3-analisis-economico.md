@@ -5,23 +5,24 @@ El análisis económico se realiza con el fin de determinar la viabilidad del pr
 
 ## Análisis de ingresos y egresos  mensuales de la fábrica
 
-Se inicia por hacer un estudio y determinar como era la situación de la fábrica antes de la intervención. Para tener una base de los costos de producción asi como los ingresos recibidos para fundamentar los beneficios que produce de la propuesta de automatización.
+Se inicia por hacer un estudio y determinar como era la situación de la fábrica antes de la intervención. Para tener una base de los costos de producción y los ingresos recibidos para establece los beneficios que produciría de la propuesta de automatización.
 
 ## Antes de intervención
 
 ### Ingresos
 
-Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se tiene que el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. Basado en el costo de mercado de los productos de referencia Corona que fueron adaptados para definir los productos de la fabrica se tiene que el costo la caja de baldosas de de $38.113 COP para calidad tipo 1 y  30800 para las baldosas de calidad tipo 2.
-Obeniendo un ingreso de ventas de $5.399 millones de pesos mensuales.
+Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se tiene que el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. Basado en el costo de mercado de los productos de referencia Corona, que fueron adaptados para definir los productos de la fábrica, se tiene que el costo la caja de baldosas es de $38.113 COP para calidad tipo 1; y 30800 para las baldosas de calidad tipo 2.
+Obteniendo un ingreso de ventas de $5.399 millones de pesos mensuales.
 ![ingrso](analisis-economico/before/ingresos.png)
 
 ### Costos de producción
 
-Por otro lado para determinar los costos de producción se consideran los costos de insumos, mano de obra, costos de servicio de energia gas y agua; asi como los otros gastos asociados a la producción de baldosas cerámicas, como lo pueden ser el overhead de administración de la fabrica.
+Por otro lado para determinar los costos de producción se considera el valor de insumos, mano de obra, costos de servicio de energía gas y agua; así como los otros gastos asociados a la producción de baldosas cerámicas, como lo pueden ser el overhead de administración de la fábrica.
 
 #### Costos de insumos
-Para el cálculo de los costos de insumos se consideran los costos de las materias primas necesarias para la producción de baldosas cerámicas. Teniendo la producción mensual de baldosas asy como su peso de 522 g se calcula la cantidad de material necesario. se descompuso respecto a su porcentaje de composición de  Se tiene que el costo de las materias primas es de $ 2.231.422.848 COP mensuales.
-$$ *522 g =  [kg]$$
+
+Para calcular el costo de los insumos se tiene en cuenta el  el porcentaje y el valor de cada una las materias primas necesarias para la producción. Se tiene que el peso de la baldosa es de 522 g, y los porcentajes de cada material son los siguientes:
+
 
 - Arcilla	49,01%
 - Feldespatos	24,51%
@@ -30,16 +31,18 @@ $$ *522 g =  [kg]$$
 - Caolines	2,94%
 - Esmalte	1,97%
 
+
+Con una producción mensual de 190 mil metros cuadrados de baldosas se requieren de $ 2.231.422.848 COP mensuales para cubrir la compra de insumos. 
+
+$$ *522 g =  [kg]$$
 ![costos insumos](analisis-economico/before/costos-insumos.png)
 
 #### Costo recursos Humano
 
-La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador. Causandose un costo mensual de $212.472.000  COP.
+La planta antes de la intervención requiere el siguiente recurso humano. Para cubrir un puesto de trabajo 24 horas se requieren 4 cargos. En el costo mensual de cada cargo se incluye el salario básico más: las prestaciones sociales, los aportes a seguridad social (salud, pensiones y riesgos profesionales); la parafiscalidad (beneficios de caja de compensación familiar, SENA y ICBF); dotaciones y elementos de protección personal según lo establecido en el código sustantivo del trabajo. Estos costos corresponden aproximadamente a un 56% adicional al salario base del trabajador, por lo que el total  mensual es de $212.472.000  COP .
 
 ![costos recurso humano](analisis-economico/before/recurso-humano.png)
 
-
-Se hace un estimado del costo incurrido por la fabrica de baldosas.
 
 #### Consolidado
 
@@ -47,11 +50,11 @@ Se hace un estimado del costo incurrido por la fabrica de baldosas.
 |---------------------------------|------------------|
 | Materia primas                  | $ 2.231.422.848  |
 | Servicios públicos              | $ 758.641.960    |
-| RECURSO HUMANO                  | $ 212.472.000    |
+| Recurso humano                  | $ 212.472.000    |
 | Servicios (Mantenimiento) 1% ventas | $ 57.021.888   |
 | Depreciación (15 AÑOS)          | $ 5.461.832      |
 | **TOTAL COSTOS**                | **$ 3.265.020.528** |
-| GASTOS 25%                      | $ 816.255.132    |
+| Gastos %                        | $ 816.255.132    |
 | **TOTAL EGRESOS**               | **$ 4.081.275.659** |
 
 
@@ -64,13 +67,6 @@ Se hace un estimado del costo incurrido por la fabrica de baldosas.
 ## Análisis económico del proyecto
 
 Para ello, se consideran los costos de inversión, los costos operativos, los ingresos esperados y el periodo de recuperación de la inversión.
-
-
-El producto 1 tiene un valor comercial de $ 30.800 $COP/m^2$  que equivale a $ 1.232 COP/u asumiendo que la fabrica de cerámicas obtiene una ganancia de 7% respecto al precio de venta del producto, se tiene una ganancia de $ 258.720 COP y una ganancia mensual de 130 millones de pesos. 
-Con un aumento de 10% en la producción de baldosas. Se tiene un aumento de ganancias 13 millones de pesos mensuales. 
-
-
-
 
 
 
@@ -98,11 +94,11 @@ Con un aumento de 10% en la producción de baldosas. Se tiene un aumento de gana
 - Propuestas de valor: servicios de ingeniería. Desarrollo de un proyecto que identifique el proceso de producción actual y proponga una solución de automatización que permita aumentar la producción y disminuir los costos de producción. Seguimiento y mantenimiento del proyecto.
 
 - Canales
-pagina web
+página web
 
 - Relaciones con clientes
 
-- Fuentes de ingreso: ¿Cuanto esta dispuesto a pagar el cliente? El proyecto se vera financiado por la empresa de cerámicas. Y se desglosara en etapas que se pagaran a medida que se avance en el proyecto.
+- Fuentes de ingreso: ¿Cuánto esta dispuesto a pagar el cliente? El proyecto se verá financiado por la empresa de cerámicas. Y se desglosará en etapas que se pagarán a medida que se avance en el proyecto.
 
 - Recursos clave:
 recursos humanos
@@ -125,6 +121,10 @@ Arancel: Corresponde a la tarifa arancelaria que es el porcentaje que aplica al 
 
 IVA Impuesto al valor agregado. Es un impuesto indirecto sobre el consumo se aplica por la compra de bienes o servicios profesionales y es equivalente al 19%.
 
+La tasa de descuento es la a tasa de interés que se utiliza para descontar flujos de efectivo futuros a su valor presente. En otras palabras, refleja el costo de oportunidad del dinero, ya que un peso de hoy vale más que un peso en el futuro debido a la capacidad de generar rendimientos financieros si se invierten. tasa de rendimiento mínima aceptable en este caso 0,99 mes,
+Calculamos el saldo del flujo de caja mes a mes durante el tiempo del proyecto (24 meses) sin proyecto y con proyecto, se saca la diferencia que serán los recursos adicionales que generaría la implementación del proyecto, negativos cuando hay salida de caja para pagos del proyecto sin que haya ingresos adicionales por el mismo y positivos cuando el proyecto genera ingresos adicionales.
+Se calcula la TIR sobre las diferencias mes a mes durante el periodo del proyecto (se aplica la fórmula de Excel =+TIR(D27:AB27)), y se compara frente a la tasa de descuento si la TIR es mayor el proyecto es viable si es menor se debe ajustar o descartar el proyecto.
+Igualmente se calcula el valor presente neto, el saldo de caja mes que genera el proyecto, se trae a pesos de hoy aplicando la fórmula de Excel mes a mes (=+VA($D$30;E4;;E27;0)*-1)  y luego se suma el resultado de todos los meses si el valor es negativo se descarta el proyecto por que no se recupera la inversión si es positivo indica que se recupera la inversión a mayor valor mayor beneficio.
 
 ## Referencias
 

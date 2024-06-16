@@ -1,14 +1,14 @@
 ## Propuestas de automatización
 
-Basado en la descrición del proceso de producción se realiza una presentación de posibles propuestas de automatización para la línea de producción de baldosas cerámicas.
+Basado en la descripción del proceso de producción se realiza una presentación de posibles propuestas de automatización para la línea de producción de baldosas cerámicas.
 
 ### Molino: 
 
-implementar dentro del molino un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor permite capturar datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua.
+Implementar dentro del molino un sensor de humedad infrarrojo mide continuamente el contenido de humedad de la barbotina. Este sensor permite capturar datos en tiempo real a un sistema de control automatizado. Basándose en estas mediciones, el sistema ajusta una válvula de control de agua para mantener la humedad de la barbotina dentro de los parámetros especificados. Este ajuste se realiza mediante un actuador que regula la apertura y cierre de la válvula, asegurando una adición precisa de agua.
 
 ### Atomizador:
 
-* implementar un sistema de automatización que utilice un sensor infrarrojo y un muestreador de polvo. Estos dispositivos estarían diseñados para monitorear constantemente las condiciones de la barbotina y el sólido resultante. Con base en los datos recopilados por el sensor infrarrojo y el muestreador de polvo, se ajustaría automáticamente la válvula de aspersión de la barbotina.
+* Implementar un sistema de automatización que utilice un sensor infrarrojo y un muestreador de polvo. Estos dispositivos estarían diseñados para monitorear constantemente las condiciones de la barbotina y el sólido resultante. Con base en los datos recopilados por el sensor infrarrojo y el muestreador de polvo, se ajusta automáticamente la válvula de aspersión de la barbotina.
 * Implementación de un sistema de control de la presión y la temperatura del aire en el atomizador para optimizar el proceso de secado.
 
 ### Prensado:
@@ -31,7 +31,7 @@ garantizando  las condiciones dimensionales y de curvatura de las pieza.
 
 ### Empaquetado:
 
-Cambio de proceso de empaquetado manual por un proceso automatizado para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas y reducir las perdidas por daños en el producto.
+Cambio de proceso de empaquetado manual por un proceso automatizado para aumentar la eficiencia y la precisión del proceso de empaquetado de las baldosas cerámicas y reducir las pérdidas por daños en el producto.
 
 ### Paletizado:
 Implementación de una celda robotizada encargada del proceso de paletizado de las cajas de baldosas cerámicas buscando incrementar la eficiencia del proceso.

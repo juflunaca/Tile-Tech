@@ -62,7 +62,7 @@ Teniendo el proceso en cuenta, se dividió el proceso en tareas realizables por 
 
 ## Diagrama de flujo
 
-A partir del punto anterior, se realizó un diagrama de flujo relacionando las tareas.}
+A partir del punto anterior, se realizó un diagrama de flujo relacionando las tareas.
 
 ![robot](https://github.com/juflunaca/Tile-Tech/assets/55969494/cc23fc8e-d4d9-496b-afac-d3cb7aa77b3c)
 

@@ -1,15 +1,14 @@
 # Definición de productos
 
+Se propone como prducto tres tipos diferentes de baldosas de porcelana todas con **tamaño de 20x20 centímetros** , un **grosor de 5.7 $\pm$ 0.3 milímetros**  (se toma como valor nominal el espesor máximo admisible de 6 mm) y un peso de baldosa de 522 g. Las baldosas son empacadas en cajas de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas
 
-El producto fabrico consta de tres tipos diferentes de baldosas de porcelana todas con **tamaño de 20x20 centímetros** , un **grosor de 5.7 $\pm$ 0.3 milímetros** y Un peso de baldosa de 522 g. Las baldosas son empacadas en cajas de 25 baldosas dependiendo del producto.  Estas cajas de baldosas son empacadas en palets de 80 cajas
-
-baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
+Baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 <!--
 (19.8x19.8)
 -->
 
 
-| Tipo        | PISO PARED EGEO BLANCO | PARED ADRIATICO AZUL CLARO | (N)CER  PRISMA MENTA                |
+| Tipo        | PISO PARED EGEO BLANCO | PARED ADRIÁTICO AZUL CLARO | (N)CER  PRISMA MENTA                |
 |-------------|------------------------|----------------------------|-------------------------------------|
 | Decorado    | ![](4baldosa1.png)     | ![](4baldosa2.png)         | ![](4baldosa3.png)                  |
 | Formato     | 20x20x6 cm             | 20x20x6 cm                 | 20x20x6 cm                          |
@@ -18,7 +17,7 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 | Acabado     | mate                   | brillante                  |  brillante                          |
 | Baldosas/caja | 25                   | 25                         | 25                                  |
 | Baldosas/estiba | 80                 | 80                         | 80                                  |
-| Uso         | residencial   baños    | residencial bajo trafico   | residencial cocina                  |
+| Uso         | Residencial   baños    | Residencial bajo trafico   | Residencial cocina                  |
 
 
 
@@ -28,10 +27,12 @@ baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 ![Baldosa cerámica](./definicion-de-producto/2clasificacion-baldosas.png)
 
 ## Referencias
+
 Los productos adaptados de los siguientes catálogos de productos de corona:
-* [Catalogo producto 1](/catalogos/1productos_baldosa.pdf) 
-* [Catalogo producto 2](/catalogos/1productos_baldosa2.pdf) 
-* [Catalogo producto 3](/catalogos/1productos_baldosa3.pdf) 
+
+* [Catálogo producto 1](/catalogos/1productos_baldosa.pdf) 
+* [Catálogo producto 2](/catalogos/1productos_baldosa2.pdf) 
+* [Catálogo producto 3](/catalogos/1productos_baldosa3.pdf) 
 
 <!--
 

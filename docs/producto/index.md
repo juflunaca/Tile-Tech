@@ -13,12 +13,13 @@ Para el desarrollo de la propuesta de automatización se tuvieron en cuenta las 
 
 ## [Análisis económico](./3-analisis-economico)
 
-
 ## [Celda robotizada](./6-celda-robotizada)
 
 ## [lógica de PLCs](./7-PLC)
 
-## [Gemelo digital](./8-transformacion-digital)
+## [Gemelo digital](./8-digital-factory)
+
+## [Transformación digital](./8-transformacion-digital)
 
 ## [SCADA](./9-SCADA)
 

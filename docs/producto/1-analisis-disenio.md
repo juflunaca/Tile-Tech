@@ -2,7 +2,7 @@
 
 ## Estado de la planta previo a intervención:
 
-Se tiene que la fábrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosas se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fábrica tiene un area operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
+Se tiene que la fábrica opera de manera continua en 3 turnos de 8 horas. Donde se produce en promedio 7000 baldosas/hora con tres tipos diferentes de baldosas en empaques de 25 baldosas.  Estas cajas de baldosas son empacadas en palets de 80 cajas. La producción de los 3 tipos de baldosas se realiza por lotes de 20  palets. Para más detalles sobre las características de las baldosas remitirse a [definición de producto](2-definicion-de-productos.md). La fábrica tiene un área operativa de planta de 250 m de largo y 60 m de ancho (según simulación de tecnomatix).
 
 
 
@@ -42,7 +42,7 @@ Las materias primas se transportan mediante un sistema de bandas transportadoras
 
 ### Atomizado
 
-El proceso de atomización se inicia con la introducción de la barbotina obtenida del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándola a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un atomizador ATM036 con una capacidad de producción de polvo atomizado de **8490 kg/hora** con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)].
+El proceso de atomización se inicia con la introducción de la barbotina obtenida del paso anterior en un cilindro cerrado, donde se expulsa mediante aspersión en un entorno controlado con corrientes de aire caliente. Esta operación provoca la reducción de la humedad de la barbotina, llevándola a un estado sólido. Posteriormente, por efecto de la gravedad, el sólido resultante cae sobre una cinta transportadora que lo dirige hacia el siguiente proceso de fabricación. Se tiene que la planta cuenta con un **atomizador ATM036** con una capacidad de producción de polvo atomizado de **8490 kg/hora** con humedad del 6% que representa 7980 kg/hora de polvo seco (15290 baldosas/hora ) [[3](#referencias)].
 
 ![Diagrama de atomización](analisis-disenio/1atomizacion-parts.png){width=80%}
 > Tomado de [2]
@@ -100,7 +100,7 @@ drying unit pressure -0.5 to 1.5 mbar
 
 ### Prensado 
 
-En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con un molde para 2 piezas de 60x60. Puede estimarse un area de trabajo util de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora  que equivalen a un peso aproximado de 6577 kg/hora.
+En este proceso, el polvo atomizado resultante de la etapa de atomización se distribuye uniformemente en una bandeja, donde se aplica una fuerza entre 340 y 400 kg/cm² mediante una prensa hidráulica. Esta fuerza provoca que la humedad residual en el polvo facilite la formación de la pieza con una forma geométrica específica, en este caso, un cuadrado de 20x20 centímetros. La pieza se conforma mediante la compactación del polvo granulado semiseco. El proceso utiliza una prensa  SACMI PH2090 esta cuenta con un molde para 2 piezas de 60x60 cm. Puede estimarse un área de trabajo util de un 100x60 cm donde se elaboran 15 baldosas por cada ciclo. La prensa realiza 14 ciclos por minuto equivalente a un periodo de **4.29 s por golpe** [[4](#referencias)]. La prensa a su máxima capacidad puede producir 12600 baldosas/hora  que equivalen a un peso aproximado de 6577 kg/hora.
 
 <!---
 preprensado: 0.522 kg x 15 u = 7.83 kg/ u golpe 
@@ -174,7 +174,7 @@ Dos variables fundamentales en esta etapa son el ciclo térmico y la atmósfera 
 
 La etapa de cocción se divide en dos partes principales: calentamiento y enfriamiento. Durante la etapa de calentamiento, que abarca aproximadamente el 55-60% de la longitud del horno, las piezas se calientan gradualmente hasta alcanzar alrededor de 400°C. Este calentamiento inicial tiene como objetivo eliminar la humedad excesiva y los humos generados durante la combustión. Luego, se produce un aporte energético que facilita la oxidación de la materia orgánica y las impurezas, eliminando los gases generados y descomponiendo los carbonatos presentes en el soporte cerámico.
 
-Es crucial que estas reacciones se completen antes de que la permeabilidad del esmalte y el soporte sea demasiado baja, lo que podría causar problemas como alteraciones de color o textura en las piezas. La etapa de cocción propiamente dicha es donde ocurre la sinterización de las piezas. Durante este proceso, el soporte cerámico experimenta una transformación química, pasando de una mezcla de materias primas a una estructura más compleja, con fases vitreas o cristalinas estables, dependiendo del tipo de composición.
+Es crucial que estas reacciones se completen antes de que la permeabilidad del esmalte y el soporte sea demasiado baja, lo que podría causar problemas como alteraciones de color o textura en las piezas. La etapa de cocción propiamente dicha es donde ocurre la sinterización de las piezas. Durante este proceso, el soporte cerámico experimenta una transformación química, pasando de una mezcla de materias primas a una estructura más compleja, con fases vítreas o cristalinas estables, dependiendo del tipo de composición.
 
 El tiempo necesario en esta etapa es crucial para garantizar la vitrificación completa de la pieza y asegurar su estabilidad dimensional. Las temperaturas alcanzadas pueden oscilar entre 1130°C y 1200°C. Durante esta fase, y al final del calentamiento, las piezas experimentan una importante variación dimensional debido a la dilatación térmica, lo que debe ser considerado en el diseño de la pasta, el englobe y el esmalte para evitar problemas de curvatura en el producto final.
 
@@ -185,9 +185,9 @@ Las dimensiones y curvatura de las piezas se miden de forma automática, pero la
 ![ciclo de cocción del horno](analisis-disenio/1coccion-ciclo-del-horno.png)
 > Tomado de [2] pag 218
 
-A partir de la grafica del ciclo de calentamiento del horno se sabe que el proceso de cocción dura 45 min.
+A partir de la gráfica del ciclo de calentamiento del horno se sabe que el proceso de cocción dura 45 min.
 
-El horno utilizado es el horno SACMI maestro. Un horno de longitud variable por modulos. Se utiliza una longitud de 160 m y una velocidad de 3.5 m/min.  Se escoje igualmente un inlet 3850 mm y con un numero de piezas esperado de 12 piezas entrando al horno simultaneamente y ingreso de 3 filas de piezas por metro recorrido. Esto resulta en una capacidad de producción  de 4300 baldosas/hora.
+El horno utilizado es el horno SACMI maestro. Un horno de longitud variable por módulos. Se utiliza una longitud de 160 m y una velocidad de 3.5 m/min.  Se escoge igualmente un inlet 3850 mm y con un numero de piezas esperado de 12 piezas entrando al horno simultáneamente y ingreso de 3 filas de piezas por metro recorrido. Esto resulta en una capacidad de producción  de 4300 baldosas/hora.
 
 $ 14 * 3 * 3.5 m/min (60 min/h) = 8820 u/h$
 
@@ -196,7 +196,7 @@ $ 14 * 3 * 3.5 m/min (60 min/h) = 8820 u/h$
 
 ### Control de calidad:
 
-Debido a procesos inherentes dentro de la fabricación de baldosas se tienen fluctuaciones en la calidad del producto. Dentro de la estación de control de calidad se separa las baldosas en tipo 1 y tipo 2 siendo las primeras de la mejor calidad y las segundas de calidad estándar. La maquina utilizada para este proceso es la SACMI Synthesis and Genusis La cual tiene una taza de producción de 150 unidades/min que equivale a 9000 baldosas hora. Estas se clasifican en 2 categorías. Categoría 1 la cual es de primera calidad y  categoría 2 que es de calidad estándar. Se tiene que la planta produce en las baldosas de calidad 1 y calidad 2 en una proporción de 4:1 es decir 80% y 20% respectivamente.
+Debido a procesos inherentes dentro de la fabricación de baldosas se tienen fluctuaciones en la calidad del producto. Dentro de la estación de control de calidad se separa las baldosas en tipo 1 y tipo 2 siendo las primeras de la mejor calidad y las segundas de calidad estándar. La máquina utilizada para este proceso es la SACMI Synthesis and Genusis la cual tiene una taza de producción de 150 unidades/min que equivale a 9000 baldosas hora. Estas se clasifican en 2 categorías. Categoría 1 la cual es de primera calidad y  categoría 2 que es de calidad estándar. Se tiene que la planta produce en las baldosas de calidad 1 y calidad 2 en una proporción de 4:1 es decir 80% y 20% respectivamente.
 
 ![control_de_calidad](analisis-disenio/control_calidad.png){width=80%}
 
@@ -205,7 +205,7 @@ Debido a procesos inherentes dentro de la fabricación de baldosas se tienen flu
 
 ### Empaquetado:
 
-La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que este optimiza la distribución de carga de los productos. Se tiene que la planta produce 294 cajas/hora (7350 baldosas/hora),  4.9 cajas/min equivalente a **12.2 seg por cajas**. En la estación se tienen 4 operarios que realizan el proceso de empaquetado.
+La clasificación y el embalaje es la penúltima etapa del proceso de fabricación de baldosas cerámicas. Se establece que la planta hace este proceso de forma manual donde la inspección se realiza de forma visual por los operarios los cuales seleccionan y empaquetan 25 baldosas por caja de empaquetado. Los cerámicos se empacan de manera vertical ya que así se optimiza la distribución de carga de los productos. Se tiene que la planta produce 294 cajas/hora (7350 baldosas/hora),  4.9 cajas/min equivalente a **12.2 seg por cajas**. En la estación se tienen 4 operarios que realizan el proceso de empaquetado.
 
 <!---
 $
@@ -215,11 +215,11 @@ $
 
 ### Paletizado:
 
-El ultimo paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
+El último paso del proceso consiste en el al agrupación de cajas de baldosas para formar un paletizado donde se prepara el producto para su transporte. Este proceso se realiza de forma manual a traves de un operario. Se define que se empacan 80 cajas por estiba [[5]].
 
 ![paletizado](analisis-disenio/1paletizado-estiba.png){width=80%}
 
-Se define que la fábrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso optimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 2x4 para formar un modulo patron, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
+Se define que la fábrica utiliza palets universales de 1200X100 mm. Basado en la norma ISO 3394 La cual especifica la medida de las cajas para un uso óptimo del espacio. Se utiliza una caja de 200x150x200 mm donde se agrupan en paquetes de 8 cajas en 2 filas para formar un módulo patrón, acomodando 5 módulos por piso y 2 pisos de altura se tiene 80 cajas por palet y 2000 baldosas por palet. Se tiene una producción de 3.8 palets/hora (7600 baldosas/hora) equivalente a **15 min por palet**.
 
 ![paletizado](analisis-disenio/1paletizado-tamanio-standar.png){width=80%}
 
@@ -234,11 +234,11 @@ SYNTHESIS Y GENUSIS
 
 ## Referencias
 
-1. Catálogo  de molinos de tambor continuo SACMI. [Catalogo de molinos SACMI](/catalogos/1molienda_catalogo_Molino_MTC_SACMI.pdf)
+1. Catálogo  de molinos de tambor continuo SACMI. [Catálogo de molinos SACMI](/catalogos/1molienda_catalogo_molinos_MTC_SACMI.pdf)
 2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
-3. Preparacion de polvos ceramicos atomizacion.[SACMI](https://sacmi.com/es-ES/ceramics/Azulejos/Preparacion-de-polvos-ceramicos/atomizacion/ATM)
-4. [Catalogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
-5. [ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosas.pdf)
-6. [Video de referencia de proceso de empaquedato](https://youtu.be/rk26any7pKM?si=Vo3NG7W6ul343CLb)
-7. [Calago secadora SACMI EVA ](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/EVA-Sacmi-(EN-IT-ES)_1.pdf)
-8. [Catalogo 2 de prensa SACMI](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/Serie-2000-Sacmi-(EN-IT-ES).pdf)
+3. Preparación de polvos cerámicos atomización.[SACMI](https://sacmi.com/es-ES/ceramics/Azulejos/Preparacion-de-polvos-ceramicos/atomizacion/ATM)
+4. [Catálogo de prensa SACMI](/catalogos/1prensado_catalogo_prensa_SACMI.pdf) 
+5. [Ficha técnica Egeo blanco de Corona](/catalogos/1productos_baldosa.pdf)
+6. [Vídeo de referencia de proceso de empaquedato](https://youtu.be/rk26any7pKM?si=Vo3NG7W6ul343CLb)
+7. [Catálago secadora SACMI EVA](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/EVA-Sacmi-(EN-IT-ES)_1.pdf)
+8. [Catálogo 2 de prensa SACMI](https://sacmi.com/SacmiCorporate/media/ceramics/Catalogues/Serie-2000-Sacmi-(EN-IT-ES).pdf)
