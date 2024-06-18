@@ -15,7 +15,7 @@ Para el desarrollo de la propuesta de automatización se tuvieron en cuenta las 
 
 ## [Celda robotizada](./6-celda-robotizada)
 
-## [lógica de PLCs](./7-PLC)
+## [Lógica de PLCs](./7-PLC)
 
 ## [Gemelo digital](./8-digital-factory)
 
