@@ -4,7 +4,7 @@ A continuación se presentan los módulos de aprendizaje  de las habilidades des
 
 ## Módulo Gerencia de producción
 - [VSM](../producto/5-gestion-produccion.md#vsm-value-stream-mapping)
-- [Indicadores de gestión](../producto/5-gestion-produccion.md#indicadores-claves-de-diseño)
+- [Indicadores de gestión](../producto/5-gestion-produccion.md#indicadores-claves-de-diseno)
 
 <!--
 
@@ -22,13 +22,15 @@ A continuación se presentan los módulos de aprendizaje  de las habilidades des
 ## Módulo de robótica
 - [Celda robotizada](../producto/6-celda-robotizada)
 
-## Módulo gemelo digital
-- [Gemelo digital en NX](../producto/8-transformacion-digital.md)
+## Módulo digital factory
+- [Gemelo digital en NX](../producto/8-digital-factory.md)
 
 ## Módulo de PLC y SCADA
 - [Lógica de PLC](../producto/7-PLC.md)
 - [SCADA](../producto/9-SCADA.md)
 
+## Módulo gemelo digital
+- [Transformación digital ](../producto/8-transformacion-digital.md)
 ## Reflexiones
 <details>
   <summary> </summary>

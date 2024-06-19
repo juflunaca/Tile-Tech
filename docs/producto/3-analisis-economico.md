@@ -13,7 +13,7 @@ Se inicia por hacer un estudio y determinar como era la situación de la fábric
 
 Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se tiene que el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. Basado en el costo de mercado de los productos de referencia Corona, que fueron adaptados para definir los productos de la fábrica, se tiene que el costo la caja de baldosas es de $38.113 COP para calidad tipo 1; y 30800 para las baldosas de calidad tipo 2.
 Obteniendo un ingreso de ventas de $5.399 millones de pesos mensuales.
-![ingresos](analisis-economico/before/ingresos.png)
+![ingresos](analisis-economico/before/ingresos.png){width=60%}
 
 ### Costos de producción
 
@@ -52,7 +52,7 @@ La planta antes de la intervención requiere el siguiente recurso humano. Para c
 
 Además de los costos antes mencionados se tienen en cuenta los costos de mantenimiento de la maquinaria y depreciación de la misma. Se tiene un costo de mantenimiento del 1% de las ventas y una depreciación a 15 años.
 
-[consolidado](analisis-economico/before/consolidado.png)
+![consolidado](analisis-economico/before/consolidado.png){width=60%}
 
 ## Después de la intervención
 
@@ -60,7 +60,7 @@ Además de los costos antes mencionados se tienen en cuenta los costos de manten
 
 Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se mantienen los porcentajes donde el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. manteniendo los precios correspondientes. Con un aumento de la producción del 23% y reducción de los defectos que afectan el volumen de producción a 2,05% se obtiene  un ingreso por ventas de  $ 6.740. millones de pesos mensuales representando un incremento del 25%.
 
-![ingresos](analisis-economico/after/ingresos.png)
+![ingresos](analisis-economico/after/ingresos.png){width=80%}
 
 
 ### Costos de producción
@@ -90,7 +90,7 @@ En el area de personal se tiene una disminución en el número de empleados requ
 
 Se obtiene como resultado el siguiente consolidado que resume los ingresos y costos de producción asi como su variación respecto al valor previo a la intervención.
 
-![costos recurso humano](analisis-economico/after/consolidado.png)
+![costos recurso humano](analisis-economico/after/consolidado.png){width=80%}
 
 
 ## Análisis económico del proyecto
@@ -111,15 +111,27 @@ Igualmente se estima el costo de instalación de los mismos, así como el costo 
 
 ![equipos](analisis-economico/instalacion-equipos.png)
 
+Dentro de los costos asociados al trabajo de los participantes se tiene en cuenta el costo de los recursos humanos, el cual se estima en un salario base $ 2.500 millones COP y se asocial el mismo 56% respecto a los demás costos asociados a prestaciones. Se tienen en cuenta rubros por suministros viáticos y desplazamientos.
+
+![equipos](analisis-economico/asesoria.png)
+
+A continuación se muestra el consolidado de los gastos del proyecto sobre el que se efectua un mark up por riesgo del 30% y un AIU resultado en un valor de propuesta de automatización por $ 1.977.000.000 COP. 
+
+
+![equipos](analisis-economico/consolidado.png)
+
 ## Cronograma de pagos
 
-El proyecto se descopone en las siguientes etapas:
+Para el periodo de desarrollo del proyecto se tiene un cronograma de pagos que se ajusta a las etapas de desarrollo del proyecto:
 
-1. Evaluación y diseño 
+1. Evaluación y diseño
 2. Adquisición y recepción equipos
 3. Instalación y puesta en funcionamiento propuesta
 4. Estabilización producción
 
+![cronograma](analisis-economico/cronograma.png)
+
+Para inicio del proyecto se requiere un pago inicial del 20% del valor total del proyecto, seguido de pagos del 20% el inicio de las etapas 2, 3; seguido de un 30% antes inicio de la etapa 4 para un pago final del 10% al momento de cierre del proyecto.
 
 ## Flujo de caja
 <!--
@@ -150,8 +162,11 @@ En el siguiente adjunto se presenta el análisis económico completo del proyect
 -->
 ## Evaluación y Conclusiones
 
+
 Para la evaluación de la viablidad del proyecto se utilizaron como indicadores: el payback time, el valor presente (VAN) y la tasa de retorno (ROI). Del análisis económico se obtiene que el proyecto es viable, ya que la TIR es del ... y el VAN es de ...  de pesos. Lo que indica que el proyecto es rentable y se recupera la inversión.
 
+
+![evaluacion](analisis-economico/resultado.png)
 La tasa de descuento es la a tasa de interés que se utiliza para descontar flujos de efectivo futuros a su valor presente. En otras palabras, refleja el costo de oportunidad del dinero, ya que un peso de hoy vale más que un peso en el futuro debido a la capacidad de generar rendimientos financieros si se invierten. tasa de rendimiento mínima aceptable en este caso 0,99 mes,
 Calculamos el saldo del flujo de caja mes a mes durante el tiempo del proyecto (24 meses) sin proyecto y con proyecto, se saca la diferencia que serán los recursos adicionales que generaría la implementación del proyecto, negativos cuando hay salida de caja para pagos del proyecto sin que haya ingresos adicionales por el mismo y positivos cuando el proyecto genera ingresos adicionales.
 Se calcula la TIR sobre las diferencias mes a mes durante el periodo del proyecto (se aplica la fórmula de Excel =+TIR(D27:AB27)), y se compara frente a la tasa de descuento si la TIR es mayor el proyecto es viable si es menor se debe ajustar o descartar el proyecto.
@@ -196,8 +211,8 @@ IVA Impuesto al valor agregado. Es un impuesto indirecto sobre el consumo se apl
 
 1. José Francisco Marciano Motta, José Mário Coelho, Marsis Cabra Junior,Antenor Zanardo, Luiz Carlos Tanno. MATERIAS PRIMAS PARA PASTAS DE GRES PORCELÁNICO .[url](https://www.qualicer.org/recopilatorio/ponencias/pdfs/0232150s.pdf)
 2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
-3.   
-E. Monfort,  A. Mezquita, R. Granel,  E. Vaquer,  A. Escrig A. Miralles,  V. Zaer.[url](https://www.qualicer.org/recopilatorio/ponencias/pdfs/2010239.pdf)
+3.   E. Monfort,  A. Mezquita, R. Granel,  E. Vaquer,  A. Escrig A. Miralles,  V. Zaer.  ANALYSIS OF ENERGY CONSUMPTION AND  CARBON DIOXIDE EMISSIONS IN CERAMIC 
+TILE MANUFACTURE. [url](https://www.qualicer.org/recopilatorio/ponencias/pdfs/2010239.pdf)
 
 “Cómo consultar el arancel de aduanas”  DIAN Dirección de Impuestos y Aduanas Nacionales. 
 Decreto 1881 de 2021 “Por el cual se adopta el arancel de aduanas y otras disposiciones”
