@@ -1,13 +1,14 @@
 # Análisis económico
 
-El análisis económico se realiza con el fin de determinar la viabilidad del proyecto y evaluar su rentabilidad. Para ello se inicia por determinar el número de baldosas producidas por mes antes de la intervención, basados en la capacidad de producción de la planta y el tiempo de operación establecidos en la [gestión de producción](5-gestion-produccion#cuellos-de-botella-y-áreas-de-mejora).
+El análisis financiero se realiza para determinar la viabilidad y el impacto del proyecto, es decir determinar si los recursos invertidos retornan o se recuperan; si los recursos utilizados en este proyecto generan mayores beneficios que utilizarlos en otros y establecer el impacto del proyecto en la rentabilidad de la planta.
+
+Para el análisis financiero se determinó la capacidad de producción de la planta en su estado actual y la planta posterior a la intervención, el número de metros cuadrados de baldosa que producen, lo que permite determinar los ingresos mensuales por ventas de la empresa. Igualmente se analizaron los costos y gastos de producción, estableciendo la cantidad de materiales que se requieren, el consumo de servicios (agua, energía y gas), los costos de recurso humano y otros costos y gastos operativos.
 
 
-## Análisis de ingresos y egresos  mensuales de la fábrica
-
-Se inicia por hacer un estudio y determinar como era la situación de la fábrica antes de la intervención. Para tener una base de los costos de producción y los ingresos recibidos para establece los beneficios que produciría de la propuesta de automatización.
 
 ## Antes de intervención
+
+Se inicia por hacer un estudio y determinar como era la situación de la fábrica antes de la intervención. El número de baldosas producidas por mes antes de la intervención es establecido en la [gestión de producción](5-gestion-produccion#cuellos-de-botella-y-áreas-de-mejora).
 
 ### Ingresos
 
@@ -21,12 +22,12 @@ Por otro lado para determinar los costos de producción se considera el valor de
 
 #### Costos de insumos
 
-Para calcular el costo de los insumos se tiene en cuenta el  el porcentaje y el valor de cada una las materias primas necesarias para la producción. Se tiene que el peso de la baldosa es de 522 g, y los porcentajes de cada material 
+Para calcular el costo de los insumos se tiene en cuenta el porcentaje y el valor de cada una las materias primas necesarias para la producción. Se tiene que el peso de la baldosa es de 522 g, y los porcentajes de cada material 
 arcilla 40-60%, feldespatos 20-30%, arenas 10-20% , carbonatos 5-10% y caolines 1-5% y esmalte 1-5%[1].
 
 $$ 7200*24*30*0,522 kg =270648  [kg]$$
 
-Con una producción mensual de 190 mil metros cuadrados de baldosas se requieren de $ 2.330.169.915 COP mensuales para cubrir la compra de insumos. Para el calculo de la cantidad de material que debe ingresar mensualmente  se toma como referencia el valor de base de 7200 baldosas mensuales para tener en cuenta perdidas e inefficiencies en los procesos.
+Con una producción mensual de 190 mil metros cuadrados de baldosas se requieren de $ 2.330.169.915 COP mensuales para cubrir la compra de insumos. Para el cálculo de la cantidad de material que debe ingresar mensualmente, se toma como referencia el valor de base de 7200 baldosas mensuales, para tener en cuenta pérdidas e ineficiencias (subutilización de las máquinas) en los procesos.
 
 ![costos insumos](analisis-economico/before/costos-insumos.png)
 
@@ -58,7 +59,7 @@ Además de los costos antes mencionados se tienen en cuenta los costos de manten
 
 ### Ingresos
 
-Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se mantienen los porcentajes donde el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2. manteniendo los precios correspondientes. Con un aumento de la producción del 23% y reducción de los defectos que afectan el volumen de producción a 2,05% se obtiene  un ingreso por ventas de  $ 6.740. millones de pesos mensuales representando un incremento del 25%.
+Basados en la producción bruta de baldosas mensuales se calcula el ingreso mensual de la fábrica. Se mantienen los porcentajes donde el 80% de las baldosas son de calidad tipo 1 y el 20% restante de calidad tipo 2, manteniendo los precios correspondientes. Con un aumento de la producción del 23% y reducción de los defectos que afectan el volumen de producción a 2.05%, se obtiene  un ingreso por ventas de  $ 6.740 millones de pesos mensuales representando un incremento del 25%.
 
 ![ingresos](analisis-economico/after/ingresos.png){width=80%}
 
@@ -69,33 +70,34 @@ Un aumento en la producción requiere a su vez más recursos para obtener los re
 
 ### Costos de insumos
 
-La cantidad de insumos requeridos incrementa en un 23% con respecto a la producción anterior Por ende se tien en cuenta este incremento obteniendo un valor por insumos de  $ 2.878 millones COP mensuales.
+La cantidad de insumos requeridos incrementa en un 23% con respecto a la producción anterior, por ende se tiene en cuenta este incremento obteniendo un valor por insumos de $2.878 millones COP mensuales.
 
 
 ![costos insumos](analisis-economico/after/costos-insumos.png)
 
 ### Costos de servicios
 
-En los costos de servicios se tiene en cuenta el incremento proporcional en el consumo, además del consumo producido por las nuevas maquinas, la esmaltadora adicional asi como la empacadora y la celda robótica resultando en un agregado por consumo de servicios de $ 1.224. millones de COP.
+En los costos de servicios se tiene en cuenta que al aumentar la producción se eleva el consumo de servicios(agua luz y energía), en la misma proporción; además, existe un aumento adicional, debido a las nuevas máquinas: la esmaltadora adicional, la empacadora y la celda robótica. Dicho consumo se proyecta en $1.224 millones de COP.
 
 ![costos servicios](analisis-economico/after/costos-servicios.png)
 
 ### Costo recursos humano
 
-En el area de personal se tiene una disminución en el número de empleados requeridos para la producción, pasando de 4  y 6 empleados por turno para el empaquetado y el paletizado a un único empleado por turno por estación. Esto se traduce en un costo mensual de $ 159 millones COP o una reducción del un 35% en el rubro.
+En el área de personal se tiene una disminución en el número de empleados requeridos para la producción, pasando de 4  y 6 empleados por turno para el empaquetado y el paletizado, a un único empleado por turno por estación. Esto se traduce en un costo mensual de $ 159 millones COP o una reducción del un 35% en el rubro.
 
 ![costos recurso humano](analisis-economico/after/recurso-humano.png)
 
 ### Consolidado
 
-Se obtiene como resultado el siguiente consolidado que resume los ingresos y costos de producción asi como su variación respecto al valor previo a la intervención.
+Se obtiene como resultado el siguiente consolidado que resume los ingresos y costos de producción, así como su variación respecto al valor previo a la intervención.
 
 ![costos recurso humano](analisis-economico/after/consolidado.png){width=80%}
 
 
 ## Análisis económico del proyecto
 
-Se descompone el valor de los items asociados al proyecto en los siguientes rubros:
+Se descompone el valor de los ítems asociados al proyecto en los siguientes rubros:
+
 - Diseño automatización de planta
 - Equipos
 - Servicios de instalación
@@ -103,35 +105,35 @@ Se descompone el valor de los items asociados al proyecto en los siguientes rubr
 
 Se genera una propuesta donde se avalúa las actividades de ingeniería enfocadas en el diseño de la automatización de la planta con una valoración de 300 millones de pesos.
 
-Basado en la [propuesta de automatización](4-propuesta) se definen los equipos necesarios y se hace la gestión de adquisiciones donde se determinan la disponibilidad de los equipos siendo necesario importar varios de estos. Donde se tendrá en cuenta no solo el impuesto sino también los aranceles de importación.
+Basado en la [propuesta de automatización](4-propuesta) se definen los equipos necesarios y se hace la gestión de adquisiciones donde se determinan la disponibilidad de los equipos, siendo necesario importar varios de estos. Donde se tendrá en cuenta no solo el impuesto sino también los aranceles de importación.
 
 ![equipos](analisis-economico/propuesta-equipos.png)
 
-Igualmente se estima el costo de instalación de los mismos, así como el costo de los servicios de ingeniería y la asesoría y acompañamiento en la puesta en marcha del proyecto.
+Igualmente se estima el costo de instalación de los mismos, así como el valor de los servicios de ingeniería, la asesoría y acompañamiento en la puesta en marcha del proyecto.
 
 ![equipos](analisis-economico/instalacion-equipos.png)
 
-Dentro de los costos asociados al trabajo de los participantes se tiene en cuenta el costo de los recursos humanos, el cual se estima en un salario base $ 2.500 millones COP y se asocial el mismo 56% respecto a los demás costos asociados a prestaciones. Se tienen en cuenta rubros por suministros viáticos y desplazamientos.
+Dentro de los costos asociados al trabajo de los participantes se tiene en cuenta el valor del recurso humano, el cual se estima en un salario base $ 2.500.000  COP más el 56% que corresponde a prestaciones sociales, aportes a seguridad social, parafiscales, dotaciones y elementos de protección personal. Adicionalmente se tienen en cuenta rubros por suministros viáticos y desplazamientos.
 
 ![equipos](analisis-economico/asesoria.png)
 
-A continuación se muestra el consolidado de los gastos del proyecto sobre el que se efectua un mark up por riesgo del 30% y un AIU resultado en un valor de propuesta de automatización por $ 1.977.000.000 COP. 
+A continuación se muestra el consolidado de los gastos del proyecto sobre el que se efectúa un mark up por riesgo del 30% y un AIU que da como resultado una propuesta de automatización por un valor de $ 1.977.000.000 COP. 
 
 
 ![equipos](analisis-economico/consolidado.png)
 
 ## Cronograma de pagos
 
-Para el periodo de desarrollo del proyecto se tiene un cronograma de pagos que se ajusta a las etapas de desarrollo del proyecto:
+Para el periodo de desarrollo del proyecto se tiene un cronograma de pagos que se ajusta a las etapas de implementación del proyecto:
 
-1. Evaluación y diseño
-2. Adquisición y recepción equipos
-3. Instalación y puesta en funcionamiento propuesta
-4. Estabilización producción
+1. Evaluación y diseño.
+2. Adquisición y recepción equipos.
+3. Instalación y puesta en funcionamiento propuesta.
+4. Estabilización producción.
 
 ![cronograma](analisis-economico/cronograma.png)
 
-Para inicio del proyecto se requiere un pago inicial del 20% del valor total del proyecto, seguido de pagos del 20% el inicio de las etapas 2, 3; seguido de un 30% antes inicio de la etapa 4 para un pago final del 10% al momento de cierre del proyecto.
+Para dar inicio al proyecto se requiere un anticipo del 20% del valor total del proyecto, con un segundo pago del 20% a la entrega y aprobación de los diseños,  proyectado para el tercer mes; un tercer pago correspondiente al 20% en el quinto mes, para el inicio de la instalación de los equipos; un cuarto pago correspondiente al 30%  en el octavo mes al finalizar la instalación y un pago final del 10% al momento de cierre del proyecto.
 
 ## Flujo de caja
 <!--
@@ -159,11 +161,13 @@ En el siguiente adjunto se presenta el análisis económico completo del proyect
 
 <iframe src="/Tile-Tech/analis-economico.htm"  width="100%" height="600px" ></iframe>
 
+presupuesto de ejecución material
+
 -->
 ## Evaluación y Conclusiones
 
 
-Para la evaluación de la viablidad del proyecto se utilizaron como indicadores: el payback time, el valor presente (VAN) y la tasa de retorno (ROI). Del análisis económico se obtiene que el proyecto es viable, ya que la TIR es del ... y el VAN es de ...  de pesos. Lo que indica que el proyecto es rentable y se recupera la inversión.
+Para la evaluación de la viabilidad del proyecto se utilizaron como indicadores: el payback time, el valor presente (VAN) y la tasa de retorno (ROI). Del análisis económico se obtiene que el proyecto es viable, ya que la TIR es del ... y el VAN es de ...  de pesos. Lo que indica que el proyecto es rentable y se recupera la inversión.
 
 
 ![evaluacion](analisis-economico/resultado.png)
@@ -213,6 +217,8 @@ IVA Impuesto al valor agregado. Es un impuesto indirecto sobre el consumo se apl
 2. Tecnología cerámica aplicada SACMI, Asociación Española de Técnicos Cerámicos. 2004.[SACMI](https://sacmi.com/)
 3.   E. Monfort,  A. Mezquita, R. Granel,  E. Vaquer,  A. Escrig A. Miralles,  V. Zaer.  ANALYSIS OF ENERGY CONSUMPTION AND  CARBON DIOXIDE EMISSIONS IN CERAMIC 
 TILE MANUFACTURE. [url](https://www.qualicer.org/recopilatorio/ponencias/pdfs/2010239.pdf)
+4. Canal de Isabel II, PLIEGO DE PRESCRIPCIONES TÉCNICAS. [url](https://licitaciones.canaldeisabelsegunda.es/licitacion/documento?numExpediente=77/2022&idDoc=R0221196)
+
 
 “Cómo consultar el arancel de aduanas”  DIAN Dirección de Impuestos y Aduanas Nacionales. 
 Decreto 1881 de 2021 “Por el cual se adopta el arancel de aduanas y otras disposiciones”

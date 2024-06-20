@@ -4,7 +4,7 @@ Se presenta el desarrollo de la simulación de una fábrica digital desarrollado
 
 ## Gemelo digital
 
-Se realizo el gemelo digital de una maquina de empacado de baldosas, en el cual se simula el proceso y se maneja la actuación a traves de comunicación OPC a traves de ignition conectando NX con el un controlador PLC simulado. La logica es desarrollada usando lenguaje ladder para determinar la de las subrutinas a desarrollar. Las cuales fueron desarrolladas en GRAFCET, el cual facilita el desarrollo de rutina complejas mediante la representación gráfica de las mismas.
+Se realizó el gemelo digital de una máquina de empacado de baldosas, en el cual se simula el proceso y se maneja la actuación a través de comunicación OPC mediante ignition conectando NX con un controlador PLC simulado. La lógica es desarrollada usando lenguaje ladder para determinar las subrutinas, las cuales fueron desarrolladas en GRAFCET. Este tipo de programación facilita el desarrollo de rutina complejas mediante la representación gráfica de las mismas.
 
 ![ gemelo digital](./digital-factory/basic-physics.png)
 
@@ -17,7 +17,7 @@ Se realizo el gemelo digital de una maquina de empacado de baldosas, en el cual 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OOryg0T-8Ps?si=zwQEkovh5ce04zeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-A continuación se presenta la demostración del funcionamiento de las etapas del proceso desarrollo en NX.
+A continuación se presenta la demostración del funcionamiento de las etapas desarrolladas en NX.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Azf9Fd5UB84?si=1J0MO_XdI1FadSqF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
