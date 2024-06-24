@@ -36,4 +36,11 @@ flowchart LR
 
 ```
 
+## Referencias
 
+1. Rockwell Automation Publication. Modular Programming Tips in Studio 5000 Logix Designer. [url](https://literature.rockwellautomation.com/idc/groups/literature/documents/wp/9324-wp007_-en-p.pdf)
+
+2. Rockwell Automation Publication Programming Manual Original Instructions Logix 5000 Controllers. [url](https://literature.rockwellautomation.com/idc/groups/literature/documents/pm/1756-pm006_-en-p.pdf)
+
+3. Rockwell Automation Publication. Reference Manual Original Instructions Logix 5000 Controllers Design Considerations. [url](https://literature.rockwellautomation.com/idc/groups/literature/documents/rm/1756-rm094_-en-p.pdf)
+4. Rockwell Automation Publication. Programming Manual Original Instructions Logix 5000 Controllers Structured Text. [url](https://literature.rockwellautomation.com/idc/groups/literature/documents/pm/1756-pm007_-en-p.pdf)
