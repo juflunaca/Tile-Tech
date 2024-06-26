@@ -1,4 +1,4 @@
-![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/775e93ef-b79f-4673-b251-ed5676ce0c4e)# Celda Robótica
+# Celda Robótica
 
 Para el diseño de la celda robótica se siguió la siguiente ruta:
 
@@ -225,9 +225,9 @@ Por lo tanto, se concluye que las medidas de seguridad y mitigación adecuadas s
 
 ## Simulación de la celda robótica
 
-Para simular la rutina de la celda robótica se utilizó el software RoboDK. A continuación se muestra el layout desarrollado en RoboDK
+Para simular la rutina de la celda robótica se utilizó el software RobotStudio. A continuación se muestra el layout desarrollado en RobotStudio
 
-![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/3d3eafb4-008e-43ff-976c-9ed0da5c364a)
+![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/69ea778b-bc6f-4aca-b666-b9706c09a810)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/627i0lmmtzM?si=hJQjSsamhF24Ow1i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -238,3 +238,4 @@ Es posible encontrar el código de la rutina del robot en la sección de Anexos.
 1. Corona. 2010. Manual para la manipulación de productos: Decorados & Complementos. [Manual](https://www.megamafers.com/wp-content/uploads/2015/06/Lacasitos.pdf)
 2. OSHA Robotics Standards. [Manual](https://www.osha.gov/robotics/standards)
 3. Industrial Robot Cells: Designing for Safety and Effectiveness. [Manual](https://control.com/technical-articles/industrial-robot-cells-designing-for-safety-and-effectiveness/)
+   
