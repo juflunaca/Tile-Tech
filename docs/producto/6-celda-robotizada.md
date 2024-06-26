@@ -1,4 +1,4 @@
-# Celda Robótica
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/775e93ef-b79f-4673-b251-ed5676ce0c4e)# Celda Robótica
 
 Para el diseño de la celda robótica se siguió la siguiente ruta:
 
@@ -40,12 +40,11 @@ _Tomado de [1]_
    | Característica | Especificaciones |
    | -------------- | -----------------|
    | Peso Total | 1044 Kg |
-   | Altura total (incluyendo altura del palet) | 952.4 mm |
+   | Altura total (incluyendo altura del palet) | 552.4 mm |
    | Cantidad de cajas por palet | 80 |
    | Superficie del palet usada | 100% |
 
-   ![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/e2ec244c-e2d5-4913-916f-af95fccfe70b)
-
+   ![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/f687526c-41d8-4bd0-b45e-e52adf39a905)
    Simulación realizada con [Calculadora y configurador de pallets](https://www.ptchronos.com/es/calculadora-de-pallets)
 
 ## Subdivisión de tareas
@@ -99,43 +98,50 @@ Para seleccionar el robot a utilizar en la celda, se tuvieron en cuenta los sigu
 | Alcance | Mayor a 1200 mm |
 | Costo | El menor costo posible |
 
-Revisando las características de diferentes robots, se seleccionó el robot Kuka KR22 R1610-2:
+Revisando las características de diferentes robots, se seleccionó el robot ABB IRB 4600-20:
 
-![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/ddd5089b-35da-4a2f-8567-270f4eead2d6)
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/4aa0c22c-752f-4d06-b602-1f4ea61d567a)
 
 Área de trabajo
 
-![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/337b4fe1-496e-40e7-8705-8ff6a37cb63b)
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/482354eb-6351-4365-a9a4-d337655e601e)
 
-Los datos técnicos pueden encontrarse aquí: [KR22 R1610-2 Datos Técnicos](https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321011_es.pdf?rev=ea0b3ca65413451aab3208293739e619&hash=07B8DCCE4871A89E582997C3F8BB4971)
+Los datos técnicos pueden encontrarse aquí: [IRB4600 Datos Técnicos](https://search.abb.com/library/Download.aspx?DocumentID=ROB0109EN_G&LanguageCode=en&DocumentPartId=&Action=Launch)
 
-Una vez seleccionado el robot, se revisó la documentación de Kuka para seleccionar el controlador. De esta manera, se seleccionó el controlador KR C5:
+Una vez seleccionado el robot, se revisó la documentación de Kuka para seleccionar el controlador. De esta manera, se seleccionó el controlador IRC5:
 
-![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/a584eee7-7987-4549-a71c-9fd46b409086)
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/e1996b9c-8c18-4a44-8250-2aa0771c5c65)
 
-Los datos técnicos pueden encontrarse en: [KRC5](https://www.kuka.com/-/media/kuka-downloads/imported/87f2706ce77c4318877932fb36f6002d/kuka_kr_c5_en.pdf?rev=6209cd039c4a4716b0d1e7e67a4010a9&hash=4B878D33601BDE6539C52A52CB0CE88A)
+Los datos técnicos pueden encontrarse en: [IRC5](https://search.abb.com/library/Download.aspx?DocumentID=ROB0295EN&LanguageCode=en&DocumentPartId=&Action=Launch)
 
 ## Alternativas de Layout
 
 Una vez identificados todos los elementos y las operaciones a realizar, se proponen 3 alternativas de layout para la celda robótica:
 
+![M](https://github.com/juflunaca/Tile-Tech/assets/55969494/0fd15901-0ef9-4476-a035-251ebbbd4703)
+
 ### Alternativa 1
-![O1](https://github.com/juflunaca/Tile-Tech/assets/55969494/9f05ab70-eb70-4630-9c70-ca17ab1299a7)
+![C1](https://github.com/juflunaca/Tile-Tech/assets/55969494/22771a25-6d8f-428a-a7cc-d56bfa212676)
 
 ### Alternativa 2
-![O2](https://github.com/juflunaca/Tile-Tech/assets/55969494/e90249cf-e19a-4e6e-83f8-27d5315d76d2)
+![C2](https://github.com/juflunaca/Tile-Tech/assets/55969494/2455f02a-df9b-4cf9-b052-97b5ddb70b57)
 
 ### Alternativa 3
-![O3](https://github.com/juflunaca/Tile-Tech/assets/55969494/bb494ce3-39a6-4d63-bbf6-a1c60aa78eb6)
+![C3](https://github.com/juflunaca/Tile-Tech/assets/55969494/6269deb7-ddac-461e-93ab-b566575b0bad)
+
+### Alternativa 4
+![C4 ](https://github.com/juflunaca/Tile-Tech/assets/55969494/230a6e7a-746f-4005-add5-f6b2e8e5328f)
 
 ## Selección de la mejor alternativa
 
-Se selecciona la alternativa 3 como la mejor opción, según los siguientes criterios:
+Se selecciona la alternativa 4 como la mejor opción, según los siguientes criterios:
 
-- Es la alternativa que menos espacio utiliza
+- No implica pausas innecesarias para el robot
 - Permite un fácil acceso al controlador
 - Permite una correcta visualización del proceso desde la perspectiva del operario
 - Mejor aprovechamiento del área de trabajo y alcance del robot
+- Permite el fácil transporte y ubicación de los palets
+- La entrada y salida de material se encuentran en distintos lugares
 
 ## Seguridad
 
