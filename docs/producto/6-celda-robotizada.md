@@ -45,6 +45,7 @@ _Tomado de [1]_
    | Superficie del palet usada | 100% |
 
    ![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/f687526c-41d8-4bd0-b45e-e52adf39a905)
+   <br>
    Simulación realizada con [Calculadora y configurador de pallets](https://www.ptchronos.com/es/calculadora-de-pallets)
 
 ## Subdivisión de tareas
@@ -116,9 +117,9 @@ Los datos técnicos pueden encontrarse en: [IRC5](https://search.abb.com/library
 
 ## Alternativas de Layout
 
-Una vez identificados todos los elementos y las operaciones a realizar, se proponen 3 alternativas de layout para la celda robótica:
+Una vez identificados todos los elementos y las operaciones a realizar, se proponen 4 alternativas de layout para la celda robótica:
 
-![M](https://github.com/juflunaca/Tile-Tech/assets/55969494/0fd15901-0ef9-4476-a035-251ebbbd4703)
+<img src="https://github.com/juflunaca/Tile-Tech/assets/55969494/0fd15901-0ef9-4476-a035-251ebbbd4703" width="300" />
 
 ### Alternativa 1
 ![C1](https://github.com/juflunaca/Tile-Tech/assets/55969494/22771a25-6d8f-428a-a7cc-d56bfa212676)
