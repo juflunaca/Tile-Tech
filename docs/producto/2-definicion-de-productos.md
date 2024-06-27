@@ -11,7 +11,7 @@ Baldosas cerámicas con 3 tipos de esmalte: con esmalte clase 1, 2 y 3.
 | Tipo        | PISO PARED EGEO BLANCO | PARED ADRIÁTICO AZUL CLARO | (N)CER  PRISMA MENTA                |
 |-------------|------------------------|----------------------------|-------------------------------------|
 | Decorado    | ![](4baldosa1.png)     | ![](4baldosa2.png)         | ![](4baldosa3.png)                  |
-| Formato     | 20x20x6 cm             | 20x20x6 cm                 | 20x20x6 cm                          |
+| Formato     | 200x200x6 mm             | 200x200x6 mm             | 200x200x6 mm                        |
 | Peso        | 522 g                  | 522 g                      | 522 g                               |
 | Esmalte     | clase 1                | clase 2                    |  clase 3                            |
 | Acabado     | mate                   | brillante                  |  brillante                          |
