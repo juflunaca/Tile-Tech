@@ -107,7 +107,7 @@ Se genera una propuesta donde se avalúa las actividades de ingeniería enfocada
 
 Basado en la [propuesta de automatización](4-propuesta) se definen los equipos necesarios y se hace la gestión de adquisiciones donde se determinan la disponibilidad de los equipos, siendo necesario importar varios de estos. Donde se tendrá en cuenta no solo el impuesto sino también los aranceles de importación.
 
-![equipos](analisis-economico/propuesta-equipos.png)
+<embed src="/Tile-Tech/analisis-economico/equipos.pdf" type="application/pdf" width="100%" height="600px" />
 
 Igualmente se estima el costo de instalación de los mismos, así como el valor de los servicios de ingeniería, la asesoría y acompañamiento en la puesta en marcha del proyecto.
 
@@ -183,13 +183,13 @@ Igualmente se calcula el valor presente neto, el saldo de caja mes que genera el
 
 - Propuestas de valor: servicios de ingeniería. Desarrollo de un proyecto que identifique el proceso de producción actual y proponga una solución de automatización que permita aumentar la producción y disminuir los costos de producción. Seguimiento y mantenimiento del proyecto.
 
-- Canales
-página web
+- Canales: página web
 
 - Relaciones con clientes
 
 - Fuentes de ingreso: ¿Cuánto esta dispuesto a pagar el cliente? El proyecto se verá financiado por la empresa de cerámicas. Y se desglosará en etapas que se pagarán a medida que se avance en el proyecto.
 
+<!--
 - Recursos clave:
 recursos humanos
 
@@ -200,10 +200,8 @@ actividades planteadas por cronograma
 - Estructura de costos
 
 proceso de estimación de costos
+-->
 
-
-## BOM
-Se anexa el Build of materials (BOM), el cual contiene la lista de los materiales necesarios para la elaboración del proyecto.
 
 ## Definiciones
 
