@@ -14,7 +14,6 @@ Se realizó el gemelo digital de una máquina de empacado de baldosas, en el cua
 ![ gemelo digital](./digital-factory/OPC-signals.png){width=60%}
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OOryg0T-8Ps?si=zwQEkovh5ce04zeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 A continuación se presenta la demostración del funcionamiento de las etapas desarrolladas en NX.
@@ -25,6 +24,12 @@ Cada estación se trabajó en un archivo independiente, a fin de tener modularid
 
 ![gemelo digital](./digital-factory/layout-fabrica.png){width=60%}
 
+## Estación de calidad
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VFhoQvjKN2s?si=fqOdf4wdI7cqqDPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Aqui sale el Chamote
 
 <!--
 

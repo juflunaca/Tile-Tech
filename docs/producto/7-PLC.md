@@ -6,6 +6,8 @@ Para el control de la planta se desarrollo las rutinas de control mediante studi
 
 Una de las etapas a automatizar es el empaquetado donde se remplaza el trabajo manual por una dobladora de cajas. Para controlar su movimiento se inicia por identificar las señales que se conectarían al PLC.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOryg0T-8Ps?si=zwQEkovh5ce04zeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### Lista de Entradas y Salidas 
 

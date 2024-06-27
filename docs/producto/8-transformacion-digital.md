@@ -4,6 +4,18 @@
 
 La Industria 4.0, o Cuarta Revolución Industrial, ha traído consigo una transformación significativa en diversos sectores, incluida la industria cerámica. Esta evolución se basa en la integración de tecnologías digitales avanzadas que permiten optimizar y revolucionar los procesos de producción. La industria cerámica, tradicionalmente caracterizada por métodos de producción manuales y semi-automatizados, ha experimentado una metamorfosis considerable gracias a la digitalización. A continuación, se detalla cómo la Industria 4.0 está moldeando el futuro de la producción cerámica.
 
+[piramide digital](digital/piramide_control.png)
+
+- Proceso: Instalación de nuevas máquinas y sensores en la línea de producción.
+
+- Control: Medida de las variables de control de las diferentes etapas del proceso, controlador de la celda robótica y de la empacadora.
+
+- Supervisión: No se ve contemplado en la solución del proyecto.
+
+- Operación: Software MES ya en funcionamiento, reconfiguración de acuerdo a las nuevas capacidades.
+
+- Información: La información del funcionamiento de las máquinas y de procesos se puede revisar pero no se centraliza ni se analiza automaticamente.
+
 #### Elementos Clave de la Industria 4.0 en la Cerámica
 
 1. **Interconectividad y IoT**: La Internet de las Cosas (IoT) permite conectar máquinas y sistemas de producción cerámicos. Sensores inteligentes y dispositivos conectados recopilan datos en tiempo real, proporcionando información crucial sobre el estado de las máquinas, el consumo de energía y el progreso de la producción. Esta interconectividad facilita el monitoreo continuo y el mantenimiento predictivo, reduciendo tiempos de inactividad y costos operativos.
