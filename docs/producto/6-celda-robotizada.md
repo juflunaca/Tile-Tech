@@ -228,9 +228,11 @@ Por lo tanto, se concluye que las medidas de seguridad y mitigación adecuadas s
 
 Para simular la rutina de la celda robótica se utilizó el software RobotStudio. A continuación se muestra el layout desarrollado en RobotStudio
 
-![celda](https://github.com/juflunaca/Tile-Tech/assets/55969494/69ea778b-bc6f-4aca-b666-b9706c09a810)
+![image](https://github.com/juflunaca/Tile-Tech/assets/55969494/82b11c2e-3b5b-4ebb-a100-db2e7b0e7e6b)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3ZawmNZCF3g?si=PxCKxKA-nrorVfOy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+En el vídeo se muestra la rutina programada.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Meu7qNaNfNI?si=MKuVeg875kuDGUIh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Referencias
