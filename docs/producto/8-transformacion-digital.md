@@ -4,17 +4,17 @@
 
 La Industria 4.0, o Cuarta Revolución Industrial, ha traído consigo una transformación significativa en diversos sectores, incluida la industria cerámica. Esta evolución se basa en la integración de tecnologías digitales avanzadas que permiten optimizar y revolucionar los procesos de producción. La industria cerámica, tradicionalmente caracterizada por métodos de producción manuales y semi-automatizados, ha experimentado una metamorfosis considerable gracias a la digitalización. A continuación, se detalla cómo la Industria 4.0 está moldeando el futuro de la producción cerámica.
 
-[piramide digital](digital/piramide_control.png)
+![piramide digital](digital/piramide_control.png)
 
-- Proceso: Instalación de nuevas máquinas y sensores en la línea de producción.
+- Proceso: se logró mejorar la capacidad de producción mediante la instalación de nuevas máquinas y sensores en la línea de producción.
 
-- Control: Medida de las variables de control de las diferentes etapas del proceso, controlador de la celda robótica y de la empacadora.
+- Control: se tiene la medida de las variables de control de las diferentes etapas del proceso usando los sensores internos de las máquinas, controlador de la celda robótica y de la empacadora.
 
-- Supervisión: No se ve contemplado en la solución del proyecto.
+- Supervisión: No se implementó en el proyecto un sistema SCADA pero las variables de proceso están disponibles fácilmente para la implementación futura del mismo.
 
-- Operación: Software MES ya en funcionamiento, reconfiguración de acuerdo a las nuevas capacidades.
+- Operación: Desde un principio se asume que la fábrica debido a su tamaño ya cuenta con un software MES para el seguimiento y planeación de la manufactura, sólo es necesario ajustarlo de acuerdo a las nuevas capacidades.
 
-- Información: La información del funcionamiento de las máquinas y de procesos se puede revisar pero no se centraliza ni se analiza automaticamente.
+- Información: actualmente no hay integraciones o análisis automático de las mismas
 
 #### Elementos Clave de la Industria 4.0 en la Cerámica
 
