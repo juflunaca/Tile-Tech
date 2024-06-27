@@ -79,7 +79,7 @@ Se han considerado varios factores críticos como la eficiencia, la calidad del 
    - **Razonamiento**: El empaquetado es una tarea intensiva en mano de obra y propensa a errores humanos. Automatizar este proceso con una empaquetadora mejora la precisión, la velocidad y la consistencia del empaquetado.
    - **Impacto**: Reducción de costos laborales, aumento de la velocidad de empaquetado y mejora en la calidad del empaquetado, permitiendo manejar mayores volúmenes de producción eficientemente.
 
-3. **Uso de una celda robotizada con un robot KR 22 R1610 para el paletizado**:
+3. **Uso de una celda robotizada con un robot IRB 4600 para el paletizado**:
    - **Razonamiento**: El paletizado es una tarea repetitiva y físicamente demandante. Un robot IRB 4600 puede realizar esta tarea de manera rápida, precisa y sin necesidad de descansos, aumentando la eficiencia y reduciendo riesgos de lesiones laborales.
    - **Impacto**: Incremento en la velocidad y consistencia del paletizado, reducción de errores y daños en los productos, y mayor eficiencia en el manejo de grandes volúmenes de producción.
 
