@@ -80,7 +80,7 @@ Se han considerado varios factores críticos como la eficiencia, la calidad del 
    - **Impacto**: Reducción de costos laborales, aumento de la velocidad de empaquetado y mejora en la calidad del empaquetado, permitiendo manejar mayores volúmenes de producción eficientemente.
 
 3. **Uso de una celda robotizada con un robot KR 22 R1610 para el paletizado**:
-   - **Razonamiento**: El paletizado es una tarea repetitiva y físicamente demandante. Un robot KR 22 R1610 puede realizar esta tarea de manera rápida, precisa y sin necesidad de descansos, aumentando la eficiencia y reduciendo riesgos de lesiones laborales.
+   - **Razonamiento**: El paletizado es una tarea repetitiva y físicamente demandante. Un robot IRB 4600 puede realizar esta tarea de manera rápida, precisa y sin necesidad de descansos, aumentando la eficiencia y reduciendo riesgos de lesiones laborales.
    - **Impacto**: Incremento en la velocidad y consistencia del paletizado, reducción de errores y daños en los productos, y mayor eficiencia en el manejo de grandes volúmenes de producción.
 
 La selección de aumentar la producción de la etapa de esmaltado, automatizar el empaquetado y usar una celda robotizada para el paletizado se basa en una evaluación estratégica de cómo estas mejoras impactan directamente en la capacidad de producción, la eficiencia operativa y la calidad del producto final. Estas inversiones permiten una optimización integral de la línea de producción, abordando tanto los cuellos de botella actuales como mejorando procesos clave para manejar incrementos en la producción y reducir costos operativos a largo plazo.
