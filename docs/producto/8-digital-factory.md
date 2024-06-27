@@ -29,7 +29,7 @@ Cada estación se trabajó en un archivo independiente, a fin de tener modularid
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VFhoQvjKN2s?si=fqOdf4wdI7cqqDPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Aqui sale el Chamote
+De esta estación sale el producto dividido en los dos grupos de calidad asi como el chamote que vuelve a la estacion de molienda como insumo para la fabricación de las baldosas.
 
 <!--
 
