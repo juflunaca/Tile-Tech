@@ -14,11 +14,11 @@ La Industria 4.0, o Cuarta Revolución Industrial, ha traído consigo una transf
 
 - Operación: Desde un principio se asume que la fábrica debido a su tamaño ya cuenta con un software MES para el seguimiento y planeación de la manufactura, sólo es necesario ajustarlo de acuerdo a las nuevas capacidades.
 
-- Información: actualmente no hay integraciones o análisis automático de las mismas
+- Información: La información del funcionamiento de las máquinas y de procesos se puede revisar pero no se centraliza ni se analiza automaticamente.
 
 #### Elementos Clave de la Industria 4.0 en la Cerámica
 
-1. **Interconectividad y IoT**: La Internet de las Cosas (IoT) permite conectar máquinas y sistemas de producción cerámicos. Sensores inteligentes y dispositivos conectados recopilan datos en tiempo real, proporcionando información crucial sobre el estado de las máquinas, el consumo de energía y el progreso de la producción. Esta interconectividad facilita el monitoreo continuo y el mantenimiento predictivo, reduciendo tiempos de inactividad y costos operativos.
+1. **Interconectividad e IoT**: La Internet de las Cosas (IoT) permite conectar máquinas y sistemas de producción cerámicos. Sensores inteligentes y dispositivos conectados recopilan datos en tiempo real, proporcionando información crucial sobre el estado de las máquinas, el consumo de energía y el progreso de la producción. Esta interconectividad facilita el monitoreo continuo y el mantenimiento predictivo, reduciendo tiempos de inactividad y costos operativos.
 
 2. **Automatización Avanzada**: La robótica y la automatización han transformado las líneas de producción cerámica. Robots avanzados se encargan de tareas repetitivas y peligrosas, como la manipulación de materias primas y el esmaltado, aumentando la eficiencia y la seguridad. La automatización también permite una mayor precisión en el control de calidad, asegurando productos finales homogéneos y de alta calidad.
 
@@ -36,6 +36,10 @@ La Industria 4.0, o Cuarta Revolución Industrial, ha traído consigo una transf
 4. **Flexibilidad y Personalización**: La capacidad de adaptar rápidamente los procesos y personalizar productos según las demandas del mercado otorga a las empresas cerámicas una ventaja competitiva.
 
 5. **Seguridad y Mantenimiento**: La interconectividad y el monitoreo continuo mejoran la seguridad laboral y permiten un mantenimiento predictivo, reduciendo fallos inesperados y tiempos de inactividad.
+
+### Filosofia Grupal:
+
+Nuestro equipo trabajó bajo el fundamento de que la transformación digital industrial es una mentalidad que debe tenerse para el desarrollo de proyectos de automatización, donde se debe armar un plan de mejora continuo en los procesos con mejoras incrementales que contribuyan a la eficiencia de la planta y a una mejor recopilación y uso de los datos de producción que resultan de cada uno de los procesos para poder seguir iterando y/o encontrando nuevas oportunidades de mejora. Esta mentalidad debe llevarse desde los niveles de producción mediante la implementación y mejora de la maquinaria usando la automatización industrial como una herramienta más que como un fin, se debe automatizar con un propósito y debe permear la totalidad de la planta, incluida la gerencia, de forma que se tomen decisiones informadas, usando datos reales y certeros y que permitan seguir en la dirección de una producción eficiente e idealmente sostenible que permita optimizar tiempo y materias primas mientras se minimizan los desperdicios.
 
 ### Conclusión
 
